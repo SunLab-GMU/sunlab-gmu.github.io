@@ -71,7 +71,6 @@ a:hover {
 	margin: 0;
 	padding: 0px;
 	color: #FFFFFF;
-	vertical-align: middle;
 }
 
 #logo h1, #logo p {
@@ -217,8 +216,13 @@ a:hover {
 	padding: 0;
 }
 
+
+
+.post {
+}
+
 .post .title {
-	height: 24px;
+	height: 38px;
 	padding: 12px 0 0 20px;
 	letter-spacing: -.5px;
 	color: #181818;
@@ -239,11 +243,13 @@ a:hover {
 	font-style: italic;
 }
 
+.post .meta a {
+}
+
 .post .entry {
 	text-align: justify;
 	margin-bottom: 25px;
 	padding: 30px 20px 10px 20px;
-	padding-right: 33%;
 }
 
 .links {
@@ -369,33 +375,4 @@ a:hover {
 
 #footer a {
 	color: #FFDBD9;
-}
-
-div.column {
-	float: left;
-	width: 33.33%;
-}
-div.row:after {
-	content: "";
-	display: table;
-	clear: both;
-}
-
-img.profile {
-	height: 181px;
-	width: 138px;
-	object-fit: cover;
-	display: flex;
-	align-items: flex-end;
-	overflow: hidden;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-o-user-select: none;
-	user-select: none;
-	-webkit-user-drag: none;
-	-khtml-user-drag: none;
-	-moz-user-drag: none;
-	-o-user-drag: none;
-	user-drag: none;
 }
