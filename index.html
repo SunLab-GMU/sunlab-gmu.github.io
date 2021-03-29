@@ -1,0 +1,1436 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, maximum-scale=1">
+<meta name="description" content="SunLab at George Mason University focuses on the latest cybersecurity research and emerging threats.">
+<title>Sun Security Lab</title>
+<link rel="icon" href="img/sunlab-logo.png" type="image/png">
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css"> 
+<link href="css/font-awesome.css" rel="stylesheet" type="text/css"> 
+<link href="css/animate.css" rel="stylesheet" type="text/css">
+ 
+<!--[if lt IE 9]>
+    <script src="js/respond-1.1.0.min.js"></script>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/html5element.js"></script>
+<![endif]-->
+ 
+</head>
+<body>
+
+<!--Header_section-->
+<header id="header_wrapper">
+  <div class="container">
+    <div class="header_box">
+      <div class="logo"><a href="#"><img src="img/sunlab_logo3.png" height="40" alt="logo"></a></div>
+      <nav class="navbar" role="navigation">
+	  <!--
+        <div class="navbar-header">
+          <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        </div>
+	  -->
+        <div id="main-nav" class="collapse navbar-collapse navStyle">
+        <ul class="nav navbar-nav" id="mainNav">
+          <li class="active"><a href="#home" class="scroll-link">Home</a></li>
+          <li><a href="#aboutUs" class="scroll-link">About Us</a></li>
+          <li class="dropdown">
+		      <a class="data-toggle" data-toggle="dropdown" data-target="#" href="#research">Research<strong class="caret"></strong></a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="research/trusted_computing.html">Trustworthy Computing</a></li>
+              <li class="dropdown-item"><a href="research/mtd.html">Moving Target Defense</a></li>
+	      <li class="dropdown-item"><a href="research/software_security.html">Software Security</a></li>
+              <li class="dropdown-item"><a href="research/container_security.html">Container Security</a></li>
+              <li class="dropdown-item"><a href="#research">Mobile Phone Security</a></li>
+	      <li class="dropdown-item"><a href="research/ai_security.html">AI Security</a></li>
+              <li class="dropdown-header dropdown-item">Resources</li>
+              <li class="dropdown-item"><a href="https://github.com/SunLab-GMU">GitHub</a></li>
+            </ul>
+          </li>
+          <li><a href="#publication" class="scroll-link">Publication</a></li>
+		  <li><a href="#team" class="scroll-link">Team</a></li>  
+          <li><a href="#sponsors" class="scroll-link">Sponsors</a></li>
+		  <li><a href="#contact" class="scroll-link">Contact</a></li>
+        </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+<!--Header_section--> 
+
+
+<!--home-->
+<section id="home" class="top_cont_outer">
+  <div class="hero_wrapper">
+    <div class="container">
+      <div class="home">
+        <div class="row">
+          <div class="col-lg-5 col-sm-7">
+            <div class="top_left_cont zoomIn wow animated">
+              <h2>Sun Security Laboratory</h2> 
+              <p style="font-size:18px">“Live as if you were to die tomorrow. Learn as if you were to live forever.” –– Mahatma Gandhi</p>
+              <a href="#research" class="read_more2">Read more</a> </div>
+          </div>
+          <div class="col-lg-7 col-sm-5">
+            <div class="top_left_cont">
+              <!-- News Carousel -->
+              <div id="newscarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                  <li data-target="#newscarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#newscarousel" data-slide-to="1"></li>
+                  <li data-target="#newscarousel" data-slide-to="2"></li>
+                  <li data-target="#newscarousel" data-slide-to="3"></li>
+                  <li data-target="#newscarousel" data-slide-to="4"></li>
+                </ol>
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                  <div class="item active">
+                    <a href="https://par.nsf.gov/servlets/purl/10172419" target="_blank">
+                      <img class="mx-auto d-block" src="img/herofigure.png" alt="">
+                    </a>
+                    <div class="carousel-caption">
+                      <p style="font-size:15px">"When Match Fields Do Not Need to Match: Buffered Packet Hijacking" in SDN at NDSS 2020<br />&nbsp;</p>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <a href="https://csis.gmu.edu/ksun/publications/CITM_CCS20.pdf" target="_blank">
+                      <img class="" src="img/hero-CITM_CCS20.png" alt="">
+                    </a>
+                    <div class="carousel-caption">
+                      <p style="font-size:15px">"Cache-in-the-Middle (CITM) Attacks : Manipulating Sensitive Data in Isolated Execution Environments" at CCS 2020</p>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <a href="https://csis.gmu.edu/ksun/publications/Desir-infocom2016.pdf" target="_blank">
+                      <img src="img/hero-disir-infocom2016.png" alt="">
+                    </a>
+                    <div class="carousel-caption">
+                      <p style="font-size:15px">"DESIR: Decoy-Enhanced Seamless IP Randomization" at INFOCOM 2016<br />&nbsp;</p>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <a href="https://csis.gmu.edu/ksun/publications/ModReplay_CCS20.pdf" target="_blank">
+                      <img src="img/hero-modreplay-ccs20.png" alt="">
+                    </a>
+                    <div class="carousel-caption">
+                      <p style="font-size:15px">"When the Differences in Frequency Domain are Compensated: Understanding and Defeating Modulated Replay Attacks on Automatic Speech Recognition" at CCS 2020</p>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <a href="https://csis.gmu.edu/ksun/publications/SPEAKER-DIMVA2017.pdf" target="_blank">
+                      <img src="img/hero-speaker-dimva2017.png" alt="">
+                    </a>
+                    <div class="carousel-caption">
+                      <p style="font-size:15px">"SPEAKER: Split-Phase Execution of Application Containers" at DIMVA 2017<br />&nbsp;</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#newscarousel" data-slide="prev">
+                  <span><i class="fa fa-arrow-left"></i></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#newscarousel" data-slide="next">
+                  <span><i class="fa fa-arrow-right"></i></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            </div>
+		      </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--home--> 
+
+
+<section id="aboutUs"><!--Aboutus-->
+<div class="inner_wrapper">
+  <div class="container">
+	<h2>About Us</h2>
+	<div class="inner_section">
+	  <div class="row">
+		<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 pull-left">
+		  <div class=" delay-01s animated fadeInDown wow animated">
+			<!--<h3>Welcome to Sun Security Lab</h3><br/> -->
+			<p style="font-size:17px; line-height:170%">The Sun Security Laboratory (SunLab) was founded by Professor Kun Sun. We are located at George Mason University. 
+			Our mission is to conduct basic and applied research in the systems and network security. 
+			Our current research areas include trustworthy computing, moving target defence, software security, cloud/container security, AI security, and mobile phone security.</p>
+			<br />
+			<h3>News</h3>
+			<ul style="list-style-type:disc; margin:0px; padding:20px">
+			  <li style="font-size:16px">1 paper accepted by DSN 2021.&nbsp; </li>
+			  <li style="font-size:16px">1 paper accepted by CODASY 2021. &nbsp;</li>
+<li style="font-size:16px">1 paper accepted by INFOCOM 2021.</li>
+<li style="font-size:16px">Shu Wang received Student Travel Award from CCS 2020.</li>
+			  <li style="font-size:16px">1 paper accepted by AsiaCCS 2021.</li>
+			  <li style="font-size:16px">1 paper accepted by ACSAC 2020.</li>
+			  <li style="font-size:16px">Our paper "Off-Path TCP Exploits of the Mixed IPID Assignment" was nominated for CCS 2020 Distinguished Paper award (one among four papers).</li>
+			  <li style="font-size:16px">3 papers accepted by CCS 2020.</li>
+			  <li style="font-size:16px">Dr. Shengye Wan defends his PhD thesis in July 2020 and joins FB.</li>
+			  <li style="font-size:16px">1 paper accepted by RAID 2020.</li>
+			  <li style="font-size:16px">1 paper accepted by NDSS 2020.</li>
+			</ul>
+		  </div>
+		</div>
+		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 pull-right">
+		<!--
+			<img src="img/sunlab-logo.png" class="img delay-03s animated wow zoomIn" alt="">
+		-->	
+			<img src="img/gmu-square.jpg" class="img-circle delay-03s animated wow zoomIn" alt="">
+		
+		</div>
+	  </div>
+	</div>
+	<div class="work_bottom"> <span>Want to know more ...</span> <a href="#contact" class="contact_btn scroll-link">Contact Us</a> </div>       
+  </div>
+</div>  
+</section>
+<!--Aboutus--> 
+
+<!--Research-->
+<section id="research">
+  <div class="container">
+    <h2>Research</h2>
+    <h6>We aim to solve the most challenging problems in cybersecurity.</h6>
+    <div class="research_wrapper">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="research_block">
+            <div class="research_icon delay-03s animated wow zoomIn"> <span><a href="research/trusted_computing.html"><i class="fa fa-shield"></i></a></span> </div>
+            <h3 class="animated fadeInUp wow"><a href="research/trusted_computing.html" style="color:#000000;">Trustworthy Computing</a></h3>
+            <p class="animated fadeInDown wow">We design and develop new trusted computing systems to protect security sensitive code/data on both X86 and ARM processors using hardware security extensions such as ARM TrustZone, Intel SGX/TXT/SMM.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 borderLeft">			
+          <div class="research_block">
+            <div class="research_icon icon2 delay-03s animated wow zoomIn"> <span><a href="research/mtd.html"><i class="fa fa-bullseye"></i></a></span> </div>
+            <h3 class="animated fadeInUp wow"><a href="research/mtd.html" style="color:#000000;">Moving Target Defense</a></h3>
+            <p class="animated fadeInDown wow">We develop adaptive virtualized systems that protect a production system through hiding it in a continuously morphing virtual environment and/or serve disinformation via believable deceptive decoys.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 borderLeft">
+          <div class="research_block">
+            <div class="research_icon icon3 delay-03s animated wow zoomIn"> <span><a href="research/software_security.html"><i class="fa fa-code"></i></a></span> </div>
+            <h3 class="animated fadeInUp wow"><a href="research/software_security.html" style="color:#000000;">Software Security</a></h3>
+            <p class="animated fadeInDown wow">We focus on automatically discovering the vulnerable code, identifying security patches, and generating security patches in the real-world open-source and proprietary software projects.</p>
+          </div>
+        </div>
+      </div>
+	  <div class="row borderTop">
+	    <div class="col-lg-4 mrgTop">
+          <div class="research_block">
+            <div class="research_icon delay-03s animated wow  zoomIn"> <span><a href="research/container_security.html"><i class="fa fa-cubes"></i></a></span> </div>
+            <h3 class="animated fadeInUp wow"><a href="research/container_security.html" style="color:#000000;">Container Security</a></h3>
+            <p class="animated fadeInDown wow">Based on the observation that different sets of system calls are needed for various execution phases, we implement a temporal-based system call reduction mechanism called SPEAKER that can dramatically reduce the attack surface on system calls.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 mrgTop borderLeft">
+          <div class="research_block">
+            <div class="research_icon delay-03s animated wow  zoomIn"> <span><i class="fa fa-mobile"></i></span> </div>
+            <h3 class="animated fadeInUp wow">Mobile Phone Security</h3>
+            <p class="animated fadeInDown wow">Enhance the security of mobile phones in various layers including firmware, mobile OS, and mobile apps.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 mrgTop borderLeft">
+          <div class="research_block">
+            <div class="research_icon delay-03s animated wow zoomIn"> <span><a href="research/ai_security.html"><i class="fa fa-cogs"></i></a></span> </div>
+            <h3 class="animated fadeInUp wow" ><a href="research/ai_security.html" style="color:#000000;">AI Security</a></h3>
+            <p class="animated fadeInDown wow">We study both the security problems in current AI/ML solutions and how to use AI/ML on solving existing security problems. </p>
+            <!--[<a href="project/modreplay.html">ModReplay</a>] [<a href="project/sieve.html">SIEVE</a>]-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--research-->
+
+<!-- publication -->
+<section id="publication" class="content"> 
+  <!-- Container -->
+  <div class="container publication_title"> 
+    <!-- Title -->
+    <div class="section-title">
+      <h2>publication</h2>
+    </div>
+    <div class="publication-top">
+      <div class="publication_wrapper">
+        <div class="row">
+          <div class="col-lg-12">
+            <div id="filters">
+              <ul class="clearfix">
+                <li><a id="all" href="#" data-filter="*" class="active">
+                  <h5>All</h5>
+                  </a></li>
+                <li><a class="" href="#" data-filter=".trustworthy">
+                  <h5>Trustworthy Computing</h5>
+                  </a></li>
+                <li><a class="" href="#" data-filter=".mtdcd">
+                  <h5>Moving Target Defense and Cyber Deception</h5>
+                  </a></li>
+                <li><a class="" href="#" data-filter=".mobilephone">
+                  <h5>Mobile Phone Security</h5>
+                  </a></li>
+                <li><a class="" href="#" data-filter=".networksecurity">
+                  <h5>Network Security</h5>
+                  </a></li>
+                <li><a class="" href="#" data-filter=".aisecurity">
+                  <h5>AI Security</h5>
+                  </a></li>
+                <li><a class="" href="#" data-filter=".softwaresecurity">
+                  <h5>Software Security</h5>
+                  </a></li>
+                <li><a class="" href="#" data-filter=".passwordmanagement">
+                  <h5>Password Management</h5>
+                  </a></li>
+                <li><a class="" href="#" data-filter=".unknown">
+                  <h5>Miscellaneous</h5>
+                  </a></li>
+              </ul>
+            </div>
+          </div>
+		  <div class="isotope fadeInLeft animated wow" id="publication_wrapper">
+
+		    <div class="isotope-item col-md-12 networksecurity">
+			  <div class="col-md-2 col-xs-12 publication-venue">
+			    CODASPY 2021
+			  </div>
+			  <div class="col-md-10 col-xs-12 publication-item">
+			  <strong>UTrack: Enterprise User Tracking Based on OS-Level Audit Logs</strong><br />
+			  Yue Li, Zhenyu Wu, Haining Wang, Kun Sun, Zhichun Li, Kangkook Jee, Junghwan Rhee, and Haifeng Chen<br />
+			  To appear in the 11th ACM Conference on Data and Application Security and Privacy (CODASPY) <br />
+ April 26 - 28, 2021. Taking place virtually. <br />
+			  [<a href="https://csis.gmu.edu/ksun/publications/CODASPY21-UTrack.pdf">Paper</a>]
+			  </div>
+		    </div>
+		    
+		    <div class="isotope-item col-md-12 aisecurity">
+			  <div class="col-md-2 col-xs-12 publication-venue">
+			    INFOCOM 2021
+			  </div>
+			  <div class="col-md-10 col-xs-12 publication-item">
+			  <strong>Detecting Localized Adversarial Examples: A Generic Approach using Critical Region Analysis</strong><br />
+			  Fengting Li, Xuankai Liu, Xiaoli Zhang, Qi Li, Kun Sun, and Kang Li<br />
+			  To appear in the IEEE International Conference on Computer Communications (INFOCOM) <br />
+			  10-13 May 2021. Virtual Conference.<br />
+			   [<a href="https://csis.gmu.edu/ksun/publications/INFOCOM21_TaintRadar.pdf">Paper</a>]
+			  </div>
+		    </div>
+
+		    <div class="isotope-item col-md-12 trustworthy">
+			  <div class="col-md-2 col-xs-12 publication-venue">
+				ASIACCS 2021
+			  </div>
+			  <div class="col-md-10 col-xs-12 publication-item">
+			  <strong>See through Walls: Detecting Malware in SGX Enclaves with SGX-Bouncer</strong><br />
+			  Zeyu Zhang, Xiaoli Zhang, Qi Li, Kun Sun, Yinqian Zhang, SongSong Liu, Yukun Liu, and Xiaoning Li<br />
+			  To appear in The ACM Asia Conference on Computer and Communications Security (ACM ASIACCS)<br />
+			  Hong Kong, China, June 7-11, 2021<br />
+			  Acceptance ratio: 18.47%=29/157<br />
+			  [<a href="https://csis.gmu.edu/ksun/publications/asiaccs21_sgxmalware.pdf">Paper</a>]
+			  </div>
+		    </div>
+		    <div class="isotope-item col-md-12 trustworthy">
+			  <div class="col-md-2 col-xs-12 publication-venue">
+			    SenSys 2020
+			  </div>
+			  <div class="col-md-10 col-xs-12 publication-item">
+			  <strong>TrustICT: An Efficient Trusted Interaction Interface between Isolated Execution Domains on ARM Multi-core Processors</strong><br />
+			  Jie Wang, Yuewu Wang, Lingguang Lei, Kun Sun, Jiwu Jing, and Quan Zhou<br />
+			  To appear in the 18th ACM Conference on Embedded Networked Sensor Systems (SenSys)<br />
+			  Yokohama, Japan November 16-19, 2020<br />
+			   [<a href="https://csis.gmu.edu/ksun/publications/sensys20-trustict.pdf">Paper</a>]
+			  </div>
+		    </div>
+		    <div class="isotope-item col-md-12 trustworthy">
+			  <div class="col-md-2 col-xs-12 publication-venue">
+			    ACSAC 2020
+			  </div>
+			  <div class="col-md-10 col-xs-12 publication-item">
+			  <strong>RusTEE: Developing Memory-Safe ARM TrustZone Applications</strong><br />
+			  Shengye Wan, Mingshen Sun, Kun Sun, Ning Zhang, and Xu He<br />
+			  To appear in Annual Computer Security Applications Conference (ACSAC)<br />
+			  Austin, Texas, USA, December 7-11, 2020<br />
+			  [<a href="https://csis.gmu.edu/ksun/publications/ACSAC20_RusTEE_2020.pdf">Paper</a>]
+			  </div>
+		    </div>
+		    <div class="isotope-item col-md-12 softwaresecurity">
+			  <div class="col-md-2 col-xs-12 publication-venue">
+			    ISC 2020
+			  </div>
+			  <div class="col-md-10 col-xs-12 publication-item">
+			  <strong>Evaluation on the Security of Commercial Cloud Container Services</strong><br />
+			  Yifei Wu, Lingguang Lei, Yuewu Wang, Kun Sun, and Jingzi Meng<br />
+			  To appear in the 23th Information Security Conference (ISC)<br />
+			  Bali, Indonesian, December 16-19, 2020<br />
+			  Acceptance ratio: 25.50%=23/90<br />
+			  [<a href="https://csis.gmu.edu/ksun/publications/ISC20-containerEval.pdf">Paper</a>]
+			  </div>
+		    </div>
+		    <div class="isotope-item col-md-12 trustworthy">
+			  <div class="col-md-2 col-xs-12 publication-venue">
+			    CCS 2020
+			  </div>
+			  <div class="col-md-10 col-xs-12 publication-item">
+			  <strong>Cache-in-the-Middle (CITM) Attacks : Manipulating Sensitive Data in Isolated Execution Environments</strong><br />
+			  Jie Wang, Kun Sun, Lingguang Lei, Shengye Wan, Yuewu Wang, and Jiwu Jing<br />
+			  To appear in ACM Conference on Computer and Communications Security (CCS)<br />
+			  Orlando, USA, November 9-13, 2020<br />
+			  [<a href="https://csis.gmu.edu/ksun/publications/CITM_CCS20.pdf">Paper</a>]
+			  </div>
+		    </div>
+		    <div class="isotope-item col-md-12 networksecurity">
+			  <div class="col-md-2 col-xs-12 publication-venue">
+			  CCS 2020
+			  </div>
+			  <div class="col-md-10 col-xs-12 publication-item">
+			  <strong>Off-Path TCP Exploits of the Mixed IPID Assignment</strong><br />
+			  Xuewei Feng, Chuanpu Fu, Qi Li, Kun Sun, and Ke Xu<br />
+			  To appear in ACM Conference on Computer and Communications Security (CCS)<br />
+			  Orlando, USA, November 9-13, 2020<br />
+			  [<a href="https://csis.gmu.edu/ksun/publications/IPID_side_channel_CCS20.pdf">Paper</a>]
+			  </div>
+		    </div>
+		    <div class="isotope-item col-md-12 aisecurity">
+			  <div class="col-md-2 col-xs-12 publication-venue">
+			  CCS 2020
+			  </div>
+			  <div class="col-md-10 col-xs-12 publication-item">
+			  <strong>When the Differences in Frequency Domain are Compensated: Understanding and Defeating Modulated Replay Attacks on Automatic Speech Recognition</strong><br />
+			  Shu Wang, Jiahao Cao, Xu He, Kun Sun, and Qi Li<br />
+			  To appear in ACM Conference on Computer and Communications Security (CCS)<br />
+			  Orlando, USA, November 9-13, 2020<br />
+			  [<a href="https://csis.gmu.edu/ksun/publications/ModReplay_CCS20.pdf">Paper</a>]
+			  </div>
+		    </div>
+		    <div class="isotope-item col-md-12 trustworthy">
+			  <div class="col-md-2 col-xs-12 publication-venue">
+			  SecureComm 2020
+			  </div>
+			  <div class="col-md-10 col-xs-12 publication-item">
+			  <strong>SGX-Cube: An SGX-Enhanced Single Sign-On System against Server-side Credential Leakage</strong><br />
+			  Songsong Liu, Qiyang Song, Kun Sun, and Qi Li<br />
+			  To appear in the 16th EAI International Conference on Security and Privacy in Communication Networks (SecureComm)<br />
+			  Washington D.C., USA, October 21-23, 2020<br />
+			  [<a href="https://csis.gmu.edu/ksun/publications/SecureComm2020_SGX_SSO.pdf">Paper</a>]
+			  </div>
+		    </div>
+		    <div class="isotope-item col-md-12 aisecurity">
+			  <div class="col-md-2 col-xs-12 publication-venue">
+			  RAID 2020
+			  </div>
+			  <div class="col-md-10 col-xs-12 publication-item">
+			  <strong>SIEVE: Secure In-Vehicle Automatic Speech Recognition Systems</strong><br />
+			  Shu Wang, Jiahao Cao, Kun Sun, and Qi Li<br />
+			  To appear in the International Symposium on Research in Attacks, Intrusions and Defenses (RAID)<br />
+			  Donostia/San Sebastian, Spain, October 14-16, 2020<br />
+			  Acceptance ratio: 24.79%=31/121<br />
+			  [<a href="https://csis.gmu.edu/ksun/publications/SIEVE_RAID20.pdf">Paper</a>]
+			  </div>
+		    </div>
+		    <div class="isotope-item col-md-12 mobilephone">
+			  <div class="col-md-2 col-xs-12 publication-venue">
+			  TDSC 2020
+			  </div>
+			  <div class="col-md-10 col-xs-12 publication-item">
+			  <strong>JNI Global References Are Still Vulnerable: Attacks and Defenses</strong><br />
+			  Yi He, Yuan Zhou, Yajin Zhou, Qi Li, Kun Sun, Yacong Gu, and Yong Jiang<br />
+			  To appear in the Transactions on Dependable and Secure Computing (TDSC)<br />
+			  2020<br />
+			  [pdf]
+			  </div>
+		    </div>
+		    <div class="isotope-item col-md-12 aisecurity softwaresecurity">
+			  <div class="col-md-2 col-xs-12 publication-venue">
+			  CNS 2020
+			  </div>
+			  <div class="col-md-10 col-xs-12 publication-item">
+			  <strong>A Machine Learning Approach to Classify Security Patches into Vulnerability Types</strong><br />
+			  Xinda Wang, Shu Wang, Kun Sun, Archer Batcheller, and Sushil Jajodia<br />
+			  To appear in IEEE Conference on Communications and Network Security (CNS)<br />
+			  Virtual Conference, 29 June – 1 July 2020<br />
+			  [<a href="https://csis.gmu.edu/ksun/publications/CNS20_PatchByType.pdf">Paper</a>]
+			  </div>
+		    </div>
+		    <div class="isotope-item col-md-12 mtdcd">
+			  <div class="col-md-2 col-xs-12 publication-venue">
+			  CNS 2020
+			  </div>
+			  <div class="col-md-10 col-xs-12 publication-item">
+			  <strong>Towards a Believable Decoy System: Replaying Network Activities from Real System</strong><br />
+			  Jianhua Sun, Kun Sun, and Qi Li<br />
+			  To appear in IEEE Conference on Communications and Network Security (CNS)<br />
+			  Virtual Conference, 29 June – 1 July 2020<br />
+			  [<a href="https://csis.gmu.edu/ksun/publications/CNS20_Mirage.pdf">Paper</a>]
+			  </div>
+		    </div>
+		    <div class="isotope-item col-md-12 passwordmanagement">
+			  <div class="col-md-2 col-xs-12 publication-venue">
+			  TDSC 2020
+			  </div>
+			  <div class="col-md-10 col-xs-12 publication-item">
+			  <strong>Understanding Account Recovery in the Wild and Its Security Implications</strong><br />
+			  Yue Li, Zeyu Chen, Haining Wang, Kun Sun, and Sushil Jajodia<br />
+			  To appear in the Transactions on Dependable and Secure Computing (TDSC)<br />
+			  2020<br />
+			  [pdf]
+			  </div>
+		    </div>
+		    <div class="isotope-item col-md-12 networksecurity">
+			  <div class="col-md-2 col-xs-12 publication-venue">
+			  NDSS 2020
+			  </div>
+			  <div class="col-md-10 col-xs-12 publication-item">
+			  <strong>When Match Fields Do Not Need to Match: Buffered Packets Hijacking in SDN</strong><br />
+			  Jiahao Cao, Renjie Xie, Kun Sun, Qi Li, Guofei Gu, and Mingwei Xu<br />
+			  To appear in the Network and Distributed System Security Symposium (NDSS)<br />
+			  San Diego, CA, February 23-26, 2020<br />
+			  [<a href="https://csis.gmu.edu/ksun/publications/BPHijack_NDSS20.pdf">Paper</a>]
+			  </div>
+		    </div>
+
+
+
+		  <!---
+		  Scrapper
+		  -->
+		    <div class="isotope-item col-md-12 mtdcd">
+			  <div class="col-md-2 col-xs-12 publication-venue">
+			  ICICS 2019
+			  </div>
+			  <div class="col-md-10 col-xs-12 publication-item">
+			  <strong>UBER: Combating Sandbox Evasion via User Behavior Emulators</strong><br />
+			  Pengbin Feng, Jianhua Sun, Songsong Liu, and Kun Sun<br />
+			  Proceedings of the 21st International Conference on Information and Communications Security (ICICS)<br />
+			  Beijing, China, December 15-17, 2019<br />
+			  Acceptance ratio: 23.6%=47/199<br />
+			  [<a href=https://csis.gmu.edu/ksun/publications/User_Emulation_ICICS2019.pdf>Paper</a>]
+			  </div>
+		    </div>
+		    <div class="isotope-item col-md-12 aisecurity">
+			  <div class="col-md-2 col-xs-12 publication-venue">
+			  DSC 2019
+			  </div>
+			  <div class="col-md-10 col-xs-12 publication-item">
+			  <strong>Federated-Cloud Based Deep Neural Networks with Privacy-Preserving Image Filtering Techniques</strong><br />
+			  Isabelle Choi, Qiyang Song, and Kun Sun<br />
+			  Proceedings of the 2019 IEEE Conference on Dependable and Secure Computing (DSC)<br />
+			  Hangzhou, China, November 18-20, 2019.<br />
+			  </div>
+		    </div>
+		    <div class="isotope-item col-md-12 mtdcd">
+			  <div class="col-md-2 col-xs-12 publication-venue">
+			  MTD 2019
+			  </div>
+			  <div class="col-md-10 col-xs-12 publication-item">
+			  <strong>A Scalable High Fidelity Decoy Framework against Sophisticated Cyber Attacks</strong><br />
+			  Jianhua Sun, Songsong Liu, and Kun Sun<br />
+			  Proceedings of the 6th ACM Workshop on Moving Target Defense (MTD) in conjunction with the 26th ACM Conference on Computer and Communications Security (ACM CCS)<br />
+			  London, UK, November 11, 2019<br />
+			  [<a href=https://csis.gmu.edu/ksun/publications/MTD19_DecoyNet.pdf>Paper</a>]
+			  </div>
+		    </div>
+		    <div class="isotope-item col-md-12 mobilephone">
+			  <div class="col-md-2 col-xs-12 publication-venue">
+			  TDSC 2019
+			  </div>
+			  <div class="col-md-10 col-xs-12 publication-item">
+			  <strong>Vulnerable Service Invocation and Countermeasures</strong><br />
+			  Huan Chang, Lingguang Lei, Kun Sun, Yuewu Wang, Jiwu Jing, Yi He, and Pingjian Wang<br />
+			  To appear in IEEE Transactions on Dependable and Secure Computing (TDSC)<br />
+			  </div>
+		    </div>
+		    <div class="isotope-item col-md-12 trustworthy">
+			  <div class="col-md-2 col-xs-12 publication-venue">
+			  ESORICS 2019
+			  </div>
+			  <div class="col-md-10 col-xs-12 publication-item">
+			  <strong>OCRAM-assisted Sensitive Data Protection on ARM-based Platform</strong><br />
+			  Dawei Chu, Yuewu Wang, Lingguang Lei, Yanchu Li, Jiwu Jing, and Kun Sun<br />
+			  In the European Symposium on Research in Computer Security (ESORICS)<br />
+			  Luxembourg, September 23-27, 2019<br />
+			  Acceptance ratio: 19.5%=67/344<br />
+			  [<a href=https://csis.gmu.edu/ksun/publications/OCRAM_ESORICS2019.pdf>Paper</a>]
+			  </div>
+		    </div>
+		    <div class="isotope-item col-md-12 networksecurity">
+			  <div class="col-md-2 col-xs-12 publication-venue">
+			  SecureComm 2019
+			  </div>
+			  <div class="col-md-10 col-xs-12 publication-item">
+			  <strong>Covert Channels in SDN: Leaking Out Information from Controllers to End Hosts</strong><br />
+			  Jiahao Cao, Kun Sun, Qi Li, Mingwei Xu, Zijie Yang, Kyung Joon Kwak, and Jason Li<br />
+			  In the 15th International Conference on Security and Privacy in Communication Networks (SecureComm)<br />
+			  Orlando, FL, USA, October 23-25, 2019<br />
+			  [<a href=https://csis.gmu.edu/ksun/publications/Securecomm2019_CovertChannels_SDN.pdf>Paper</a>]
+			  </div>
+		    </div>
+		    <div class="isotope-item col-md-12 networksecurity">
+			  <div class="col-md-2 col-xs-12 publication-venue">
+			  SecureComm 2019
+			  </div>
+			  <div class="col-md-10 col-xs-12 publication-item">
+			  <strong>Automated IoT Device Fingerprinting Through Encrypted Stream Classification</strong><br />
+			  Jianhua Sun, Kun Sun, and Chris Shenefiel<br />
+			  In the 15th International Conference on Security and Privacy in Communication Networks (SecureComm)<br />
+			  Orlando, FL, USA, October 23-25, 2019<br />
+			  [<a href=https://csis.gmu.edu/ksun/publications/SecureComm19_IoT.pdf>Paper</a>]
+			  </div>
+		    </div>
+		    <div class="isotope-item col-md-12 networksecurity">
+			  <div class="col-md-2 col-xs-12 publication-venue">
+			  RAID 2019
+			  </div>
+			  <div class="col-md-10 col-xs-12 publication-item">
+			  <strong>Fingerprinting SDN Applications via Encrypted Control Traffic</strong><br />
+			  Jiahao Cao, Zijie Yang, Kun Sun, Qi Li, Mingwei Xu, and Peiyi Han<br />
+			  In the 22nd International Symposium on Research in Attacks, Intrusions and Defenses (RAID)<br />
+			  September 23-25, 2019<br />
+			  Acceptance ratio: 22.28%=37/166<br />
+			  [<a href=https://csis.gmu.edu/ksun/publications/SDNfingerprint-raid2019.pdf>Paper</a>]
+			  </div>
+		    </div>
+		    <div class="isotope-item col-md-12 trustworthy">
+			  <div class="col-md-2 col-xs-12 publication-venue">
+			  DSN 2019
+			  </div>
+			  <div class="col-md-10 col-xs-12 publication-item">
+			  <strong>SATIN: A Secure and Trustworthy Asynchronous Introspection onMulti-Core ARM Processors</strong><br />
+			  Shengye Wan, Jianhua Sun, Kun Sun, Ning Zhang, and Qi Li<br />
+			  In the 49th Annual IEEE/IFIP International Conference on Dependable Systems and Networks (DSN)<br />
+			  Portland, Oregon, June 24-27, 2019<br />
+			  Acceptance ratio: 21.40%=54/252<br />
+			  [<a href=https://csis.gmu.edu/ksun/publications/SATIN-DSN2019.pdf>Paper</a>]
+			  </div>
+		    </div>
+		    <div class="isotope-item col-md-12 softwaresecurity">
+			  <div class="col-md-2 col-xs-12 publication-venue">
+			  DSN 2019
+			  </div>
+			  <div class="col-md-10 col-xs-12 publication-item">
+			  <strong>Detecting "0-Day" Vulnerability: An Empirical Study of Secret Security Patch in OSS (short paper)</strong><br />
+			  Xinda Wang, Kun Sun, Archer Batcheller, and Sushil Jajodia<br />
+			  In the 49th Annual IEEE/IFIP International Conference on Dependable Systems and Networks (DSN)<br />
+			  Portland, Oregon, June 24-27, 2019<br />
+			  Acceptance ratio: 21.40%=54/252<br />
+			  [<a href=https://csis.gmu.edu/ksun/publications/secretpatch-dsn19.pdf>Paper</a>]
+			  </div>
+		    </div>
+		    <div class="isotope-item col-md-12 networksecurity">
+			  <div class="col-md-2 col-xs-12 publication-venue">
+			  Security 2019
+			  </div>
+			  <div class="col-md-10 col-xs-12 publication-item">
+			  <strong>The CrossPath Attack: Disrupting the SDN Control Channel via Shared Links</strong><br />
+			  Jiahao Cao, Qi Li, Renjie Xie, Kun Sun, Guofei Gu, Mingwei Xu, and Yuan Yang<br />
+			  In 28th USENIX Security Symposium (USENIX Security)<br />
+			  Santa Clara, CA, August 14-16, 2019<br />
+			  First round acceptance ratio: 9.8%=25/254<br />
+			  [<a href=https://csis.gmu.edu/ksun/publications/Crosspath-sec19.pdf>Paper</a>]
+			  </div>
+		    </div>
+		    <div class="isotope-item col-md-12 networksecurity">
+			  <div class="col-md-2 col-xs-12 publication-venue">
+			  CyberSecurity 2019
+			  </div>
+			  <div class="col-md-10 col-xs-12 publication-item">
+			  <strong>PathMarker: Protecting Web Contents against Inside Crawlers</strong><br />
+			  Shengye Wan, Yue Li, and Kun Sun<br />
+			  In CyberSecurity, Volume 2, number 1, February 20, 2019<br />
+			  </div>
+		    </div>
+		    <div class="isotope-item col-md-12 mtdcd">
+			  <div class="col-md-2 col-xs-12 publication-venue">
+			  ACSAC 2018
+			  </div>
+			  <div class="col-md-10 col-xs-12 publication-item">
+			  <strong>A Measurement Study on Linux Container Security: Attacks and Countermeasures</strong><br />
+			  Xin Lin, Yuewu Wang, Lingguang Lei, Jiwu Jing, Kun Sun, and Quan Zhou<br />
+			  In 2018 Annual Computer Security Applications Conference (ACSAC)<br />
+			  San Juan, Puerto Rico, December 3-7, 2018<br />
+			  Acceptance ratio: 20.1%=60/299<br />
+			  [<a href=https://csis.gmu.edu/ksun/publications/container-acsac18.pdf>Paper</a>]
+			  </div>
+		    </div>
+		    <div class="isotope-item col-md-12 networksecurity">
+			  <div class="col-md-2 col-xs-12 publication-venue">
+			  ICDCS 2018
+			  </div>
+			  <div class="col-md-10 col-xs-12 publication-item">
+			  <strong>CADET: Investigating a Collaborative and Distributed Entropy Transfer Protocol</strong><br />
+			  Kyle Wallace, Gang Zhou, and Kun Sun<br />
+			  In the 38th IEEE International Conference on Distributed Computing Systems (ICDCS)<br />
+			  Vienna, Austria, July 2-5, 2018<br />
+			  [<a href=https://csis.gmu.edu/ksun/publications/CADET_ICDCS18.pdf>Paper</a>]
+			  </div>
+		    </div>
+		    <div class="isotope-item col-md-12 trustworthy">
+			  <div class="col-md-2 col-xs-12 publication-venue">
+			  TIFS 2018
+			  </div>
+			  <div class="col-md-10 col-xs-12 publication-item">
+			  <strong>Memory Forensic Challenges Under Misused Architectural Features</strong><br />
+			  Ning Zhang, Ruide Zhang, Kun Sun, Wenjing Lou, Tom Hou, and Sushil Jajodia<br />
+			  In IEEE Transactions on Information Forensics and Security (TIFS), vol  13, no  9, pp  2345-2358<br />
+			  September 2018<br />
+			  </div>
+		    </div>
+		    <div class="isotope-item col-md-12 trustworthy">
+			  <div class="col-md-2 col-xs-12 publication-venue">
+			  INFOCOM 2018
+			  </div>
+			  <div class="col-md-10 col-xs-12 publication-item">
+			  <strong>TruSense: Information Leakage from TrustZone</strong><br />
+			  Ning Zhang, Kun Sun, Deborah Shands, Wenjing Lou, and Thomas Hou<br />
+			  In IEEE International Conference on Computer Communications (INFOCOM)<br /> 
+			  Honolulu, HI, April 15-19, 2018<br /> 
+			  Acceptance ratio: 19.2%=309/1,606<br />
+			  [<a href=https://csis.gmu.edu/ksun/publications/trusense-infocom18.pdf>Paper</a>]
+			  </div>
+		    </div>
+		    <div class="isotope-item col-md-12 passwordmanagement">
+			  <div class="col-md-2 col-xs-12 publication-venue">
+			  INFOCOM 2018
+			  </div>
+			  <div class="col-md-10 col-xs-12 publication-item">
+			  <strong>Email as a Master Key: Analyzing Account Recovery in the Wild</strong><br />
+			  Yue Li, Haining Wang, and Kun Sun<br />
+			  In IEEE International Conference on Computer Communications (INFOCOM)<br /> 
+			  Honolulu, HI, April 15-19, 2018<br />
+			  Acceptance ratio: 19.2%=309/1,606<br />
+			  [<a href=https://csis.gmu.edu/ksun/publications/Email-Passwd-infocom2018.pdf>Paper</a>]
+			  </div>
+		    </div>
+		  <div class="isotope-item col-md-12 mobilephone">
+			<div class="col-md-2 col-xs-12 publication-venue">
+			  CCS 2017
+			</div>
+			<div class="col-md-10 col-xs-12 publication-item">
+			<strong>Vulnerable Implicit Service: A Revisit</strong><br />
+			 Lingguang Lei, Yi He, Kun Sun, Jiwu Jing, Yuewu Wang, Qi Li, and Jian Weng<br />
+			 In the 24th ACM Conference on Computer and Communications Security (CCS)<br /> 
+			 Dallas, Texas, October 30-November 3, 2017<br />
+			 Acceptance ratio: 18%=151/836<br />
+			 [<a href=https://csis.gmu.edu/ksun/publications/implicit%20service-CCS2017.pdf>Paper</a>]
+			</div>
+		  </div>
+		  <div class="isotope-item col-md-12 passwordmanagement">
+			<div class="col-md-2 col-xs-12 publication-venue">
+			  SecureComm 2017
+			</div>
+			<div class="col-md-10 col-xs-12 publication-item">
+			<strong>BluePass: A Secure Hand-free Password Manager</strong><br />
+			 Yue Li, Haining Wang, and Kun Sun<br />
+			 In the International Conference on Security and Privacy in Communication Networks (SECURECOMM)<br /> 
+			 Niagara Falls, CANADA, October 22-25, 2017<br /> 
+			 Acceptance ratio (full paper): 29.5%=31/105<br /> 
+			 [<a href=https://csis.gmu.edu/ksun/publications/Securecomm2018_BluePass.pdf>Paper</a>]
+			</div>
+		  </div>
+		  <div class="isotope-item col-md-12 mobilephone">
+			<div class="col-md-2 col-xs-12 publication-venue">
+			  SecureComm 2017
+			</div>
+			<div class="col-md-10 col-xs-12 publication-item">
+			<strong>LinkFlow: Efficient Large-Scale Inter-App Privacy Leakage Detection</strong><br />
+			Yi He, Qi Li, and Kun Sun<br />
+			in the International Conference on Security and Privacy in Communication Networks (SECURECOMM)<br />
+			Niagara Falls, CANADA, October 22-25, 2017<br />
+			Acceptance ratio (full paper): 29.5%=31/105<br />
+			[<a href=https://csis.gmu.edu/ksun/publications/Securecomm2018_LinkFlow.pdf>Paper</a>]
+			</div>
+		  </div>
+		  <div class="isotope-item col-md-12 networksecurity">
+			<div class="col-md-2 col-xs-12 publication-venue">
+			  SecureComm 2017
+			</div>
+			<div class="col-md-10 col-xs-12 publication-item">
+			<strong>Disrupting SDN via the Data Plane: A Low-Rate Flow Table Overflow Attack</strong><br />
+			 Jiahao Cao, Mingwei Xu, Qi Li, Kun Sun, Yuan Yang, and Jing Zheng<br />
+			 In the International Conference on Security and Privacy in Communication Networks (SECURECOMM)<br />
+			 Niagara Falls, CANADA, October 22-25, 2017<br />
+			 Acceptance ratio (full paper): 29.5%=31/105<br />
+			 [<a href=https://csis.gmu.edu/ksun/publications/LOFT-securecomm2017.pdf>Paper</a>]
+			</div>
+		  </div>
+		  <div class="isotope-item col-md-12 mtdcd">
+			<div class="col-md-2 col-xs-12 publication-venue">
+			  CNS 2017
+			</div>
+			<div class="col-md-10 col-xs-12 publication-item">
+			  <strong>CyberMoat: Camouflaging Critical Server Infrastructures with Large Scale Decoy Farms</strong><br />
+			  Jianhua Sun, Kun Sun, and Qi Li<br />
+			  In IEEE Conference on Communications and Network Security (CNS)<br />
+			  Las Vegas, NV,October 9-11, 2017<br />
+			  Acceptance ratio: 29.99%=41/137<br />
+			  [<a href=https://csis.gmu.edu/ksun/publications/Cybermoat-cns2017.pdf>Paper</a>]
+			</div>
+		  </div>
+		  <div class="isotope-item col-md-12 passwordmanagement">
+			<div class="col-md-2 col-xs-12 publication-venue">
+			  TIFS 2017
+			</div>
+			<div class="col-md-10 col-xs-12 publication-item">
+			  <strong>Personal Information in Passwords and Its Security Implications</strong><br />
+			  Yue Li, Haining Wang, and Kun Sun<br />
+			  In IEEE Transactions on Information Forensics and Security (TIFS) page 2320-2333, Vol 12, Issue 10<br />
+			  October 2017<br />
+			</div>
+		  </div>
+		  <div class="isotope-item col-md-12 mtdcd">
+			<div class="col-md-2 col-xs-12 publication-venue">
+			  DIMVA 2017
+			</div>
+			<div class="col-md-10 col-xs-12 publication-item">
+			  <strong>SPEAKER: Split-Phase Execution of Application Containers</strong><br />
+			  Lingguang Lei, Jianhua Sun, Kun Sun, Chris Shenefiel, Rui Ma, Yuewu Wang, and Qi Li<br />
+			  In the 14th Conference on Detection of Intrusions and Malware &amp; Vulnerability Assessment (DIMVA)<br />
+			  Bonn, Germany, July 6-7  2017<br />
+			  Acceptance ratio: 26.86%=18/67<br />
+			  [<a href=https://csis.gmu.edu/ksun/publications/SPEAKER-DIMVA2017.pdf>Paper</a>]
+			</div>
+		  </div>
+		  <div class="isotope-item col-md-12 mobilephone">
+			<div class="col-md-2 col-xs-12 publication-venue">
+			  DSN 2017
+			</div>
+			<div class="col-md-10 col-xs-12 publication-item">
+			  <strong>JGRE: An Analysis of JNI Global Reference Exhaustion Vulnerabilities in Android</strong><br />
+			  Yacong Gu, Kun Sun, Purui Su, Qi Li, Yemian Lu, Lingyun Ying, and Denguo Feng<br />
+			  In the 47th Annual IEEE/IFIP International Conference on Dependable Systems and Networks (DSN)<br />
+			  Denver, CO, June 26-29, 2017<br />
+			  Acceptance ratio: 22.27%=49/220<br />
+			  [<a href=https://csis.gmu.edu/ksun/publications/JGRE-DSN2017.pdf>Paper</a>]
+			</div>
+		  </div>
+		  <div class="isotope-item col-md-12 networksecurity">
+			<div class="col-md-2 col-xs-12 publication-venue">
+			  ICC 2017
+			</div>
+			<div class="col-md-10 col-xs-12 publication-item">
+			  <strong>Protecting Web Contents against Persistent Distributed Crawlers</strong><br />
+			  Shengye Wan, Yue Li, and Kun Sun<br />
+			  In the IEEE ICC 2017, Communication and Information Systems Security Symposium<br />
+			  Paris, France, 2017<br />
+			  [<a href=https://csis.gmu.edu/ksun/publications/icc17_anti_crawler.pdf>Paper</a>]
+			</div>
+		  </div>
+		  <div class="isotope-item col-md-12 networksecurity">
+			<div class="col-md-2 col-xs-12 publication-venue">
+			  ICC 2017
+			</div>
+			<div class="col-md-10 col-xs-12 publication-item">
+			  <strong>A Measurement Study on Amazon Wishlist and Its Privacy Exposure</strong><br />
+			  Yue Li, Nan Zheng, Haining Wang, Kun Sun, and Hui Fang<br />
+			  In the IEEE ICC 2017, Communication and Information Systems Security Symposium<br />
+			  Paris, France, 2017<br />
+			  [<a href=https://csis.gmu.edu/ksun/publications/icc17_wishlist.pdf>Paper</a>]
+			</div>
+		  </div>
+		  <div class="isotope-item col-md-12 networksecurity">
+			<div class="col-md-2 col-xs-12 publication-venue">
+			  CC 2017
+			</div>
+			<div class="col-md-10 col-xs-12 publication-item">
+			  <strong>FEC-Seluge: Efficient, Reliable, and Secure Large Data Dissemination using Erasure Codes</strong><br />
+			  Gangwon Hyun, Kun Sun, and Peng Ning<br />
+			  In Computer Communications, 104, 191-203<br />
+			  May 2017<br />
+			</div>
+		  </div>
+		  <div class="isotope-item col-md-12 unknown">
+			<div class="col-md-2 col-xs-12 publication-venue">
+			  IoT 2016
+			</div>
+			<div class="col-md-10 col-xs-12 publication-item">
+			  <strong>Toward Sensor-Based Random Number Generation for Mobile and IoT Devices</strong><br />
+			  Kyle Wallace, Kevin Moran, Ed Novak, Gang Zhou, and Kun Sun<br />
+			  In the IEEE Internet of Things Journal, vol  3, no  6, pp  1189-1201<br />
+			  December 2016.<br />
+			</div>
+		  </div>
+		  <div class="isotope-item col-md-12 passwordmanagement">
+			<div class="col-md-2 col-xs-12 publication-venue">
+			  ICDCS 2016
+			</div>
+			<div class="col-md-10 col-xs-12 publication-item">
+			<strong>Amnesia: A Bilateral Generative Password Manager</strong><br />
+			Luren Wang, Yue Li, and Kun Sun<br />
+			in the 36th IEEE International Conference on Distributed Computing Systems (ICDCS)<br />
+			Nara, Japan, June 27-30, 2016<br />
+			Acceptance ratio: 17.62%=68/386<br />
+			[<a href=https://csis.gmu.edu/ksun/publications/Amnesia-icdcs16.pdf>Paper</a>]
+			</div>
+		  </div>
+		  <div class="isotope-item col-md-12 trustworthy">
+			<div class="col-md-2 col-xs-12 publication-venue">
+			  S&P 2016
+			</div>
+			<div class="col-md-10 col-xs-12 publication-item">
+			<strong>CaSE: Cache-Assisted Secure Execution on ARM Processors</strong><br />
+			Ning Zhang, Kun Sun, Wenjing Lou, and Tom Hou<br />
+			in the 37th IEEE Symposium on Security and Privacy (S&amp;P)<br />
+			San Jose, CA, USA, MAY 23-25, 2016<br />
+			Acceptance ratio: 13.75%=55/400<br />
+			[<a href=https://csis.gmu.edu/ksun/publications/CaSE-sp2016.pdf>Paper</a>]
+			</div>
+		  </div>
+		  <div class="isotope-item col-md-12 unknown">
+			<div class="col-md-2 col-xs-12 publication-venue">
+			  ASIACCS 2016
+			</div>
+			<div class="col-md-10 col-xs-12 publication-item">
+			<strong>Privacy Breach by Exploiting postMessage in HTML5: Identification, Evaluation, and Countermeasure</strong><br />
+			Chong Guan, Kun Sun, Zhan Wang, and Wen Tao Zhu<br />
+			in the 11th ACM Symposium on Information, Compute rand Communications Security (ASIACCS)<br />
+			Xi'an, China, May 30 June 3, 2016<br />
+			Acceptance ratio: 20.9%=73/350 (full paper)<br />
+			[<a href="https://csis.gmu.edu/ksun/publications/postmessage-asiaccs16.Paper">Paper</a>]
+			</div>
+		  </div>
+		  <div class="isotope-item col-md-12 passwordmanagement">
+			<div class="col-md-2 col-xs-12 publication-venue">
+			  INFOCOM 2016
+			</div>
+			<div class="col-md-10 col-xs-12 publication-item">
+			<strong>A Study of Personal Information in Human-chosen Passwords and Its Security Implications</strong><br />
+			Yue Li, Haining Wang, and Kun Sun<br />
+			in IEEE International Conference on Computer Communications (INFOCOM)<br />
+			San Francisco, CA, April 10-15, 2016<br />
+			Acceptance ratio: 18.25%=300/1,644<br />
+			[<a href=https://csis.gmu.edu/ksun/publications/Password-infocom2016.pdf>Paper</a>]
+			</div>
+		  </div>
+		  <div class="isotope-item col-md-12 mtdcd">
+			<div class="col-md-2 col-xs-12 publication-venue">
+			  INFOCOM 2016
+			</div>
+			<div class="col-md-10 col-xs-12 publication-item">
+			  <strong>DESIR: Decoy-Enhanced Seamless IP Randomization</strong><br />
+			  Jianhua Sun and Kun Sun<br />
+			  In IEEE International Conference on Computer Communications (INFOCOM)<br />
+			  San Francisco, CA, April 10-15, 2016<br />
+			  Acceptance ratio: 18.25%=300/1,644<br />
+			  [<a href=https://csis.gmu.edu/ksun/publications/Desir-infocom2016.pdf>Paper</a>]
+			</div>
+		  </div>
+		  <div class="isotope-item col-md-12 trustworthy">
+			<div class="col-md-2 col-xs-12 publication-venue">
+			  EuroS&P 2016
+			</div>
+			<div class="col-md-10 col-xs-12 publication-item">
+			  <strong>CacheKit: Evading Memory Introspection Using Cache Incoherence</strong><br />
+			  Ning Zhang, He Sun, Kun Sun, Wenjing Lou, and Thomas Hou<br />
+			  In the 1st IEEE European Symposium on Security and Privacy (EuroS&amp;P)<br />
+			  Saarbrücken, GERMANY, March 21-24, 2016<br />
+			  Acceptance ratio: 17.26%=29/168<br />
+			  [<a href=https://csis.gmu.edu/ksun/publications/CacheKit-eurosp2016.pdf>Paper</a>]
+			</div>
+		  </div>
+		  <div class="isotope-item col-md-12 mtdcd">
+			<div class="col-md-2 col-xs-12 publication-venue">
+			  GameSec 2015
+			</div>
+			<div class="col-md-10 col-xs-12 publication-item">
+			<strong>A Game-Theoretic Approach to IP Address Randomization in Decoy-Based Cyber Defense</strong><br />
+			Andrew Clark, Kun Sun, Linda Bushnell, and Radha Poovendran<br />
+			in the Sixth Conference on Decision and Game Theory for Security (GameSec)<br />
+			London, UK, on November 4-5, 2015<br />
+			Acceptance ratio: 43.24%=16/37 (full papers)<br />
+			[<a href=https://csis.gmu.edu/ksun/publications/GameSec_2015.pdf>Paper</a>]
+			</div>
+		  </div>
+		  <div class="isotope-item col-md-12 trustworthy">
+			<div class="col-md-2 col-xs-12 publication-venue">
+			  TIFS 2015
+			</div>
+			<div class="col-md-10 col-xs-12 publication-item">
+			  <strong>Reliable and Trustworthy Memory Acquisition on Smartphones</strong><br />
+			  He Sun, Kun Sun, Yuewu Wang, and Jiwu Jing<br />
+			  In Information Forensics and Security, IEEE Transactions on (TIFS), vol.10, no.12, pp.2547-2561<br />
+			  December 2015<br />
+			</div>
+		  </div>
+		  <div class="isotope-item col-md-12 trustworthy passwordmanagement">
+			<div class="col-md-2 col-xs-12 publication-venue">
+			  CCS 2015
+			</div>
+			<div class="col-md-10 col-xs-12 publication-item">
+			  <strong>TrustOTP: Transforming Smartphones into Secure One-Time Password Tokens</strong><br />
+			  He Sun, Kun Sun, Yuewu Wang, and Jiwu Jing<br />
+			  In the 22nd ACM Conference on Computer and Communications Security (CCS)<br />
+			  Denver, Colorado, October 12-16, 2015<br />
+			  Acceptance ratio: 19.81%=128/646<br />
+			  [<a href=https://csis.gmu.edu/ksun/publications/TrustOTP-ccs2015.pdf>Paper</a>]
+			</div>
+		  </div>
+		  <div class="isotope-item col-md-12 mobilephone">
+			<div class="col-md-2 col-xs-12 publication-venue">
+			  SRDS 2015
+			</div>
+			<div class="col-md-10 col-xs-12 publication-item">
+			  <strong>PmDroid: Permission Supervision for Android Advertising</strong><br />
+			  Xing Gao, Dachuan Liu, Haining Wang, and Kun Sun<br />
+			  In the 34th Symposium on Reliable Distributed Systems (SRDS)<br />
+			  Montreal, Canada, September 28 - October 01, 2015<br />
+			  Acceptance ratio: 29.63%=24/81 (regular papers)<br />
+			  [<a href="https://csis.gmu.edu/ksun/publications/pmdroid-srds2015.Paper">Paper</a>]
+			</div>
+		  </div>
+		  <div class="isotope-item col-md-12 trustworthy">
+			<div class="col-md-2 col-xs-12 publication-venue">
+			  DSN 2015
+			</div>
+			<div class="col-md-10 col-xs-12 publication-item">
+			  <strong>TrustICE: Hardware-assisted Isolated Computing Environments on Mobile Devices</strong><br />
+			  He Sun, Kun Sun, Yuewu Wang, Jiwu Jing, and Haining Wang<br />
+			  In the 45th Annual IEEE/IFIP International Conference on Dependable Systems and Networks (DSN)<br />
+			  Rio de Janeiro, Brazil, June 22-25, 2015<br />
+			  Acceptance ratio: 21.83%=50/229<br />
+			  [<a href=https://csis.gmu.edu/ksun/publications/TrustICE-dsn2015.pdf>Paper</a>]
+			</div>
+		  </div>
+		  <div class="isotope-item col-md-12 trustworthy">
+			<div class="col-md-2 col-xs-12 publication-venue">
+			  S&P 2015
+			</div>
+			<div class="col-md-10 col-xs-12 publication-item">
+			  <strong>Using Hardware Features for Increased Debugging Transparency</strong><br />
+			  Fengwei Zhang, Kevin Leach, Angelos Stavrou, HainingWang, and Kun Sun<br />
+			  In the 36th IEEE Symposium on Security and Privacy (S&amp;P)<br />
+			  Fairmont, San Jose, CA, May 18-20, 2015<br />
+			  Acceptance ratio:13.51%=55/407<br />
+			  [<a href=https://csis.gmu.edu/ksun/publications/Malt-sp2015.pdf>Paper</a>]
+			</div>
+		  </div>
+		  <div class="isotope-item col-md-12 trustworthy">
+			<div class="col-md-2 col-xs-12 publication-venue">
+			  ASIACCS 2015
+			</div>
+			<div class="col-md-10 col-xs-12 publication-item">
+			  <strong>Now You See Me: Hide and Seek in Physical Address Space</strong><br />
+			  Ning Zhang, Kun Sun,Wenjing Lou, Y  Thomas Hou, and Sushil Jajodia<br />
+			  In the 10th ACM Symposium on Information, Compute rand Communications Security (ASIACCS)<br />
+			  Singapore, April 14-17, 2015<br />
+			  Acceptance ratio: 17.84%=48/269 (full paper)<br />
+			  [<a href=https://csis.gmu.edu/ksun/publications/NowYouSeeMe-asiaccs2015.pdf>Paper</a>]
+			</div>
+		  </div>
+		  <div class="isotope-item col-md-12 mobilephone">
+			<div class="col-md-2 col-xs-12 publication-venue">
+			  NDSS 2015
+			</div>
+			<div class="col-md-10 col-xs-12 publication-item">
+			  <strong>DeepDroid: Dynamically Enforcing Enterprise Policy on Android Devices</strong><br />
+			  Xueqiang Wang, Kun Sun, Yuewu Wang, and Jiwu Jing<br />
+			  In the 22nd Annual Network &amp; Distributed System Security Symposium (NDSS)<br />
+			  San Diego, California, February 2015<br />
+			  Acceptance ratio: 16.88%=51/302<br />
+			  [<a href=https://csis.gmu.edu/ksun/publications/DeepDroid-ndss2015.pdf>Paper</a>]
+			</div>
+		  </div>
+		  <div class="isotope-item col-md-12 trustworthy">
+			<div class="col-md-2 col-xs-12 publication-venue">
+			  ESORICS 2014
+			</div>
+			<div class="col-md-10 col-xs-12 publication-item">
+			  <strong>TrustDump: Reliable memory acquisition on smartphones</strong><br />
+			  He Sun, Kun Sun, Yuewu Wang, Jiwi Jing, and Sushil Jajodia<br />
+			  In the Proceedings of 18th European Symposium on Research in Computer Security (ESORICS)<br />
+			  Wroclaw, Poland, September 7-11, 2014<br />
+			  Acceptance ratio: 24.78%=58/234<br />
+			  [<a href=https://csis.gmu.edu/ksun/publications/TrustDump-esorics2014.pdf>Paper</a>]
+			</div>
+		  </div>
+		  <div class="isotope-item col-md-12 mobilephone">
+			<div class="col-md-2 col-xs-12 publication-venue">
+			  ASIACCS 2014
+			</div>
+			<div class="col-md-10 col-xs-12 publication-item">
+			  <strong>Remotely Wiping Sensitive Data on Stolen Smartphones</strong><br />
+			  Xingjie Yu, Zhan Wang, Kun Sun, Wen Tao Zhu, Neng Gao, and Jiwu Jing<br />
+			  In the 9th ACM Symposium on Information, Computer and Communications Security (<b>ASIACCS</b>)<br />
+			  Kyoto, Japan, June 4-6, 2014<br />
+			  Acceptance ratio: 19.60%=50/255 (short paper)<br />
+			  [<a href=https://csis.gmu.edu/ksun/publications/wipeout-asiaccs2014.pdf>Paper</a>]
+			</div>
+		  </div>
+		  <div class="isotope-item col-md-12 trustworthy">
+			<div class="col-md-2 col-xs-12 publication-venue">
+			  TDSC 2014
+			</div>
+			<div class="col-md-10 col-xs-12 publication-item">
+			<strong>HyperCheck: A Hardware-Assisted Integrity Monitor</strong><br />
+			Fengwei Zhang, Jiang Wang, Kun Sun, and Angelos Stavrou<br />
+			in IEEE Transactions on Dependable and Secure Computing (<b>TDSC</b>), vol.11, no.4, pp.332,344<br />
+			July-Aug 2014<br />
+			[<a href=https://csis.gmu.edu/ksun/publications/hypercheck-tdsc2014.pdf>Paper</a>]
+			</div>
+		  </div>
+		  <div class="isotope-item col-md-12 passwordmanagement">
+			<div class="col-md-2 col-xs-12 publication-venue">
+			  PASSAT 2013
+			</div>
+			<div class="col-md-10 col-xs-12 publication-item">
+			  <strong>A Security Analysis of Two Commercial Browser and Cloud Based Password Managers</strong><br />
+			  Rui Zhao, Chuan Yue, and Kun Sun<br />
+			  In Proceedings of the 5th ASE/IEEE International Conference on Information Privacy, Security, Risk and Trust (PASSAT)<br />
+			  Alexandria, VA, September 2013<br />
+			  [<a href=https://csis.gmu.edu/ksun/publications/passat13_passwordManagers.pdf>Paper</a>]
+			</div>
+		  </div>
+		  <div class="isotope-item col-md-12 mtdcd">
+			<div class="col-md-2 col-xs-12 publication-venue">
+			  CDC 2013
+			</div>
+			<div class="col-md-10 col-xs-12 publication-item">
+			  <strong>Effectiveness of IP Address Randomization in Decoy-Based Moving Target Defense</strong><br />
+			  Andrew W  Clark, Kun Sun, and Radha Poovendran<br />
+			  In the 52nd IEEE Conference on Decision and Control (<b>CDC</b>)<br />
+			  Florence, Italy, December 10-13, 2013<br />
+			  [<a href=https://csis.gmu.edu/ksun/publications/CDC2013.pdf>Paper</a>]
+			</div>
+		  </div>
+		  <div class="isotope-item col-md-12 mtdcd">
+			<div class="col-md-2 col-xs-12 publication-venue">
+			  CNS 2013
+			</div>
+			<div class="col-md-10 col-xs-12 publication-item">
+			  <strong>A Moving Target Defense Mechanism for MANETs Based on Identity Virtualization</strong><br />
+			  Massimiliano Albanese, Alessandra De Benedictisy, Sushil Jajodia, and Kun Sun<br />
+			  In the First IEEE Conference on Communications and Network Security (<b>CNS</b>)<br />
+			  Washington D.C., USA, October 14-16, 2013<br />
+			  Acceptance ratio: 28.36%=40/141<br />
+			  [<a href=https://csis.gmu.edu/ksun/publications/Sybil-cns2013.pdf>Paper</a>]
+			</div>
+		  </div>
+		  <div class="isotope-item col-md-12 unknown">
+			<div class="col-md-2 col-xs-12 publication-venue">
+			  DBSEC 2013
+			</div>
+			<div class="col-md-10 col-xs-12 publication-item">
+			  <strong>TerraCheck: Verification of Dedicated Cloud Storage</strong><br />
+			  Zhan Wang, Kun Sun, Sushil Jajodia, and Jiwu Jing<br />
+			  In the 27th IFIP WG 11.3 Conference on Data and Applications Security and Privacy (<b>DBSEC</b>)<br />
+			  Rutgers University, Newark, NJ, USA, July 15-17, 2013<br />
+			  Acceptance ratio: 35.55%=16/45 (full paper)<br />
+			  [<a href=https://csis.gmu.edu/ksun/publications/Terracheck-dbsec2013.pdf>Paper</a>]
+			</div>
+		  </div>
+		  <div class="isotope-item col-md-12 mtdcd">
+			<div class="col-md-2 col-xs-12 publication-venue">
+			  ICCCN 2013
+			</div>
+			<div class="col-md-10 col-xs-12 publication-item">
+			  <strong>MOTAG: Moving Target Defense Against Internet Denial of Service Attacks</strong><br />
+			  Quan Jia, Kun Sun, and Angelos Stavrou<br />
+			  In the International Conference on Computer Communications and Networks (<b>ICCCN</b>)<br />
+			  Nassau, Bahamas, 2013<br />
+			  Acceptance ratio: 28.66%=86/300 (regular paper)<br />
+			  <a href=https://csis.gmu.edu/ksun/publications/Motag-icccn2013.pdf>[Paper</a>]
+			</div>
+		  </div>
+		  <div class="isotope-item col-md-12 trustworthy">
+			<div class="col-md-2 col-xs-12 publication-venue">
+			  DSN 2013
+			</div>
+			<div class="col-md-10 col-xs-12 publication-item">
+			  <strong>Spectre: A Dependable Introspection Framework via System Management Mode</strong><br />
+			  Fengwei Zhang, Kevin Leach, Kun Sun, and Angelos Stavrou<br />
+			  In the 43rd Annual IEEE/IFIP International Conference on Dependable Systems and Networks (<b>DSN</b>)
+			  Budapest, June 2013<br />
+			  Acceptance ratio: 20.90%=46/220<br />
+			  [<a href=https://csis.gmu.edu/ksun/publications/Spectre-dsn2013.pdf>Paper</a>]
+			</div>
+		  </div>
+		  <div class="isotope-item col-md-12 networksecurity">
+			<div class="col-md-2 col-xs-12 publication-venue">
+			  IPDPS 2013
+			</div>
+			<div class="col-md-10 col-xs-12 publication-item">
+			  <strong>On Feasibility of Fingerprinting Wireless Sensor Nodes Using Physical Properties</strong><br />
+			  Xiaowei Mei, Donggang Liu, Kun Sun, and Dingbang Xu<br />
+			  In the 27th IEEE International Parallel &amp; Distributed Processing Symposium (IPDPS>)<br />
+			  Boston, Massachusetts, May 2013<br />
+			  Acceptance ratio: 21.45%=106/494<br />
+			  [<a href=https://csis.gmu.edu/ksun/publications/ipdps2013_fingerprintWSN.pdf>Paper</a>]
+			</div>
+		  </div>
+		  <div class="isotope-item col-md-12 unknown">
+			<div class="col-md-2 col-xs-12 publication-venue">
+			  DIMVA 2012
+			</div>
+			<div class="col-md-10 col-xs-12 publication-item">
+			  <strong>NetGator: Malware Detection Using Program Interactive Challenges</strong><br />
+			  Brian Schulte, Haris Andrianakis, Kun Sun ,and Angelos Stavrou<br />
+			  In the 9th Conference on Detection of Intrusions and Malware &amp; Vulnerability Assessment (DIMVA)<br />
+			  Heraklion, Crete, Greece, July 26-27th, 2012<br />
+			  Acceptance ratio: 31.81%=14/44<br />
+			  [<a href=https://csis.gmu.edu/ksun/publications/Netgator_dimva2012.pdf>Paper</a>]
+			</div>
+		  </div>
+		  <div class="isotope-item col-md-12 trustworthy">
+			<div class="col-md-2 col-xs-12 publication-venue">
+			  DSN 2012
+			</div>
+			<div class="col-md-10 col-xs-12 publication-item">
+			  <strong>A Dependability Analysis of Hardware-Assisted Polling Integrity Checking Systems</strong><br />
+			  Jiang Wang, Kun Sun, and Angelos Stavrou<br />
+			  In the Proceedings of the 42nd Annual IEEE/IFIP International Conference on Dependable Systems and Networks (DSN)<br />
+			  Boston, Massachusetts, June 2012<br />
+			  Acceptance ratio: 21.61%=51/236<br />
+			  [<a href=https://csis.gmu.edu/ksun/publications/dsn2012.pdf>Paper</a>]
+			</div>
+		  </div>
+		  <div class="isotope-item col-md-12 trustworthy">
+			<div class="col-md-2 col-xs-12 publication-venue">
+			  NDSS 2012
+			</div>
+			<div class="col-md-10 col-xs-12 publication-item">
+			  <strong>SecureSwitch: BIOS-Assisted Isolation and Switch between Trusted and Untrusted Commodity OSes</strong><br />
+			  Kun Sun, Jiang Wang, Fengwei Zhang, and Angelos Stavrou<br />
+			  In the Proceedings of the 19th Annual Network &amp; Distributed System Security Symposium (NDSS)<br />
+			  San Diego, California, 5-8 February 2012<br />
+			  Acceptance ratio: 17.82%=46/258<br />
+			  [<a href=https://csis.gmu.edu/ksun/publications/SecureSwitch-ndss2012.pdf>Paper</a>]
+			</div>
+		  </div>
+		  </div>
+        </div>
+      </div>
+    </div>
+	<!--/Title --> 
+  </div>
+  <!-- Container -->
+
+  <div class="publication-top">
+  </div>
+  
+  <!-- publication Filters -->
+  <div class="publication"> 
+    <!--/publication Filters --> 
+    <!-- publication Wrapper -->
+    <!--<div class="isotope fadeInLeft animated wow" style="position: relative; overflow: hidden; height: 480px;" id="publication_wrapper">-->
+    <div class="row">
+      <div class="col-lg-10">
+      </div>
+    </div>
+  </div>
+    <!--/publication Wrapper --> 
+  <!--/publication Filters -->
+  
+  <div class="publication_btm"></div>
+
+  <div id="project_container">
+    <div class="clear"></div>
+    <div id="project_data">
+    </div>
+  </div>
+
+</section>
+<!--/publication --> 
+
+
+<section class="page_section team" id="team"><!--main-section team-start-->
+  <div class="container">
+    <h2>Team</h2>
+    <div class="team_section clearfix">
+      <div class="team_area">
+        <div class="team_box wow fadeInDown delay-03s">
+          <div class="team_box_shadow"><a href="javascript:void(0)"></a></div>
+          <img src="img/team/ksun.jpg" alt="">
+          <ul>
+            <li><a href="https://csis.gmu.edu/ksun/" target="_blank" class="fa fa-link"></a></li>
+          </ul>
+        </div>
+        <h3 class="wow fadeInDown delay-03s">Dr. Kun Sun</h3>
+        <span class="wow fadeInDown delay-03s">Director</span>
+      </div>
+      <div class="team_area">
+        <div class="team_box wow fadeInDown delay-06s">
+          <div class="team_box_shadow"><a href="javascript:void(0)"></a></div>
+          <img src="img/team/Pengbin.jpg" alt="">
+          <ul>
+            <li><a href="https://sites.google.com/view/pfeng/home" target="_blank" class="fa fa-link"></a></li>
+          </ul>
+        </div>
+        <h3 class="wow fadeInDown delay-06s">Dr. Pengbin Feng</h3>
+        <span class="wow fadeInDown delay-06s">Postdoc</span>
+      </div>
+      <div class="team_area">
+        <div class="team_box wow fadeInDown delay-09s">
+          <div class="team_box_shadow"><a href="javascript:void(0)"></a></div>
+          <img src="img/team/LIU_SONGSONG.jpg" alt="">
+          <ul>
+            <li><a href="https://mason.gmu.edu/~sliu23/" target="_blank" class="fa fa-link"></a></li>
+          </ul>
+        </div>
+        <h3 class="wow fadeInDown delay-09s">Songsong Liu</h3>
+        <span class="wow fadeInDown delay-09s">PhD Candidate</span>
+      </div>
+      <div class="team_area">
+        <div class="team_box wow fadeInDown delay-03s">
+          <div class="team_box_shadow"><a href="javascript:void(0)"></a></div>
+          <img src="img/team/Xinda.jpg" alt="">
+          <ul>
+            <li><a href="https://www.linkedin.com/in/xindawang/" target="_blank" class="fa fa-linkedin"></a></li>
+          </ul>
+        </div>
+        <h3 class="wow fadeInDown delay-03s">Xinda Wang</h3>
+        <span class="wow fadeInDown delay-03s">PhD Student</span>
+      </div>
+      <div class="team_area">
+        <div class="team_box wow fadeInDown delay-06s">
+          <div class="team_box_shadow"><a href="javascript:void(0)"></a></div>
+          <img src="img/team/Shu_Wang.jpg" alt="">
+          <ul>
+            <li><a href="http://mason.gmu.edu/~swang47/" target="_blank" class="fa fa-link"></a></li>
+          </ul>
+        </div>
+        <h3 class="wow fadeInDown delay-06s">Shu Wang</h3>
+        <span class="wow fadeInDown delay-06s">PhD Student</span>
+      </div>
+      <div class="team_area">
+        <div class="team_box wow fadeInDown delay-09s">
+          <div class="team_box_shadow"><a href="javascript:void(0)"></a></div>
+          <img src="img/team/Xu He.jpg" alt="">
+          <ul>
+            <li><a href="https://sites.google.com/view/hexu/%E9%A6%96%E9%A1%B5" target="_blank" class="fa fa-link"></a></li>
+          </ul>
+        </div>
+        <h3 class="wow fadeInDown delay-09s">Xu He</h3>
+        <span class="wow fadeInDown delay-09s">PhD Student</span>
+      </div>
+      <div class="team_area">
+        <div class="team_box wow fadeInDown delay-03s">
+          <div class="team_box_shadow"><a href="javascript:void(0)"></a></div>
+          <img src="img/team/Jie_Wang.jpg" alt="">
+          <ul>
+            <li><a href="https://www.linkedin.com/in/jie-wang-275890195/" target="_blank" class="fa fa-linkedin"></a></li>
+          </ul>
+        </div>
+        <h3 class="wow fadeInDown delay-03s">Jie Wang</h3>
+        <span class="wow fadeInDown delay-03s">PhD Candidate</span>
+      </div>
+      <div class="team_area">
+        <div class="team_box wow fadeInDown delay-06s">
+          <div class="team_box_shadow"><a href="javascript:void(0)"></a></div>
+          <img src="img/team/profile-placeholder.png" alt="">
+          <ul>
+            <li><a href="https://www.twitter.com/tommychinjr/" target="_blank" class="fa fa-twitter"></a></li>
+          </ul>
+        </div>
+        <h3 class="wow fadeInDown delay-06s">Tommy Chin</h3>
+        <span class="wow fadeInDown delay-06s">PhD Student</span>
+      </div>
+    </div>
+    <h2>Alumni</h2>
+    <p class="text-center"> Shengye Wan, PhD, 2020, Facebook<br>
+      <a href="http://routing.netlab.edu.cn/tiki-index.php?page=Jiahao%20Cao">Jiahao Cao</a>, visiting PhD student, 2019-2020<br>
+      Jianhua Sun, PhD, 2019, Facebook<br>
+      Yue Li, PhD, 2019, Facebook<br>
+      Kyle Wallace, PhD, 2018, MITRE<br>
+  <a href="https://www.linkedin.com/in/lingguang-lei-a08367114">Lingguang Lei</a>, Postdoc, 2015-2017, CAS<br>
+      He Sun, visiting PhD student, 2014-2015, Ant Finacial<br>
+      Chong Guan, visiting PhD student, 2016-2017&nbsp;</p>
+    <p class="text-center">Zeyu Zhang, visiting Master student, 2019-2020&nbsp;</p>
+    <p class="text-center">Qiyang Song, visiting Master student, 2019-2020</p>
+    <p class="text-center">Yunlong Xing, visiting Master student, 2018-2020<br>
+      Bennett Summers, Master, 2016 </p>
+  </div>
+</section>
+<!--/Team-->
+
+<section class="page_section" id="sponsors"><!--page_section-->
+  <h2>Sponsors</h2>
+<!--page_section-->
+<div class="sponsor_logos"><!--sponsor_logos-->
+  <div class="container">
+    <ul class="fadeInRight animated wow">
+	<li><a href="https://nsf.gov/"><img src="img/sponsor/nsf_logo.jpg" alt=""></a></li>
+	<li><a href="https://www.onr.navy.mil/"><img src="img/sponsor/ONRlogo.jpg" alt=""></a></li>
+	<li><a href="https://www.arl.army.mil/who-we-are/aro/"><img src="img/sponsor/afc-ccdc-arl.svg" alt=""></a></li>
+      <li><a href="https://www.arl.army.mil"><img src="img/sponsor/ARO_logo.gif" alt=""></a></li>
+      <li><a href="https://www.cisco.com"><img src="img/sponsor/cisco.png" alt=""></a></li>
+      
+      
+      
+    </ul>
+  </div>
+</div>
+</section>
+<!--sponsor_logos-->
+
+<!--Footer-->
+<footer class="footer_wrapper" id="contact">
+  <div class="container">
+    <section class="page_section contact" id="contact">
+      <div class="contact_section">
+        <h2>Contact Us</h2>
+        <div class="row">
+          <div class="col-lg-4">
+
+          </div>
+          <div class="col-lg-4">
+           
+          </div>
+          <div class="col-lg-4">
+          
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 wow fadeInLeft">	
+		      <div class="contact_info">
+              <div class="detail">
+                  <h4>Dr. Kun Sun</h4>
+                  <p>
+                    Research Hall, Suite 417<br />
+                    George Mason University<br />
+                    4400 University Drive<br />
+                    Fairfax, VA 22030-4422
+                  </p>
+                  
+              </div>
+              <div class="detail">
+                  <h4>Call or fax us</h4>
+                  <p><span><em class="fa fa-phone"></em></span> (703) <span>993</span>-<span>1715</span><br />
+                  <span><em class="fa fa-fax"></em></span> (703) <span>993</span>-<span>4776</span></p>
+              </div>
+              <div class="detail">
+                  <h4>Email us</h4>
+                  <p>ksun3<span>@</span><span>gmu</span>.<span>edu</span></p>
+              </div> 
+          </div>
+        </div>
+      <div class="col-lg-6 wow fadeInLeft delay-06s animated" style="visibility: visible; animation-name: fadeInLeft;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8790.974151625831!2d-77.3038146353604!3d38.83065801597767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b64e6135152303%3A0x1ce13995337c22bc!2sResearch%20Hall%2C%2010401%20York%20River%20Rd%2C%20Fairfax%2C%20VA%2022030!5e0!3m2!1sen!2sus!4v1612754171068!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      </div>
+    </section>
+  </div>
+</footer>
+<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery-scrolltofixed.js"></script>
+<script type="text/javascript" src="js/jquery.nav.js"></script> 
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="js/jquery.isotope.js"></script>
+<script type="text/javascript" src="js/wow.js"></script> 
+<script type="text/javascript" src="js/custom.js"></script>
+<script>
+  $(document).ready(function(){
+    $('.dropdown-submenu a.submenu').on("click", function(e){
+      $(this).next('ul').toggle();
+      e.stopPropagation();
+      e.preventDefault();
+    });
+  });
+  </script>
+
+</body>
+</html>
