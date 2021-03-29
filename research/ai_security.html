@@ -1,0 +1,285 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, maximum-scale=1">
+<meta name="description" content="SunLab at George Mason University focuses on the latest cybersecurity research and emerging threats">
+<title>Sun Security Lab</title>
+<link rel="icon" href="../img/sunlab-logo.png" type="image/png">
+<link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="../css/style.css" rel="stylesheet" type="text/css"> 
+<link href="../css/font-awesome.css" rel="stylesheet" type="text/css"> 
+<link href="../css/animate.css" rel="stylesheet" type="text/css">
+ 
+<!--[if lt IE 9]>
+    <script src="js/respond-1.1.0.min.js"></script>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/html5element.js"></script>
+<![endif]-->
+ 
+</head>
+
+<body>
+
+<!--Header_section-->
+<header id="header_wrapper">
+  <div class="container">
+    <div class="header_box">
+      <div class="logo"><a href="../index.html"><img src="../img/sunlab_logo3.png" height="40" alt="logo"></a></div>
+      <nav class="navbar" role="navigation">
+	  <!--
+        <div class="navbar-header">
+          <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        </div>
+	  -->
+        <div id="main-nav" class="collapse navbar-collapse navStyle">
+        <ul class="nav navbar-nav" id="mainNav">
+          <li><a href="../index.html" class="scroll-link">Home</a></li>
+          <li><a href="../index.html#aboutUs" class="scroll-link">About Us</a></li>
+          <li class="dropdown">
+		      <a class="data-toggle" data-toggle="dropdown" data-target="#" href="../index.html#research">Research<strong class="caret"></strong></a>
+              <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="../research/trusted_computing.html">Trustworthy Computing</a></li>
+              <li class="dropdown-item"><a href="../research/mtd.html">Moving Target Defense</a></li>
+              <li class="dropdown-item"><a href="../research/software_security.html">Software Security</a></li>
+              <li class="dropdown-item"><a href="../research/container_security.html">Container Security</a></li>
+              <li class="dropdown-item"><a href="../index.html#research">Mobile Phone Security</a></li>
+              <li class="dropdown-item"><a href="#">AI Security</a></li>
+              <li class="dropdown-header dropdown-item">Resources</li>
+              <li class="dropdown-item"><a href="https://github.com/SunLab-GMU">GitHub</a></li>
+            </ul>
+          </li>
+          <li><a href="../index.html#publication" class="scroll-link">Publication</a></li>
+          <li><a href="../index.html#team" class="scroll-link">Team</a></li>  
+          <li><a href="../index.html#sponsors" class="scroll-link">Sponsors</a></li>
+          <li><a href="../index.html#contact" class="scroll-link">Contact</a></li>
+        </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+<!--Header_section--> 
+
+
+<!--home-->
+<section id="home" class="top_cont_outer">
+  <div class="hero_wrapper">
+    <div class="container">
+      <div class="home">
+        <div class="row">
+          <div class="col-lg-6 col-sm-6">
+            <div class="top_left_cont zoomIn wow animated">
+              <h2>AI Security</h2> 
+              <p style="font-size:18px; text-align:justify;"> Artificial intelligence (AI) has been applied in a wide range of applications. On one hand, AI is a powerful tool to identify and respond to potential cyber threats based on the learned patterns; On the other hand, with great power comes great vulnerability, AI is vulnerable to multiple adversarial attacks.
+			  With the AI techniques, our research focuses on investigating potential vulnerablities of ASR systems. By leveraging the physical properties and time-frequency features of audio, we figure out defense schemes against various malicious audio attacks.
+			  To secure AI, we provide a generic defense system that can capture sophisticated localized partial attacks.<br />
+			  <p style="font-size:18px; text-align:justify;">AI for security:
+			    <a type="button" class="btn btn-success" style="background:transparent; border:1px solid #fff; font-size:18px;" href="#modreplay">Modulated Replay Attack</a>
+				<a type="button" class="btn btn-success" style="background:transparent; border:1px solid #fff; font-size:18px;" href="#sieve">SIEVE system</a>
+			  </p>
+			  <p style="font-size:18px; text-align:justify;">Security of AI:
+				<a type="button" class="btn btn-success" style="background:transparent; border:1px solid #fff; font-size:18px;" href="#taintradar">TaintRadar</a>
+			  </p>
+			  </p>
+              <!--<a href="#modreplay" class="read_more2">Modulated Replay Attack</a>-->
+			  <!--<a href="#sieve" class="read_more2">SIEVE system</a> -->
+			</div>
+          </div>
+		  
+          <div class="col-lg-6 col-sm-6">
+		    <br /><br /><br /><br />
+		    <div class="top_left_cont">
+              <img src="img/ai-security.png"> </div>
+			</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--home--> 
+
+
+<!--modreplay-->
+<div class="container" id="modreplay">
+	<br /><br /><br />
+	<h2>Modulated Replay Attack</h2>
+	<h3>Modulated Replay Attack</h3>
+	<p style="font-size:18px; text-align:justify">Automatic speech recognition (ASR) systems have been widely deployed in modern smart devices to provide convenient and diverse voice-controlled services. Since ASR systems are vulnerable to audio replay attacks that can spoof and mislead ASR systems, a number of defense systems have been proposed to identify replayed audio signals based on the speakers’ unique acoustic features in the frequency domain. In our <a href="https://csis.gmu.edu/ksun/publications/ModReplay_CCS20.pdf" target="_blank">paper</a>, we uncover a new type of replay attack called <b>modulated replay attack</b>, which can bypass the existing frequency domain based defense systems.</p>
+	<br />
+	<div style="text-align:center">
+		<img src="img/modreplay.png" width="80%">
+	</div>
+	<p style="font-size:18px; text-align:justify">The basic idea is to compensate for the frequency distortion of a given electronic speaker using an <em>inverse filter</em> that is customized to the speaker’s transform characteristics. Our experiments on real smart devices confirm the modulated replay attacks can successfully escape the existing detection mechanisms that rely on identifying suspicious features in the frequency domain.</p>
+	<br />
+	<h3>DualGuard Defense</h3>
+	<p style="font-size:18px; text-align:justify">To defeat modulated replay attacks, we design and implement a countermeasure named <b>DualGuard</b>. We discover and formally prove that no matter how the replay audio signals could be modulated, the replay attacks will either leave <em>ringing artifacts</em> in the time domain or cause <em>spectrum distortion</em> in the frequency domain. Therefore, by jointly checking suspicious features in both frequency and time domains, DualGuard can successfully detect various replay attacks including the modulated replay attacks. We implement a prototype of DualGuard on a popular voice interactive platform, ReSpeaker Core v2. The experimental results show DualGuard can achieve 98% accuracy on detecting modulate replay attacks.</p>
+	<br />
+	<div style="text-align:center">
+		<img src="img/testbed.png" width="80%">
+	</div>
+	<p style="font-size:18px; text-align:justify">Published in <a href="https://www.sigsac.org/ccs/CCS2020/">the ACM Conference on Computer and Communications Security (CCS) 2020.</a></p>
+	<br />
+	<p align="center">
+		<a class="btn btn-primary btn-lg" role="button" style="margin-right:10px;" href="https://csis.gmu.edu/ksun/publications/ModReplay_CCS20.pdf" target="_blank">Download the Paper</a>
+		<a class="btn btn-primary btn-lg" role="button" style="margin-right:10px;" href="http://mason.gmu.edu/~swang47/papers/ccs20_slides.pdf" target="_blank">Slides</a>
+		<a class="btn btn-primary btn-lg" role="button" style="margin-right:10px;" href="http://mason.gmu.edu/~swang47/papers/ccs20_poster.pdf" target="_blank">Poster</a>
+		<a class="btn btn-primary btn-lg" role="button" style="margin-right:10px;" href="https://www.github.com/shuwang127/KitsuneV2" target="_blank">Code</a>
+		<a class="btn btn-primary btn-lg" role="button" data-toggle="collapse" href="#bibtex_modreplay" aria-expanded="false" aria-controls="bibtex">Export Citation</a>
+	</p>
+	<div class="collapse" style="margin-top: 1.5em;" align="left" id="bibtex_modreplay" >
+		<pre style="white-space: pre">
+@inproceedings{wang2020modreplay,
+author = {Wang, Shu and Cao, Jiahao and He, Xu and Sun, Kun and Li, Qi},
+title = {When the Differences in Frequency Domain Are Compensated: Understanding and Defeating Modulated Replay Attacks on Automatic Speech Recognition},
+year = {2020},
+isbn = {9781450370899},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3372297.3417254},
+doi = {10.1145/3372297.3417254},
+booktitle = {Proceedings of the 2020 ACM SIGSAC Conference on Computer and Communications Security},
+pages = {1103–1119},
+numpages = {17},
+keywords = {ringing artifacts, automatic speech recognition, modulated replay attack, frequency distortion},
+location = {Virtual Event, USA},
+series = {CCS '20}
+}
+</pre>
+	</div>
+	<br /><br /><br />
+</div>
+
+
+
+<div style="background:#efefef;">
+<div class="container" id="sieve">
+	<!-- About -->
+	<br /><br /><br />
+	<h2>SIEVE System</h2>
+	<p style="font-size:18px; text-align:justify">Driverless vehicles are becoming an irreversible trend in our daily lives, and humans can interact with cars through invehicle voice control systems. However, the automatic speech recognition (ASR) module in the voice control systems is vulnerable to adversarial voice commands, which may cause unexpected behaviors or even accidents in driverless cars. Due to the high demand on security insurance, it remains as a challenge to defend in-vehicle ASR systems against adversarial voice commands from various sources in a noisy driving environment. In our <a href="http://mason.gmu.edu/~swang47/papers/raid20.pdf">paper</a>, we develop a secure in-vehicle ASR system called <b>SIEVE</b>, which can effectively distinguish voice commands issued from the driver, passengers, or electronic speakers in three steps. First, it filters out multiple-source voice commands from multiple vehicle speakers by leveraging an autocorrelation analysis. Second, it identifies if a single-source voice command is from humans or electronic speakers using a novel dual-domain detection method. Finally, it leverages the directions of voice sources to distinguish the voice of the driver from those of the passengers. We implement a prototype of SIEVE and perform a real-world study under different driving conditions. Experimental results show SIEVE can defeat various adversarial voice commands over in-vehicle ASR systems.</p>
+	<br />
+	<div style="text-align:center">
+		<img src="img/car.png" width="70%">
+	</div>
+	<br />
+	<p style="font-size:18px; text-align:justify">Published in <a href="https://www.usenix.org/conference/raid2020">the 23rd International Symposium on Research in Attacks, Intrusions and Defenses (RAID) 2020.</a></p>
+	<br />
+	<p align="center">
+		<a class="btn btn-primary btn-lg" role="button" style="margin-right:10px;" href="http://mason.gmu.edu/~swang47/papers/raid20.pdf" target="_blank">Download the Paper</a>
+		<a class="btn btn-primary btn-lg" role="button" style="margin-right:10px;" href="http://mason.gmu.edu/~swang47/papers/raid20_slides.pdf" target="_blank">Slides</a>
+		<a class="btn btn-primary btn-lg" role="button" style="margin-right:10px;" href="https://www.github.com/shuwang127/SIEVE" target="_blank">Code</a>
+		<a class="btn btn-primary btn-lg" role="button" data-toggle="collapse" href="#bibtex_sieve" aria-expanded="false" aria-controls="bibtex">Export Citation</a>
+	</p>
+	<div class="collapse" style="margin-top: 1.5em;" align="left" id="bibtex_sieve" >
+		<pre style="white-space: pre">
+@inproceedings {wang2020sieve,
+author = {Shu Wang and Jiahao Cao and Kun Sun and Qi Li},
+title = {{SIEVE}: Secure In-Vehicle Automatic Speech Recognition Systems},
+booktitle = {23rd International Symposium on Research in Attacks, Intrusions and Defenses ({RAID} 2020)},
+year = {2020},
+isbn = {978-1-939133-18-2},
+address = {San Sebastian},
+pages = {365--379},
+url = {https://www.usenix.org/conference/raid2020/presentation/wang-shu},
+publisher = {{USENIX} Association},
+month = oct,
+}
+</pre>
+	</div>
+	<br /><br /><br />
+</div>
+</div>
+
+<div class="container" id="taintradar">
+	<br /><br /><br />
+	<h2>TaintRadar: Detecting Localized Adversarial Examples</h2>
+	<p style="font-size:18px; text-align:justify">Deep neural networks (DNNs) have been applied in a wide range of applications, e.g., face recognition and image classification; however, they are vulnerable to adversarial examples. By adding a small amount of imperceptible perturbations, an attacker can easily manipulate the outputs of a DNN. Particularly, the localized adversarial examples only perturb a small and contiguous region of the target object, so that they are robust and effective in both digital and physical worlds. Although the localized adversarial examples have more severe real-world impacts than traditional pixel attacks, they have not been well addressed in the literature. In this <a href="https://csis.gmu.edu/ksun/publications/INFOCOM21_TaintRadar.pdf" target="_blank">paper</a>, we propose a generic defense system called TaintRadar to accurately detect localized adversarial examples via analyzing critical regions that have been manipulated by attackers. The main idea is that when removing critical regions from input images, the ranking changes of adversarial labels will be larger than those of benign labels. Compared with existing defense solutions, TaintRadar can effectively capture sophisticated localized partial attacks, e.g., the eye-glasses attack, while not requiring additional training or fine-tuning of the original model’s structure. Comprehensive experiments have been conducted in both digital and physical worlds to verify the effectiveness and robustness of our defense.</p>
+	<br />
+	<div style="text-align:center">
+		<img src="img/taintradar.png" width="90%">
+	</div>
+	<p align="center" style="font-size:18px;">Workflow of TaintRadar.</p>
+	<br />
+	<p style="font-size:18px; text-align:justify">Published in <a href="https://infocom2021.ieee-infocom.org/">IEEE International Conference on Computer Communications (INFOCOM) 2021.</a></p>
+	<br />
+	<p align="center">
+		<a class="btn btn-primary btn-lg" role="button" style="margin-right:10px;" href="https://csis.gmu.edu/ksun/publications/INFOCOM21_TaintRadar.pdf" target="_blank">Download the Paper</a>
+		<a class="btn btn-primary btn-lg" role="button" data-toggle="collapse" href="#bibtex_radar" aria-expanded="false" aria-controls="bibtex">Export Citation</a>
+	</p>
+	<div class="collapse" style="margin-top: 1.5em;" align="left" id="bibtex_radar" >
+		<pre style="white-space: pre">
+@misc{li2021detecting,
+title={Detecting Localized Adversarial Examples: A Generic Approach using Critical Region Analysis}, 
+author={Fengting Li and Xuankai Liu and Xiaoli Zhang and Qi Li and Kun Sun and Kang Li},
+year={2021},
+eprint={2102.05241},
+archivePrefix={arXiv},
+primaryClass={cs.CV}
+}
+</pre>
+	</div>
+	<br /><br /><br />
+</div>
+
+
+
+<!-- Team -->
+<div style="background:#efefef;">
+<div class="container" id="group">
+	<br /><br />
+	<h2>Group</h2>
+	
+	<p style="font-size:18px; text-align:justify; color:#222"><strong>Faculty:</strong></p>
+	<p style="font-size:18px; text-align:justify; color:#666"><a href="https://csis.gmu.edu/ksun/" target="_blank">Dr. Kun Sun</a></p>
+	<br />
+
+	<p style="font-size:18px; text-align:justify; color:#222"><strong>Student:</strong></p>
+	<p style="font-size:18px; text-align:justify; color:#666"><a href="http://mason.gmu.edu/~swang47/" target="_blank">Shu Wang</a> (PhD student)</p>
+	<p style="font-size:18px; text-align:justify; color:#666"><a href="http://routing.netlab.edu.cn/tiki-index.php?page=Jiahao+Cao" target="_blank">Jiahao Cao</a> (visiting PhD student)</p>
+	<p style="font-size:18px; text-align:justify; color:#666"><a href="https://sites.google.com/view/hexu/" target="_blank">Xu He</a> (PhD student)</p>
+	<br />
+	
+	<p style="font-size:18px; text-align:justify; color:#222"><strong>External Collaborators:</strong></p>
+	<p style="font-size:18px; text-align:justify; color:#666"><a href="http://netsec.ccert.edu.cn/people/qli/" target="_blank">Qi Li</a> (Associate Professor, Tsinghua Univesity)</p>
+	<br />
+	
+	<div class="text-center mt-auto" style="width: 90%; margin-top: 1.5em; margin-bottom: 1.5em; display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap;">
+		<a href="https://www2.gmu.edu/" target="_blank">
+		</a>
+		<a href="https://csis.gmu.edu/" target="_blank">
+		</a>
+		<a href="https://www.tsinghua.edu.cn/en/" target="_blank">
+		</a>
+	</div>
+	
+	<br /><br />
+</div>
+</div>
+
+
+<!--Footer-->
+<footer class="footer_wrapper" id="ack"> </footer>
+
+
+<script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/jquery-scrolltofixed.js"></script>
+<script type="text/javascript" src="../js/jquery.nav.js"></script> 
+<script type="text/javascript" src="../js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="../js/jquery.isotope.js"></script>
+<script type="text/javascript" src="../js/wow.js"></script> 
+<script type="text/javascript" src="../js/custom.js"></script>
+<script>
+  $(document).ready(function(){
+    $('.dropdown-submenu a.submenu').on("click", function(e){
+      $(this).next('ul').toggle();
+      e.stopPropagation();
+      e.preventDefault();
+    });
+  });
+  </script>
+
+</body>
+</html>

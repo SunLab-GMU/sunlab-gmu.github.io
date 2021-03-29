@@ -1,0 +1,299 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, maximum-scale=1">
+<meta name="description" content="SunLab at George Mason University focuses on the latest cybersecurity research and emerging threats">
+<title>Sun Security Lab</title>
+<link rel="icon" href="../img/sunlab-logo.png" type="image/png">
+<link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="../css/style.css" rel="stylesheet" type="text/css"> 
+<link href="../css/font-awesome.css" rel="stylesheet" type="text/css"> 
+<link href="../css/animate.css" rel="stylesheet" type="text/css">
+ 
+<!--[if lt IE 9]>
+    <script src="js/respond-1.1.0.min.js"></script>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/html5element.js"></script>
+<![endif]-->
+ 
+</head>
+
+<body>
+
+<!--Header_section-->
+<header id="header_wrapper">
+  <div class="container">
+    <div class="header_box">
+      <div class="logo"><a href="../index.html"><img src="../img/sunlab_logo3.png" height="40" alt="logo"></a></div>
+      <nav class="navbar" role="navigation">
+	  <!--
+        <div class="navbar-header">
+          <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        </div>
+	  -->
+        <div id="main-nav" class="collapse navbar-collapse navStyle">
+        <ul class="nav navbar-nav" id="mainNav">
+          <li><a href="../index.html" class="scroll-link">Home</a></li>
+          <li><a href="../index.html#aboutUs" class="scroll-link">About Us</a></li>
+          <li class="dropdown">
+		      <a class="data-toggle" data-toggle="dropdown" data-target="#" href="../index.html#research">Research<strong class="caret"></strong></a>
+              <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="../research/trusted_computing.html">Trustworthy Computing</a></li>
+              <li class="dropdown-item"><a href="../research/mtd.html">Moving Target Defense</a></li>
+              <li class="dropdown-item"><a href="../research/software_security.html">Software Security</a></li>
+              <li class="dropdown-item"><a href="#">Container Security</a></li>
+              <li class="dropdown-item"><a href="../index.html#research">Mobile Phone Security</a></li>
+              <li class="dropdown-item"><a href="../research/ai_security.html">AI Security</a></li>
+              <li class="dropdown-header dropdown-item">Resources</li>
+              <li class="dropdown-item"><a href="https://github.com/SunLab-GMU">GitHub</a></li>
+            </ul>
+          </li>
+          <li><a href="../index.html#publication" class="scroll-link">Publication</a></li>
+          <li><a href="../index.html#team" class="scroll-link">Team</a></li>  
+          <li><a href="../index.html#sponsors" class="scroll-link">Sponsors</a></li>
+          <li><a href="../index.html#contact" class="scroll-link">Contact</a></li>
+        </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+<!--Header_section--> 
+
+
+<!--home-->
+<section id="home" class="top_cont_outer">
+  <div class="hero_wrapper">
+    <div class="container">
+      <div class="home">
+        <div class="row">
+          <div class="col-lg-7 col-sm-7">
+            <div class="top_left_cont zoomIn wow animated">
+              <h2>Container Security</h2> 
+              <p style="font-size:18px; text-align:justify;">Linux containers are gaining popularity with the OS level virtualization being widely deployed in the cloud environments; however, they also attract attackers' attention. Particularly, since the same OS kernel is shared among all containers, when one malicious container can escape from the user-level process into the OS kernel via the vulnerable system calls, all other containers will be compromised. Based on the observation that two different sets of system calls are needed for the short-term booting phase and the long-term running phase, we had implemented a system call reduction mechanism called SPEAKER that can dramatically reduce the number of available system calls when a given container executes at the running phase. The experimental results showed that SPEAKER can reduce more than 50% and 35% system calls in the running phase for the data store containers and the web server containers, respectively. In this project, we focus on extending SPEAKER as a software product that can be smoothly adopted to enhance container security using our temporal-based fine-grained system resource constraint techniques.<br /><br />
+			  Read more about our works:<br />
+			  <a type="button" class="btn btn-success" style="background:transparent; border:1px solid #fff; font-size:18px;" href="#speaker">SPEAKER</a>
+			  <a type="button" class="btn btn-success" style="background:transparent; border:1px solid #fff; font-size:18px;" href="#measurement">Measurement Studies</a>
+			  </p>
+			</div>
+          </div>
+		  
+          <div class="col-lg-5 col-sm-5">
+		    <br /><br /><br />
+		    <div class="top_left_cont">
+              <img src="img/container.png"> </div>
+			</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--home--> 
+
+
+<!--SPEAKER-->
+<div class="container" id="speaker">
+	<br /><br /><br />
+	<h2>SPEAKER</h2>
+	<p style="font-size:18px; text-align:justify">There is an unabated growth in the usage of Linux containers (e.g., Docker) as an operating system level virtualization approach for running large-scale microservice-based applications in the cloud environment. Meanwhile, the wide adoption of containers also propagates the vulnerabilities embedded in the deployed applications. Since the system calls are the entry points for processes trapping into the kernel, the Linux seccomp security profile has been integrated into Docker to provide a course-grained system call whitelist that constrains the container. However, Docker cannot narrow down this set of necessary system calls for a given application. Also, we observe a large number of system calls are only used in the booting phase and can be disabled during the running phase that is much longer, which could further scale down the attack surface.</p>
+	<div style="text-align:center">
+		<img src="img/arch.png" width="75%">
+	</div>
+	<br />
+	<p style="font-size:18px; text-align:justify">In this work, we propose a non-intrusive container security mechanism named SPEAKER that enables split-phase execution of application containers with minimal system call whitelists. For a given application container, our method automatically analyzes its behavior to identify execution phases (i.e., booting, running, or shutdown phase) and trace its invoked system calls of these three phases, respectively. Then, we extend the Linux seccomp filter to make it dynamically modifiable. After this, when the application is entering a new execution phase, the corresponding fine-grained system call whitelist will be automatically updated. We evaluate SPEAKER on eight popular database and web server containers on the Docker Hub. The experimental results show that it can successfully reduce more than 68\% system calls with a negligible performance overhead.</p>
+	<br />
+	<p align="center">
+		<a class="btn btn-primary btn-lg" role="button" style="margin-right:10px;" href="https://csis.gmu.edu/ksun/publications/SPEAKER-DIMVA2017.pdf" target="_blank">Download the Paper</a>
+		<a class="btn btn-primary btn-lg" role="button" style="margin-right:10px;" href="https://github.com/SunLab-GMU/SPEAKER" target="_blank">Code</a>
+		<a class="btn btn-primary btn-lg" role="button" data-toggle="collapse" href="#bibtex_speaker" aria-expanded="false" aria-controls="bibtex">Export Citation</a>
+	</p>
+	<div class="collapse" style="margin-top: 1.5em;" align="left" id="bibtex_speaker" >
+		<pre style="white-space: pre">
+@InProceedings{lei2017speaker,
+author="Lei, Lingguang
+and Sun, Jianhua
+and Sun, Kun
+and Shenefiel, Chris
+and Ma, Rui
+and Wang, Yuewu
+and Li, Qi",
+editor="Polychronakis, Michalis
+and Meier, Michael",
+title="SPEAKER: Split-Phase Execution of Application Containers",
+booktitle="Detection of Intrusions and Malware, and Vulnerability Assessment",
+year="2017",
+publisher="Springer International Publishing",
+address="Cham",
+pages="230--251"
+}
+</pre>
+	</div>
+	<br /><br /><br />
+</div>
+
+
+
+<div style="background:#efefef;">
+<div class="container" id="measurement">
+	<!-- About -->
+	<br /><br /><br />
+	<h2>Measurement Studies on Container Security</h2>
+	<h3>A Measurement Study on Linux Container Security: Attacks and Countermeasures</h3>
+	<p style="font-size:18px; text-align:justify">Linux container mechanism has attracted a lot of attention and is increasingly utilized to deploy industry applications. Though it is a consensus that the container mechanism is not secure due to the kernel-sharing property, it lacks a concrete and systematical evaluation of its security using real-world exploits. In this paper, we collect an attack dataset including 223 exploits that are effective on the container platform and classify them into different categories using a two-dimensional attack taxonomy. Then we evaluate the security of the existing Linux container mechanism using 88 typical exploits filtered out from the dataset. We find 50 (56.82%) exploits can successfully launch attacks from inside the container with the default configuration. Since the privilege escalation exploits can completely disable the container protection mechanism, we conduct an in-depth analysis on these exploits. We find the kernel security mechanisms such as Capability, Seccomp, and MAC play a more important role in preventing privilege escalation than the container isolation mechanisms (i.e., Namespace and Cgroup). However, the interdependence and mutual influence relationship among these kernel security mechanisms may make them fall into the "short board effect" and impair their protection capability. By studying the 11 exploits that still can successfully break the isolation provided by the container and achieve privilege escalation, we identify a common 4-step attack model followed by all 11 exploits. Finally, we propose a defense mechanism to effectively defeat those identified privilege escalation attacks.</p>
+	<br />
+	<div class="row">
+		<div class="col-lg-6 col-sm-6">
+			<div style="text-align:center">
+			<img src="img/setup.png" width="80%">
+			</div>
+			<p align="center" style="font-size:18px;">Experiment Setup.</p>
+		</div>
+		<div class="col-lg-6 col-sm-6">
+			<div style="text-align:center">
+			<img src="img/resultOverview.png" width="95%">
+			</div>
+			<p align="center" style="font-size:18px;">Security Evaluation Result Overview.</p>
+		</div>
+	</div>
+	<br />
+	<p align="center">
+		<a class="btn btn-primary btn-lg" role="button" style="margin-right:10px;" href="https://csis.gmu.edu/ksun/publications/container-acsac18.pdf" target="_blank">Download the Paper</a>
+		<a class="btn btn-primary btn-lg" role="button" data-toggle="collapse" href="#bibtex_measurement" aria-expanded="false" aria-controls="bibtex">Export Citation</a>
+	</p>
+	<div class="collapse" style="margin-top: 1.5em;" align="left" id="bibtex_measurement" >
+		<pre style="white-space: pre">
+@inproceedings{lin2018container,
+author = {Lin, Xin and Lei, Lingguang and Wang, Yuewu and Jing, Jiwu and Sun, Kun and Zhou, Quan},
+title = {A Measurement Study on Linux Container Security: Attacks and Countermeasures},
+year = {2018},
+isbn = {9781450365697},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3274694.3274720},
+doi = {10.1145/3274694.3274720},
+booktitle = {Proceedings of the 34th Annual Computer Security Applications Conference},
+pages = {418–429},
+numpages = {12},
+keywords = {Container, Kernel Security Mechanisms, Privilege Escalation},
+location = {San Juan, PR, USA},
+series = {ACSAC '18}
+}
+</pre>
+	</div>
+	<br /><br /><br />
+	
+	<h3>Evaluation on the Security of Commercial Cloud Container Services</h3>
+	<p style="font-size:18px; text-align:justify">With the increasing adoption of the container mechanism in the industrial community, cloud vendors begin to provide cloud container services. Unfortunately, it lacks a concrete method to evaluate the security of cloud containers, whose security heavily depends on the security policies enforced by the cloud providers. In this paper, we first derive a metric checklist that identifies the critical factors associated with the security of cloud container services against the two most severe threats, i.e., the privilege escalation and container escaping attacks. Specifically, we identify the metrics which directly reflect the working conditions of the attacker. We also extract the metrics essential to achieve privilege escalation and container escaping attacks by investigating the feasible methods for breaking the security measures, including KASLR, SMEP, and SMAP, etc. Since memory corruption vulnerabilities are frequently adopted in the privilege escalation attacks, we collect a dataset of the publicly released memory corruption vulnerabilities to assist the evaluation. Then, we develop a tool to collect the metric data listed in the checklist from inside the cloud containers and perform security inspections on five in-service commercial cloud container services. The results show that some containers are enforced with weak protection mechanisms (e.g., with the Seccomp mechanism being disabled), and the KASLR could be bypassed on all five cloud containers. However, even after obtaining ROOT privilege in a container, attackers still can hardly escape from the container on the public cloud platforms, since the necessary files for crafting or compiling a loadable kernel module for the host OS are inaccessible to the container. Finally, we provide some suggestions to improve the security of the cloud container services.</p>
+	<br />
+	<div style="text-align:center">
+		<img src="img/environment.png" width="75%">
+	</div>
+	<p align="center" style="font-size:18px;">Execution Environment of the Cloud Containers.</p>
+	<br />
+	<p align="center">
+		<a class="btn btn-primary btn-lg" role="button" style="margin-right:10px;" href="https://csis.gmu.edu/ksun/publications/ISC20-containerEval.pdf" target="_blank">Download the Paper</a>
+		<a class="btn btn-primary btn-lg" role="button" data-toggle="collapse" href="#bibtex_evaluation" aria-expanded="false" aria-controls="bibtex">Export Citation</a>
+	</p>
+	<div class="collapse" style="margin-top: 1.5em;" align="left" id="bibtex_evaluation" >
+		<pre style="white-space: pre">
+@InProceedings{wu2020evaluation,
+author="Wu, Yifei
+and Lei, Lingguang
+and Wang, Yuewu
+and Sun, Kun
+and Meng, Jingzi",
+editor="Susilo, Willy
+and Deng, Robert H.
+and Guo, Fuchun
+and Li, Yannan
+and Intan, Rolly",
+title="Evaluation on the Security of Commercial Cloud Container Services",
+booktitle="Information Security",
+year="2020",
+publisher="Springer International Publishing",
+address="Cham",
+pages="160--177"
+}
+</pre>
+	</div>
+	<br /><br /><br />
+</div>
+</div>
+<!-- Team 
+<div style="background:#efefef;">-->
+<div class="container" id="group">
+	<br /><br />
+	<h2>Group</h2>
+	
+	<p style="font-size:18px; text-align:justify; color:#222"><strong>Faculty:</strong></p>
+	<p style="font-size:18px; text-align:justify; color:#666"><a href="https://csis.gmu.edu/ksun/" target="_blank">Dr. Kun Sun</a></p>
+	<br />
+
+	<p style="font-size:18px; text-align:justify; color:#222"><strong>Student:</strong></p>
+	<p style="font-size:18px; text-align:justify; color:#666"><a href="https://sites.google.com/view/pfeng/home">Pengbin Feng</a><a> (</a>Postdoc)</p>
+	<p style="font-size:18px; text-align:justify; color:#666"><a href="https://www.linkedin.com/in/xindawang/">Xinda Wang</a> (PhD student)</p>
+<p style="font-size:18px; text-align:justify; color:#666"><a href="https://github.com/YunlongXing">Yunlong Xing&nbsp;</a> (Visiting Master student)</p>
+	<p style="font-size:18px; text-align:justify; color:#666">Zeyu Zhang (Visiting Master student)</p>
+	<br />
+	
+	<p style="font-size:18px; text-align:justify; color:#222"><strong>External Collaborators:</strong></p>
+	<p style="font-size:18px; text-align:justify; color:#666">Lingguang Le<a>i&nbsp;</a>&nbsp;(Chinese Academy of Sciences)</p>
+	<p style="font-size:18px; text-align:justify; color:#666">Haining Wang (Virginia Tech)&nbsp;</p>
+	<br />
+	
+	<!--
+	<div class="text-center mt-auto" style="width: 90%; margin-top: 1.5em; margin-bottom: 1.5em; display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap;">
+		<a href="https://www2.gmu.edu/" target="_blank">
+			<img width="250px" src="img/gmu_logo.png" alt="George Mason University logo" class="img-fluid" />
+		</a>
+		<a href="https://csis.gmu.edu/" target="_blank">
+			<img width="150px" src="img/csis.png" alt="CSIS logo" class="img-fluid" />
+		</a>
+		<a href="https://www.tsinghua.edu.cn/en/" target="_blank">
+			<img width="400px" src="img/tsinghua.png" alt="Tsinghua University logo" class="img-fluid" />
+		</a>
+	</div>
+	-->
+	<br /><br />
+</div>
+<!--</div>-->
+
+
+
+<!--Footer-->
+<footer class="footer_wrapper" id="ack">
+  <div class="container">
+    <section class="page_section ack" id="ack">
+		<div class="ack_section">
+			<h2>Acknowledgments</h2>
+			<p>This work is supported by NSF grant CNS-1815650.</p>
+		</div>
+    </section>
+  </div>
+</footer>	
+	
+	
+	
+
+<script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/jquery-scrolltofixed.js"></script>
+<script type="text/javascript" src="../js/jquery.nav.js"></script> 
+<script type="text/javascript" src="../js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="../js/jquery.isotope.js"></script>
+<script type="text/javascript" src="../js/wow.js"></script> 
+<script type="text/javascript" src="../js/custom.js"></script>
+<script>
+  $(document).ready(function(){
+    $('.dropdown-submenu a.submenu').on("click", function(e){
+      $(this).next('ul').toggle();
+      e.stopPropagation();
+      e.preventDefault();
+    });
+  });
+  </script>
+
+</body>
+</html>

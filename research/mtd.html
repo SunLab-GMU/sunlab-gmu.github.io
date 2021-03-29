@@ -1,0 +1,336 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, maximum-scale=1">
+<meta name="description" content="SunLab at George Mason University focuses on the latest cybersecurity research and emerging threats">
+<title>Sun Security Lab</title>
+<link rel="icon" href="../img/sunlab-logo.png" type="image/png">
+<link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="../css/style.css" rel="stylesheet" type="text/css"> 
+<link href="../css/font-awesome.css" rel="stylesheet" type="text/css"> 
+<link href="../css/animate.css" rel="stylesheet" type="text/css">
+ 
+<!--[if lt IE 9]>
+    <script src="js/respond-1.1.0.min.js"></script>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/html5element.js"></script>
+<![endif]-->
+ 
+</head>
+
+<body>
+
+<!--Header_section-->
+<header id="header_wrapper">
+  <div class="container">
+    <div class="header_box">
+      <div class="logo"><a href="../index.html"><img src="../img/sunlab_logo3.png" height="40" alt="logo"></a></div>
+      <nav class="navbar" role="navigation">
+	  <!--
+        <div class="navbar-header">
+          <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        </div>
+	  -->
+        <div id="main-nav" class="collapse navbar-collapse navStyle">
+        <ul class="nav navbar-nav" id="mainNav">
+          <li><a href="../index.html" class="scroll-link">Home</a></li>
+          <li><a href="../index.html#aboutUs" class="scroll-link">About Us</a></li>
+          <li class="dropdown">
+		      <a class="data-toggle" data-toggle="dropdown" data-target="#" href="../index.html#research">Research<strong class="caret"></strong></a>
+              <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="../research/trusted_computing.html">Trustworthy Computing</a></li>
+              <li class="dropdown-item"><a href="#">Moving Target Defense</a></li>
+              <li class="dropdown-item"><a href="../research/software_security.html">Software Security</a></li>
+              <li class="dropdown-item"><a href="../research/container_security.html">Container Security</a></li>
+              <li class="dropdown-item"><a href="../index.html#research">Mobile Phone Security</a></li>
+              <li class="dropdown-item"><a href="../research/ai_security.html">AI Security</a></li>
+              <li class="dropdown-header dropdown-item">Resources</li>
+              <li class="dropdown-item"><a href="https://github.com/SunLab-GMU">GitHub</a></li>
+            </ul>
+          </li>
+          <li><a href="../index.html#publication" class="scroll-link">Publication</a></li>
+          <li><a href="../index.html#team" class="scroll-link">Team</a></li>  
+          <li><a href="../index.html#sponsors" class="scroll-link">Sponsors</a></li>
+          <li><a href="../index.html#contact" class="scroll-link">Contact</a></li>
+        </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+<!--Header_section--> 
+
+
+<!--home-->
+<section id="home" class="top_cont_outer">
+  <div class="hero_wrapper">
+    <div class="container">
+      <div class="home">
+        <div class="row">
+          <div class="col-lg-6 col-sm-6">
+            <div class="top_left_cont zoomIn wow animated">
+              <h2>Moving Target Defense</h2> 
+              <p style="font-size:18px; text-align:justify;">MTD technologies can increase system diversity by dynamically changing the configuration in use for different layers of the system stack. This gives attackers a random and ever-changing view of the underlying system thus increasing the difficulty of successful exploits and required effort while making persistence more challenging, and ultimately deterring them from further attacks. Deception typically employs a decoy network to entrap the attackers and divert the firepower away from the real protected assets. Recent years have witnessed a surging trend of leveraging deception techniques to detect and defeat sophisticated cyber-attacks such as the advanced persistent threat. Our group performs studies on combining MTD and deception technology and develops practical techniques to enhance the stealthiness and fidelity of deception systems.<br /><br />
+			  Read more about our works:<br />
+			    <a type="button" class="btn btn-success" style="background:transparent; border:1px solid #fff; font-size:18px;" href="#mtd1">UBER System</a>
+				<a type="button" class="btn btn-success" style="background:transparent; border:1px solid #fff; font-size:18px;" href="#mtd2">MIRAGE System</a>
+				<a type="button" class="btn btn-success" style="background:transparent; border:1px solid #fff; font-size:18px;" href="#mtd3">DESIR System</a>
+
+			  </p>
+              <!--<a href="#modreplay" class="read_more2">Modulated Replay Attack</a>-->
+			  <!--<a href="#sieve" class="read_more2">SIEVE system</a> -->
+			</div>
+          </div>
+		  
+          <div class="col-lg-6 col-sm-6">
+		    <br /><br /><br />
+		    <div class="top_left_cont">
+              <img src="img/mtd.png"> </div>
+			</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--home--> 
+
+
+<!--modreplay-->
+<div class="container" id="mtd1">
+	<br /><br /><br />
+	<h2>UBER: TOWARDS A BELIEVABLE DECOY SYSTEM VIA Emulation</h2>
+	<p style="font-size:18px; text-align:justify">Malware analysis sandboxes have been widely used by cybersecurity teams to investigate the threat of malware. Correspondingly, malware authors have developed various anti-sandbox techniques to evade the analysis. Most of those evasion techniques are well studied and can be defeated with appropriate mitigation strategies. However, one particular technique is usually overlooked and can be extremely effective in defeating sandbox-based malware analysis, i.e., system fingerprinting. This technique leverages a variety of system artifacts that are expected to exist in a real system as a result of typical user activities for sandbox environment identification. To tackle this drawback of lacking authentic system artifacts in existing sandbox designs, in this paper we propose a novel system UBER for automatic artifact generation based on the emulation of real user behavior. It generalizes the user's computer usage pattern with an abstract behavior profile, employs the profile to guide the simulation of user actions and the generation of artifacts, and then clones the system with generated artifacts into the sandbox environment. We implement a prototype of UBER using python system-event monitor and automation control modules. The experimental results further demonstrate that UBER can generate believable system artifacts and effectively mitigate the sandbox evasion technique exploiting system fingerprinting.</p>
+	<br />
+	<div class="row">
+		<div class="col-lg-6 col-sm-6">
+			<div style="text-align:center">
+			<img src="img/uber_design.jpg" width="95%">
+			</div>
+			<p align="center" style="font-size:18px;">Uber System Design.</p>
+		</div>
+		<div class="col-lg-6 col-sm-6">
+			<div style="text-align:center">
+			<img src="img/uber_implementation.jpg" width="100%">
+			</div>
+			<p align="center" style="font-size:18px;">Uber System Implementation.</p>
+		</div>
+	</div>
+	<!--
+	<br />
+	<div style="text-align:center">
+		<img src="img/uber_design.jpg" width="50%">
+	</div>
+	<br />
+	<p align="center" style="font-size:18px;">Uber System Design</p>
+	<br />
+	<div style="text-align:center">
+		<img src="img/uber_implementation.jpg" width="65%">
+	</div>
+	<br />
+	<p align="center" style="font-size:18px;">Uber System Implementation</p>
+	-->
+	<br />
+	<p style="font-size:18px; text-align:justify">Published in <a href="https://dblp.org/db/conf/icics/icics2019.html">International Conference on Information and Communications Security (ICICS) 2019.</a></p>
+	<br />
+	<p align="center">
+		<a class="btn btn-primary btn-lg" role="button" style="margin-right:10px;" href="https://csis.gmu.edu/ksun/publications/User_Emulation_ICICS2019.pdf" target="_blank">Download the Paper</a>
+		<a class="btn btn-primary btn-lg" role="button" style="margin-right:10px;" href="../research/material/uber-slides.pdf" target="_blank">Slides</a>
+		<a class="btn btn-primary btn-lg" role="button" style="margin-right:10px;" href="https://github.com/fpb1386/Uber_emulation" target="_blank">Code</a>
+		<a class="btn btn-primary btn-lg" role="button" data-toggle="collapse" href="#bibtex_mtd1" aria-expanded="false" aria-controls="bibtex">Export Citation</a>
+	</p>
+	<div class="collapse" style="margin-top: 1.5em;" align="left" id="bibtex_mtd1" >
+		<pre style="white-space: pre">
+@inproceedings{feng2019uber,
+  title={UBER: Combating Sandbox Evasion via User Behavior Emulators},
+  author={Feng, Pengbin and Sun, Jianhua and Liu, Songsong and Sun, Kun},
+  booktitle={International Conference on Information and Communications Security},
+  pages={34--50},
+  year={2019},
+  organization={Springer}
+}
+</pre>
+	</div>
+	<br /><br /><br />
+</div>
+
+
+
+<!--modreplay-->
+<div style="background:#efefef;">
+<div class="container" id="mtd2">
+	<br /><br /><br />
+	<h2>MIRAGE: Towards a Believable Decoy System Via RePLAY</h2>
+	<p style="font-size:18px; text-align:justify">By leveraging deceptive decoys, the defenders seek to proactively engage with the attackers and entice them away from the protected server infrastructure. The effectiveness of such decoy-based deception largely relies on the decoy fidelity. In this paper, we observe that realistic server system inevitably experiences wearoff from service request processing and regular maintenance, resulting in characteristic access pattern, running states, and system artifacts. Accordingly, we identify two deception evasion attacks, namely, traffic fingerprinting and system fingerprinting, which enable sophisticated adversaries to accurately distinguish decoys from real servers. To protect web server decoys against those evasion attacks, we develop Mirage, a seamless real-time network traffic replay framework to generate network traffic and system artifacts on the decoy server based on the normal clients’ interactions with the real server. Mirage works as a TLS-capable reverse proxy that transparently replays real traffic towards decoys. To resolve the inconsistent states between the real and decoy servers, we integrate a decoy client emulator into the reverse proxy to maintain the stateful data features and caching logic of a decoy session. Moreover, we employ format preserving encryption technique to obfuscate sensitive data before being sent to the decoy server. Implementations and evaluations of a prototype demonstrate that Mirage can effectively mitigate deception evasion attacks with acceptable performance overhead.&nbsp;</p>
+	<br />
+	<div style="text-align:center">
+	<img src="img/mirage_arch.png" width="65%">
+	</div>
+	<p align="center" style="font-size:18px;">Mirage Architecture.</p>
+	<!--
+	<br />
+	<div style="text-align:center">
+		<img src="img/uber_design.jpg" width="50%">
+	</div>
+	<br />
+	<p align="center" style="font-size:18px;">Uber System Design</p>
+	<br />
+	<div style="text-align:center">
+		<img src="img/uber_implementation.jpg" width="65%">
+	</div>
+	<br />
+	<p align="center" style="font-size:18px;">Uber System Implementation</p>
+	-->
+	<br />
+	<p style="font-size:18px; text-align:justify">Published in <a href="https://cns2020.ieee-cns.org">IEEE Conference on Communications and Network Security (CNS) 2020.</a></p>
+	<br />
+	<p align="center">
+		<a class="btn btn-primary btn-lg" role="button" style="margin-right:10px;" href="https://csis.gmu.edu/ksun/publications/CNS20_Mirage.pdf" target="_blank">Download the Paper</a>
+		<a class="btn btn-primary btn-lg" role="button" style="margin-right:10px;" href="../research/material/Desir-slides.pdf" target="_blank">Slides</a>
+		<a class="btn btn-primary btn-lg" role="button" style="margin-right:10px;" href="" target="_blank">Code</a>
+		<a class="btn btn-primary btn-lg" role="button" data-toggle="collapse" href="#bibtex_mtd2" aria-expanded="false" aria-controls="bibtex">Export Citation</a>
+	</p>
+	<div class="collapse" style="margin-top: 1.5em;" align="left" id="bibtex_mtd2" >
+		<pre style="white-space: pre">
+@inproceedings{sun2020mirage,
+  title={Towards a Believable Decoy System: Replaying Network Activities from Real System},
+  author={Jianhua Sun and Kun Sun and Qi Li},
+  booktitle={IEEE Conference on Communications and Network Security (CNS)},
+  year={2020}
+}
+</pre>
+	</div>
+	<br /><br /><br />
+</div>
+</div>
+		
+	
+
+<!--modreplay-->
+<div style="background:#ffffff;">
+<div class="container" id="mtd3">
+	<br /><br /><br />
+	<h2>DESIR: Decoy-Enhanced Seamless IP Randomization</h2>
+	<p style="font-size:18px; text-align:justify">To mitigate the effectiveness of persistent reconnaissance attacks, we develop a defensive mechanism that dynamically mutates network topology with a large number of decoys to invalidate the attacker’s knowledge from network scanning. We combine the IP randomization technique with decoy techniques and solve two challenges, namely, service availability to legitimate users and service security against unauthorized users. First, our solution can minimize the probability of the real servers being identified and compromised by unauthorized users through deploying a large number of decoy nodes, which change their IP addresses along with the real servers to prolong the scanning time of the attackers. Second, our solution can ensure seamless connection migration so that all existing communication connections between the legitimate users and the servers are always kept alive even after the servers migrate to different IP addresses multiple times. We implement a virtual machine based system prototype and evaluate it using state-of-the-art scanning techniques.&nbsp;Both theoretical analysis and experimental results show that our solution can effectively mitigate network reconnaissance attacks without sacrificing service availability.</p>
+	<br />
+	<div class="row">
+		<div class="col-lg-6 col-sm-6">
+			<div style="text-align:center">
+			<img src="img/desir_arch.png" width="95%">
+			</div>
+			<p align="center" style="font-size:18px;">DESIR Architecture.</p>
+		</div>
+		<div class="col-lg-6 col-sm-6">
+			<div style="text-align:center">
+			<img src="img/desir_imp.png" width="100%">
+			</div>
+			<p align="center" style="font-size:18px;">DESIR System Implementation.</p>
+		</div>
+	</div>
+	<!--
+	<br />
+	<div style="text-align:center">
+		<img src="img/uber_design.jpg" width="50%">
+	</div>
+	<br />
+	<p align="center" style="font-size:18px;">Uber System Design</p>
+	<br />
+	<div style="text-align:center">
+		<img src="img/uber_implementation.jpg" width="65%">
+	</div>
+	<br />
+	<p align="center" style="font-size:18px;">Uber System Implementation</p>
+	-->
+	<br />
+	<p style="font-size:18px; text-align:justify">Published in <a href="https://infocom2016.ieee-infocom.org">IEEE International Conference on Computer Communications (INFOCOM) 2016.</a></p>
+	<br />
+	<p align="center">
+		<a class="btn btn-primary btn-lg" role="button" style="margin-right:10px;" href="https://csis.gmu.edu/ksun/publications/Desir-infocom2016.pdf" target="_blank">Download the Paper</a>
+		<a class="btn btn-primary btn-lg" role="button" style="margin-right:10px;" href="../research/material/Desir-slides.pdf" target="_blank">Slides</a>
+		<a class="btn btn-primary btn-lg" role="button" style="margin-right:10px;" href="" target="_blank">Code</a>
+		<a class="btn btn-primary btn-lg" role="button" data-toggle="collapse" href="#bibtex_mtd2" aria-expanded="false" aria-controls="bibtex">Export Citation</a>
+	</p>
+	<div class="collapse" style="margin-top: 1.5em;" align="left" id="bibtex_mtd2" >
+		<pre style="white-space: pre">
+@inproceedings{sun2016desir,
+  title={DESIR: Decoy-Enhanced Seamless IP Randomization},
+  author={Jianhua Sun and Kun Sun},
+  booktitle={IEEE International Conference on Computer Communications (INFOCOM)},
+  year={2016}
+}
+</pre>
+	</div>
+	<br /><br /><br />
+</div>
+</div>
+	
+	
+
+	
+
+	
+
+<!-- Team 
+<div style="background:#efefef;">-->
+<div class="container" id="group">
+	<br /><br />
+	<h2>Group</h2>
+	
+	<p style="font-size:18px; text-align:justify; color:#222"><strong>Faculty:</strong></p>
+	<p style="font-size:18px; text-align:justify; color:#666"><a href="https://csis.gmu.edu/ksun/" target="_blank">Dr. Kun Sun</a></p>
+	<br />
+
+	<p style="font-size:18px; text-align:justify; color:#222"><strong>Student:</strong></p>
+	<p style="font-size:18px; text-align:justify; color:#666"><a href="https://sites.google.com/view/pfeng/home" target="_blank">Dr. Pengbin Feng</a> (Postdoc)</p>
+	<p style="font-size:18px; text-align:justify; color:#666"><a href="https://mason.gmu.edu/~sliu23/" target="_blank">Songsong Liu</a> (PhD candidate)</p>
+	<p style="font-size:18px; text-align:justify; color:#666"><a href="https://sites.google.com/view/hexu/">Xu He</a> (PhD student)&nbsp;</p>
+	<p style="font-size:18px; text-align:justify; color:#666"><a href="https://twitter.com/tommychinjr/">Tommy Chin</a> (PhD student) &nbsp;</p>
+<p style="font-size:18px; text-align:justify; color:#666"><a href="https://scholar.google.com/citations?user=48crh8AAAAAJ&hl=en" target="_blank">Dr. Jianhua Sun</a> (PhD, graduated in 2019)</p>
+	<p style="font-size:18px; text-align:justify; color:#666">&nbsp;</p>
+    <p style="font-size:18px; text-align:justify; color:#666"><strong>External Collaborators:</strong>&nbsp;</p>
+    <p style="font-size:18px; text-align:justify; color:#666"><a href="https://people.ece.uw.edu/radha/index.html">Radha Poovendran</a> (University of Washington)&nbsp; &nbsp;</p>
+    <br />
+	<!--
+	<p style="font-size:18px; text-align:justify; color:#222"><strong>External Collaborators:</strong></p>
+	<p style="font-size:18px; text-align:justify; color:#666"><a href="#" target="_blank">XXX XXX</a> (XXX, XXX University)</p>
+	<br />
+	-->
+	<div class="text-center mt-auto" style="width: 90%; margin-top: 1.5em; margin-bottom: 1.5em; display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap;">
+		<a href="https://www2.gmu.edu/" target="_blank">
+		</a>
+		<a href="https://csis.gmu.edu/" target="_blank">
+		</a>
+		<a href="https://www.wm.edu/" target="_blank">
+		</a>
+	</div>
+	<br /><br />
+</div>
+<!--</div>-->
+	
+
+<!--Footer-->
+<footer class="footer_wrapper" id="ack">
+&nbsp; </footer>
+
+
+<script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/jquery-scrolltofixed.js"></script>
+<script type="text/javascript" src="../js/jquery.nav.js"></script> 
+<script type="text/javascript" src="../js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="../js/jquery.isotope.js"></script>
+<script type="text/javascript" src="../js/wow.js"></script> 
+<script type="text/javascript" src="../js/custom.js"></script>
+<script>
+  $(document).ready(function(){
+    $('.dropdown-submenu a.submenu').on("click", function(e){
+      $(this).next('ul').toggle();
+      e.stopPropagation();
+      e.preventDefault();
+    });
+  });
+  </script>
+
+</body>
+</html>

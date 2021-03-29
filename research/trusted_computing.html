@@ -1,0 +1,497 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, maximum-scale=1">
+<meta name="description" content="SunLab at George Mason University focuses on the latest cybersecurity research and emerging threats">
+<title>Sun Security Lab</title>
+<link rel="icon" href="../img/sunlab-logo.png" type="image/png">
+<link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="../css/style.css" rel="stylesheet" type="text/css"> 
+<link href="../css/font-awesome.css" rel="stylesheet" type="text/css"> 
+<link href="../css/animate.css" rel="stylesheet" type="text/css">
+ 
+<!--[if lt IE 9]>
+    <script src="js/respond-1.1.0.min.js"></script>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/html5element.js"></script>
+<![endif]-->
+ 
+</head>
+
+<body>
+
+<!--Header_section-->
+<header id="header_wrapper">
+  <div class="container">
+    <div class="header_box">
+      <div class="logo"><a href="../index.html"><img src="../img/sunlab_logo3.png" height="40" alt="logo"></a></div>
+      <nav class="navbar" role="navigation">
+	  <!--
+        <div class="navbar-header">
+          <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        </div>
+	  -->
+        <div id="main-nav" class="collapse navbar-collapse navStyle">
+        <ul class="nav navbar-nav" id="mainNav">
+          <li><a href="../index.html" class="scroll-link">Home</a></li>
+          <li><a href="../index.html#aboutUs" class="scroll-link">About Us</a></li>
+          <li class="dropdown">
+		      <a class="data-toggle" data-toggle="dropdown" data-target="#" href="../index.html#research">Research<strong class="caret"></strong></a>
+              <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="#">Trustworthy Computing</a></li>
+              <li class="dropdown-item"><a href="../research/mtd.html">Moving Target Defense</a></li>
+              <li class="dropdown-item"><a href="../research/software_security.html">Software Security</a></li>
+              <li class="dropdown-item"><a href="../research/container_security.html">Container Security</a></li>
+              <li class="dropdown-item"><a href="../index.html#research">Mobile Phone Security</a></li>
+              <li class="dropdown-item"><a href="../research/ai_security.html">AI Security</a></li>
+              <li class="dropdown-header dropdown-item">Resources</li>
+              <li class="dropdown-item"><a href="https://github.com/SunLab-GMU">GitHub</a></li>
+            </ul>
+          </li>
+          <li><a href="../index.html#publication" class="scroll-link">Publication</a></li>
+          <li><a href="../index.html#team" class="scroll-link">Team</a></li>  
+          <li><a href="../index.html#sponsors" class="scroll-link">Sponsors</a></li>
+          <li><a href="../index.html#contact" class="scroll-link">Contact</a></li>
+        </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+<!--Header_section--> 
+
+
+<!--home-->
+<section id="home" class="top_cont_outer">
+  <div class="hero_wrapper">
+    <div class="container">
+      <div class="home">
+        <div class="row">
+          <div class="col-lg-7 col-sm-7">
+            <div class="top_left_cont zoomIn wow animated">
+              <h2>Trustworthy Computing</h2> 
+              <p style="font-size:18px; text-align:justify;">We have developed hardware-assisted secure systems on both ARM and x86 architectures since 2010. A suite of secure mechanisms has been developed to achieve isolated computing environments and dependable introspection and debugging framework. First, we tackle the secure OS isolation problem without using a hypervisor or any mutable shared code. Instead, we rely on hardware security extensions integrated on both x86 and ARM processors to achieve isolated computing environments to protect secure sensitive code and data. Second, we leverage the System Management Mode (SMM) present in the popular x86 systems and the TrustZone extension in ARM-based systems to achieve both dependable software introspection and stealthy debugging, which is critical to ensure the integrity of software stack and perform effective malware analysis, respectively.<br>
+                </p>
+              <p style="font-size:18px; text-align:justify;">On ARM: 
+                <a type="button" class="btn btn-success" style="background:transparent; border:1px solid #fff; font-size:18px;" href="#tc1">CITM Attack</a> 
+				<a type="button" class="btn btn-success" style="background:transparent; border:1px solid #fff; font-size:18px;" href="#tc2">RustTEE</a> 
+				<a type="button" class="btn btn-success" style="background:transparent; border:1px solid #fff; font-size:18px;" href="#tc3">CASE</a>  
+				</p>
+				<p style="font-size:18px; text-align:justify;">On X86: 
+                <a type="button" class="btn btn-success" style="background:transparent; border:1px solid #fff; font-size:18px;" href="#tc861">SGX-Bouncer&nbsp;</a> 
+				<a type="button" class="btn btn-success" style="background:transparent; border:1px solid #fff; font-size:18px;" href="#tc862">Malt&nbsp;</a> 
+				<a type="button" class="btn btn-success" style="background:transparent; border:1px solid #fff; font-size:18px;" href="#tc863">SecureSwitch&nbsp;</a> 
+				</p>
+              <!--<a href="#modreplay" class="read_more2">Modulated Replay Attack</a>-->
+			  <!--<a href="#sieve" class="read_more2">SIEVE system</a> -->
+			</div>
+          </div>
+		  
+          <div class="col-lg-5 col-sm-5">
+		    <br /><br /><br /><br />
+		    <div class="top_left_cont">
+              <img src="img/trust.png"> </div>
+			</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--home--> 
+
+
+<!--modreplay-->
+<div class="container" id="tc1">
+	<br /><br /><br />
+	<h2>Cache-in-the-Middle (CITM) Attacks</h2>
+	<p style="font-size:18px; text-align:justify">The traditional usage of ARM TrustZone has difficulty on solving the conflicts between the manufacturers that want to minimize the trusted computing base by constraining the installation of third- party applications in the secure world and the third-party applica- tion developers who prefer to have the freedom of installing their applications into the secure world. To address this issue, researchers propose to create Isolated Execution Environments (called IEEs) in the normal world to protect the security-sensitive applications. In this paper, we perform a systematic study on the IEE data protection models and the ARM cache attributes, and discover three cache- based attacks called CITM that can be leveraged to manipulate the sensitive data protected in IEEs. Specifically, due to the inefficient and incoherent security measures on the cache that maps to the IEE memory (i.e., memory designated for IEEs), attackers in the normal world may compromise the security of IEE data by manipu- lating the IEE memory during concurrent execution, bypassing the security measures enforced when a security-sensitive application is suspended or finished, or misusing the incomplete security mea- sures during IEE’s context switching processes. We conduct case studies of CITM attacks on three well-known IEE systems including SANCTUARY, Ginseng, and TrustICE to illustrate the feasibility to exploit them on real hardware testbeds. Finally, we analyze the root causes of the CITM attacks and propose a countermeasure to defeat them. The experimental results show that our defense scheme has a small overhead. </p>
+	<br />
+	<div class="row">
+		<div class="col-lg-6 col-sm-6">
+			<div style="text-align:center">
+			<img src="img/citm-sanctuary.png" width="90%">
+			</div>
+			<p align="center" style="font-size:18px;">CITM Attack on SANCTUARY.</p>
+		</div>
+		<div class="col-lg-6 col-sm-6">
+			<div style="text-align:center">
+			<img src="img/citm-ginseng.png" width="90%">
+			</div>
+			<p align="center" style="font-size:18px;">CITM Attack on Ginseng.</p>
+		</div>
+	</div>
+	<!--
+	<br />
+	<div style="text-align:center">
+		<img src="img/uber_design.jpg" width="50%">
+	</div>
+	<br />
+	<p align="center" style="font-size:18px;">Uber System Design</p>
+	<br />
+	<div style="text-align:center">
+		<img src="img/uber_implementation.jpg" width="65%">
+	</div>
+	<br />
+	<p align="center" style="font-size:18px;">Uber System Implementation</p>
+	-->
+	<br />
+	<p style="font-size:18px; text-align:justify">Published in <a href="https://www.sigsac.org/ccs/CCS2020/">ACM Conference on Computer and Communications Security (CCS) 2020.</a></p>
+	<br />
+	<p align="center">
+		<a class="btn btn-primary btn-lg" role="button" style="margin-right:10px;" href="https://csis.gmu.edu/ksun/publications/CITM_CCS20.pdf" target="_blank">Download the Paper</a>
+		<a class="btn btn-primary btn-lg" role="button" style="margin-right:10px;" href="../research/material/citm-slides.pdf" target="_blank">Slides</a>
+		<a class="btn btn-primary btn-lg" role="button" data-toggle="collapse" href="#bibtex_tc1" aria-expanded="false" aria-controls="bibtex">Export Citation</a>
+	</p>
+	<div class="collapse" style="margin-top: 1.5em;" align="left" id="bibtex_tc1" >
+		<pre style="white-space: pre">
+@inproceedings{wang2020citm,
+  title={Cache-in-the-Middle(CITM) Attacks: Manipulating Sensitive Data in Isolated Execution Environments.},
+  author={Wang, Jie and Sun, Kun and Lei, Lingguang and Wan, Shengye and Wang, Yuewu and Jing, Jiwu},
+  booktitle={Proceedings of the 2020 ACM SIGSAC Conference on Computer and Communications Security (CCS)},
+  location = {Virtual Event, USA},
+  year={2020}
+}
+</pre>
+	</div>
+	<br /><br /><br />
+</div>
+
+	
+
+<!--modreplay-->
+<div style="background:#efefef;">
+<div class="container" id="tc2">
+	<br /><br /><br />
+	<h2>RusTEE: Developing Memory-Safe ARM TrustZone Applications</h2>
+	<p style="font-size:18px; text-align:justify">In the past decade, Trusted Execution Environment (TEE) provided by ARM TrustZone is becoming one of the primary techniques for enhancing the security of mobile devices. The isolation enforced by TrustZone can protect the trusted applications running in the TEE against malicious software in the untrusted rich execution environment (REE). However, TrustZone cannot completely prevent vulnerabilities in trusted applications residing in the TEE, which can then be used to attack other trusted applications or even the trusted OS. Previously, a number of memory corruption vulnerabilities have been reported on different TAs, which are written in memory-unsafe languages like C. Recently, various memory-safe programming languages have emerged to mitigate the prevalent memory corruption bugs. In this paper, we propose RusTEE, a trusted application mechanism that leverages Rust, a newly emerged memory-safe language, to enhance the security of TAs. Though the high-level idea is quite straight-forwarding, we resolve several challenges on adopting Rust in mobile TEEs. Specifically, since Rust currently does not support any TrustZone-assisted TEE systems, we extend the existing Rust compiler for providing such support. Also, we apply comprehensive security mechanisms to resolve two security issues of trusted applications, namely, securely invoking high-privileged system services and securely communicating with untrusted REE. We implement a prototype of RusTEE as the trusted applications’ SDK, which supports both emulator and real hardware devices. The experiment shows that RusTEE can compile applications with close-to-C performance on the evaluated platforms.</p>
+	<br />
+	<div style="text-align:center">
+	<img src="img/rustee_arch.png" width="55%" height="55%">
+	</div>
+	<p align="center" style="font-size:18px;">RusTEE Architecture.</p>
+	
+	<!--
+	<br />
+	<div style="text-align:center">
+		<img src="img/uber_design.jpg" width="50%">
+	</div>
+	<br />
+	<p align="center" style="font-size:18px;">Uber System Design</p>
+	<br />
+	<div style="text-align:center">
+		<img src="img/uber_implementation.jpg" width="65%">
+	</div>
+	<br />
+	<p align="center" style="font-size:18px;">Uber System Implementation</p>
+	-->
+	<br />
+	<p style="font-size:18px; text-align:justify">Published in <a href="https://infocom2016.ieee-infocom.org">Annual Computer Security Applications Conference (ACSAC) 2020.</a></p>
+	<br />
+	<p align="center">
+	  <a class="btn btn-primary btn-lg" role="button" style="margin-right:10px;" href="https://csis.gmu.edu/ksun/publications/ACSAC20_RusTEE_2020.pdf" target="_blank">Download the Paper</a>
+		<a class="btn btn-primary btn-lg" role="button" style="margin-right:10px;" href="../research/material/rustee-slides.pdf" target="_blank">Slides</a>
+		<a class="btn btn-primary btn-lg" role="button" style="margin-right:10px;" href="https://github.com/SunLab-GMU/RusTEE-CompileTAinRust" target="_blank">Code</a>
+		<a class="btn btn-primary btn-lg" role="button" data-toggle="collapse" href="#bibtex_tc2" aria-expanded="false" aria-controls="bibtex">Export Citation</a>
+	</p>
+	<div class="collapse" style="margin-top: 1.5em;" align="left" id="bibtex_tc2" >
+		<pre style="white-space: pre">
+@inproceedings{wan2020rustee,
+  title={RusTEE: Developing Memory-Safe ARM TrustZone Applications},
+  author={Wan, Shengye and Sun, Mingshen and Sun, Kun and Zhang, Ning and He, Xu},
+  booktitle={Annual Computer Security Applications Conference},
+  location = {Austin, USA},
+  year={2020}
+}
+</pre>
+	</div>
+	<br /><br /><br />
+</div>
+	
+	
+<!--modreplay-->
+<div style="background:#ffffff;">
+<div class="container" id="tc3">
+	<br /><br /><br />
+	<h2>CaSE: Cache-Assisted Secure Execution</h2>
+	<p style="font-size:18px; text-align:justify">TWe develop a cache-assisted secure execution mechanism called CaSE on ARM processors to defend against sophisticated attackers who can launch multi-vector attacks including software attacks and hardware memory disclosure attacks. CaSE utilizes TrustZone to create a cache based isolated execution environment, which can protect both sensitive code and data against the malicious mobile OS and the cold boot attacks. Since the encrypted secure application is loaded into the CPU cache and then decrypted within the processor, we can protect not only the sensitive data but also the code confidentiality against cold boot attacks. Moreover, we use the memory separation and the cache separation mechanism provided by TrustZone to protect the cached application against malicious mobile OS.</p>
+	<br />
+	<div style="text-align:center">
+	<img src="img/case_arch.png" width="55%" height="45%">
+	</div>
+	<p align="center" style="font-size:18px;">CaSE Architecture.</p>
+	<!--
+	<br />
+	<div style="text-align:center">
+		<img src="img/uber_design.jpg" width="50%">
+	</div>
+	<br />
+	<p align="center" style="font-size:18px;">Uber System Design</p>
+	<br />
+	<div style="text-align:center">
+		<img src="img/uber_implementation.jpg" width="65%">
+	</div>
+	<br />
+	<p align="center" style="font-size:18px;">Uber System Implementation</p>
+	-->
+	<br />
+	<p style="font-size:18px; text-align:justify">Published in <a href="https://www.ieee-security.org/TC/SP2016/">IEEE Symposium on Security and Privacy 2016.</a></p>
+	<br />
+	<p align="center">
+		<a class="btn btn-primary btn-lg" role="button" style="margin-right:10px;" href="https://csis.gmu.edu/ksun/publications/CaSE-sp2016.pdf" target="_blank">Download the Paper</a>
+		<a class="btn btn-primary btn-lg" role="button" style="margin-right:10px;" href="../research/material/case-slides.pdf" target="_blank">Slides</a>
+		<a class="btn btn-primary btn-lg" role="button" data-toggle="collapse" href="#bibtex_tc3" aria-expanded="false" aria-controls="bibtex">Export Citation</a>
+	</p>
+	<div class="collapse" style="margin-top: 1.5em;" align="left" id="bibtex_tc3" >
+		<pre style="white-space: pre">
+@inproceedings{zhang2016case,
+  title={CaSE: Cache-Assisted Secure Execution on ARM Processors},
+  author={Ning Zhang, Kun Sun, Wenjing Lou, and Tom Hou},
+  booktitle={IEEE Symposium on Security and Privacy (SP)},
+  year={2016}
+}
+</pre>
+	</div>
+	<br /><br /><br />
+</div>
+</div>
+	
+	
+	
+	
+<!--modreplay-->
+<div style="background:#efefef;">
+<div class="container" id="tc861">
+	<br /><br /><br />
+	<h2>SGX-Bouncer: Detecting Malware in SGX Enclaves</h2>
+	<p style="font-size:18px; text-align:justify">Intel software guard extensions (SGX) enables strong runtime confidentiality and integrity protection for programs and their data and has been adopted by commercial public clouds. Meanwhile, SGX may also be abused by attackers to shield their malicious behaviors in SGX enclaves. We perform a systematic study of SGX applications and formalize a comprehensive set of unwanted behaviors, including unwanted SGX development frameworks, suspicious interface behaviors, and unexpected memory access behaviors. Also, we develop a defense system that is capable of detecting various unwanted behaviors by analyzing the static binary code and runtime execution behaviors of SGX applications. &nbsp;</p>
+	<br />
+	<div class="row">
+		<div class="col-lg-6 col-sm-6">
+			<div style="text-align:center">
+			<img src="img/sgxbouncer-arch.png" width="95%">
+			</div>
+			<p align="center" style="font-size:18px;">SGX-Bouncer Design.</p>
+		</div>
+		<div class="col-lg-6 col-sm-6">
+			<div style="text-align:center">
+			<img src="img/sgxbouncer-deployment.png" width="95%">
+			</div>
+			<p align="center" style="font-size:18px;">SGX-Bouncer Real-World Deployment.</p>
+		</div>
+	</div>
+	<!--
+	<br />
+	<div style="text-align:center">
+		<img src="img/uber_design.jpg" width="50%">
+	</div>
+	<br />
+	<p align="center" style="font-size:18px;">Uber System Design</p>
+	<br />
+	<div style="text-align:center">
+		<img src="img/uber_implementation.jpg" width="65%">
+	</div>
+	<br />
+	<p align="center" style="font-size:18px;">Uber System Implementation</p>
+	-->
+	<br />
+	<p style="font-size:18px; text-align:justify">Published in <a href="https://asiaccs2021.comp.polyu.edu.hk">ACM ASIA Conference on Computer and Communications Security (ASIACCS) 2021.</a></p>
+	<br />
+	<p align="center">
+		<a class="btn btn-primary btn-lg" role="button" style="margin-right:10px;" href="https://csis.gmu.edu/ksun/publications/asiaccs21_sgxmalware.pdf" target="_blank">Download the Paper</a>
+		<!--
+		<a class="btn btn-primary btn-lg" role="button" style="margin-right:10px;" href="" target="_blank">Slides</a>
+		<a class="btn btn-primary btn-lg" role="button" style="margin-right:10px;" href="" target="_blank">Code</a>
+		-->
+		<a class="btn btn-primary btn-lg" role="button" data-toggle="collapse" href="#bibtex_tc861" aria-expanded="false" aria-controls="bibtex">Export Citation</a>
+	</p>
+	<div class="collapse" style="margin-top: 1.5em;" align="left" id="bibtex_tc861" >
+		<pre style="white-space: pre">
+@inproceedings{zhang2021sgxbouncer,
+  title={See through Walls: Detecting Malware in SGX Enclaves with SGX-Bouncer},
+  author={Zeyu Zhang, Xiaoli Zhang, Qi Li, Kun Sun, Yinqian Zhang, SongSong Liu, Yukun Liu, and Xiaoning Li,},
+  booktitle={ACM Asia Conference on Computer and Communications Security (ASIACCS)},
+  year={2021}
+}
+</pre>
+	</div>
+	<br /><br /><br />
+</div>
+
+	
+
+<!--modreplay-->
+<div style="background:#ffffff;">
+<div class="container" id="tc862">
+	<br /><br /><br />
+	<h2>MALT: Debugging Transparency</h2>
+	<p style="font-size:18px; text-align:justify">We develop a novel approach that progresses towards stealthy debugging by leveraging SMM to transparently debug software without depending upon virtualization technology. Our approach reduces the attack surface at the software level and advances state-of-the-art debugging transparency. It embodies various debugging functions, including register/memory accesses, breakpoints, and four stepping modes. We implement a prototype on two physical machines, and the experimental results show that our prototype remains transparent and undetected against an array of existing anti-virtualization, anti-emulation, and packing techniques. Furthermore, our prototype introduces moderate but manageable overheads on both Windows and Linux platforms.</p>
+	<br />
+	<div style="text-align:center">
+	<img src="img/malt_arch.png" width="65%">
+	</div>
+	<p align="center" style="font-size:18px;">Malt Architecture.</p>
+	
+	<!--
+	<br />
+	<div style="text-align:center">
+		<img src="img/uber_design.jpg" width="50%">
+	</div>
+	<br />
+	<p align="center" style="font-size:18px;">Uber System Design</p>
+	<br />
+	<div style="text-align:center">
+		<img src="img/uber_implementation.jpg" width="65%">
+	</div>
+	<br />
+	<p align="center" style="font-size:18px;">Uber System Implementation</p>
+	-->
+	<br />
+	<p style="font-size:18px; text-align:justify">Published in <a href="https://www.ieee-security.org/TC/SP2015/">IEEE Symposium on Security and Privacy 2015.</a></p>
+	<br />
+	<p align="center">
+		<a class="btn btn-primary btn-lg" role="button" style="margin-right:10px;" href="https://csis.gmu.edu/ksun/publications/Malt-sp2015.pdf" target="_blank">Download the Paper</a>
+		<a class="btn btn-primary btn-lg" role="button" style="margin-right:10px;" href="../research/material/malt-slides.pdf" target="_blank">Slides</a>
+		<a class="btn btn-primary btn-lg" role="button" data-toggle="collapse" href="#bibtex_tc862" aria-expanded="false" aria-controls="bibtex">Export Citation</a>
+	</p>
+	<div class="collapse" style="margin-top: 1.5em;" align="left" id="bibtex_tc862" >
+		<pre style="white-space: pre">
+@inproceedings{zhang2015malt,
+  title={Using Hardware Features for Increased Debugging Transparency},
+  author={Fengwei Zhang, Kevin Leach, Angelos Stavrou, Haining Wang, and Kun Sun},
+  booktitle={IEEE Symposium on Security and Privacy},
+  year={2015}
+}
+</pre>
+	</div>
+	<br /><br /><br />
+</div>
+
+<!--modreplay-->
+<div style="background:#efefef;">
+<div class="container" id="tc863">
+	<br /><br /><br />
+	<h2>SecureSwitch: BIOS-Assisted Isolation and Switch</h2>
+	<p style="font-size:18px; text-align:justify">We design a firmware-assisted system called SecureSwitch on x86 architecture, which allows users to switch between a trusted operating system and an untrusted operating system on the same physical machine with a short switching time. The basic input/output system (BIOS) is the only trusted computing base that ensures the resource isolation and enforces a trusted path for switching between the two OSes. If the untrusted OS has been compromised, it still cannot read, write, or execute any of the data and applications in the trusted OS. In our prototype, the entire switching process takes approximately 6 seconds on average.</p>
+	<br />
+	<div class="row">
+		<div class="col-lg-6 col-sm-6">
+			<div style="text-align:center">
+			<img src="img/secureswitch_switch.png" width="95%">
+			</div>
+			<p align="center" style="font-size:18px;">Switching Flow from Untrusted OS to Trusted OS.</p>
+		</div>
+		<div class="col-lg-6 col-sm-6">
+			<div style="text-align:center">
+			<img src="img/secureswitch-sm.png" width="100%">
+			</div>
+			<p align="center" style="font-size:18px;">State Machine for OS Switching.</p>
+		</div>
+	</div>
+	<!--
+	<br />
+	<div style="text-align:center">
+		<img src="img/uber_design.jpg" width="50%">
+	</div>
+	<br />
+	<p align="center" style="font-size:18px;">Uber System Design</p>
+	<br />
+	<div style="text-align:center">
+		<img src="img/uber_implementation.jpg" width="65%">
+	</div>
+	<br />
+	<p align="center" style="font-size:18px;">Uber System Implementation</p>
+	-->
+	<br />
+	<p style="font-size:18px; text-align:justify">Published in <a href="https://www.ndss-symposium.org/ndss2012/">The Network and Distributed System Security Symposium (NDSS) 2012.</a></p>
+	<br />
+	<p align="center">
+		<a class="btn btn-primary btn-lg" role="button" style="margin-right:10px;" href="https://csis.gmu.edu/ksun/publications/SecureSwitch-ndss2012.pdf" target="_blank">Download the Paper</a>
+		<a class="btn btn-primary btn-lg" role="button" style="margin-right:10px;" href="../research/material/secureswitch-slides.pdf" target="_blank">Slides</a>
+		<a class="btn btn-primary btn-lg" role="button" data-toggle="collapse" href="#bibtex_tc863" aria-expanded="false" aria-controls="bibtex">Export Citation</a>
+	</p>
+	<div class="collapse" style="margin-top: 1.5em;" align="left" id="bibtex_tc863" >
+		<pre style="white-space: pre">
+@inproceedings{sun2012secureswitch,
+  title={SecureSwitch: BIOS-Assisted Isolation and Switch between Trusted and Untrusted Commodity OSes},
+  author={Kun Sun, Jiang Wang, Fengwei Zhang, and Angelos Stavrou},
+  booktitle={Annual Network & Distributed System Security Symposium (NDSS)},
+  year={2012}
+}
+</pre>
+	</div>
+	<br /><br /><br />
+</div>	
+	
+</div>
+	
+	
+	
+
+<!-- Team -->
+<!--<div style="background:#efefef;">-->
+<div class="container" id="group">
+	<br /><br />
+	<h2>Group</h2>
+	
+	<p style="font-size:18px; text-align:justify; color:#222"><strong>Faculty:</strong></p>
+	<p style="font-size:18px; text-align:justify; color:#666"><a href="https://csis.gmu.edu/ksun/" target="_blank">Dr. Kun Sun</a></p>
+	<br />
+
+	<p style="font-size:18px; text-align:justify; color:#222"><strong>Student:</strong></p>
+	<p style="font-size:18px; text-align:justify; color:#666"><a href="https://www.linkedin.com/in/jie-wang-275890195/" target="_blank">Jie Wang</a> (PhD candidate)</p>
+	<p style="font-size:18px; text-align:justify; color:#666"><a href="https://mason.gmu.edu/~sliu23/" target="_blank">Songsong Liu</a> (PhD candidate)</p>
+	<p style="font-size:18px; text-align:justify; color:#666"><a href="https://scholar.google.com/citations?user=48crh8AAAAAJ&hl=en" target="_blank">Dr. Shengye Wan</a> (PhD, graduated in 2020)</p>
+	<p style="font-size:18px; text-align:justify; color:#666">Zeyu Zhang (visiting Master student)</p>
+	<br />
+	
+    <p style="font-size:18px; text-align:justify; color:#666"><strong>External Collaborators:</strong></p>
+    <p style="font-size:18px; text-align:justify; color:#666"><a href="https://engineering.wustl.edu/faculty/Ning-Zhang.html">Ning Zhang</a> (Washington University at St. Louis)</p>
+    <p style="font-size:18px; text-align:justify; color:#666">Yuewu Wang (Chinese Academy of Sciences)</p>
+    <p style="font-size:18px; text-align:justify; color:#666"><a href="https://sites.google.com/site/qili2012/home">Qi Li</a> (Tsinghua University)</p>
+    <p style="font-size:18px; text-align:justify; color:#666"><a href="https://ece.vt.edu/people/profile/hnw">Haining Wang</a> (Virginia Tech)</p>
+    <br />
+	<!--
+	<p style="font-size:18px; text-align:justify; color:#222"><strong>External Collaborators:</strong></p>
+	<p style="font-size:18px; text-align:justify; color:#666"><a href="#" target="_blank">XXX XXX</a> (XXX, XXX University)</p>
+	<br />
+	-->
+	<div class="text-center mt-auto" style="width: 90%; margin-top: 1.5em; margin-bottom: 1.5em; display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap;">
+		<a href="https://www2.gmu.edu/" target="_blank">
+		</a>
+		<a href="https://csis.gmu.edu/" target="_blank">
+		</a>
+		<a href="https://www.wm.edu/" target="_blank">
+		</a>
+	</div>
+	<br /><br />
+</div>
+<!--</div>-->
+
+
+<!--Footer-->
+<footer class="footer_wrapper" id="ack">
+&nbsp; </footer>
+
+
+<script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/jquery-scrolltofixed.js"></script>
+<script type="text/javascript" src="../js/jquery.nav.js"></script> 
+<script type="text/javascript" src="../js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="../js/jquery.isotope.js"></script>
+<script type="text/javascript" src="../js/wow.js"></script> 
+<script type="text/javascript" src="../js/custom.js"></script>
+<script>
+  $(document).ready(function(){
+    $('.dropdown-submenu a.submenu').on("click", function(e){
+      $(this).next('ul').toggle();
+      e.stopPropagation();
+      e.preventDefault();
+    });
+  });
+  </script>
+
+</body>
+</html>
