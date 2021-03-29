@@ -1,0 +1,263 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, maximum-scale=1">
+<meta name="description" content="SunLab at George Mason University focuses on the latest cybersecurity research and emerging threats">
+<title>Sun Security Lab</title>
+<link rel="icon" href="../img/sunlab-logo.png" type="image/png">
+<link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="../css/style.css" rel="stylesheet" type="text/css"> 
+<link href="../css/font-awesome.css" rel="stylesheet" type="text/css"> 
+<link href="../css/animate.css" rel="stylesheet" type="text/css">
+ 
+<!--[if lt IE 9]>
+    <script src="js/respond-1.1.0.min.js"></script>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/html5element.js"></script>
+<![endif]-->
+ 
+</head>
+
+<body>
+
+<!--Header_section-->
+<header id="header_wrapper">
+  <div class="container">
+    <div class="header_box">
+      <div class="logo"><a href="../index.html"><img src="../img/sunlab_logo3.png" height="40" alt="logo"></a></div>
+      <nav class="navbar" role="navigation">
+	  <!--
+        <div class="navbar-header">
+          <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        </div>
+	  -->
+        <div id="main-nav" class="collapse navbar-collapse navStyle">
+        <ul class="nav navbar-nav" id="mainNav">
+          <li><a href="../index.html" class="scroll-link">Home</a></li>
+          <li><a href="../index.html#aboutUs" class="scroll-link">About Us</a></li>
+          <li class="dropdown">
+		      <a class="data-toggle" data-toggle="dropdown" data-target="#" href="../index.html#research">Research<strong class="caret"></strong></a>
+              <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="../research/trusted_computing.html">Trustworthy Computing</a></li>
+              <li class="dropdown-item"><a href="../research/mtd.html">Moving Target Defense</a></li>
+              <li class="dropdown-item"><a href="#">Software Security</a></li>
+              <li class="dropdown-item"><a href="../research/container_security.html">Container Security</a></li>
+              <li class="dropdown-item"><a href="../index.html#research">Mobile Phone Security</a></li>
+              <li class="dropdown-item"><a href="../research/ai_security.html">AI Security</a></li>
+              <li class="dropdown-header dropdown-item">Resources</li>
+              <li class="dropdown-item"><a href="https://github.com/SunLab-GMU">GitHub</a></li>
+            </ul>
+          </li>
+          <li><a href="../index.html#publication" class="scroll-link">Publication</a></li>
+          <li><a href="../index.html#team" class="scroll-link">Team</a></li>  
+          <li><a href="../index.html#sponsors" class="scroll-link">Sponsors</a></li>
+          <li><a href="../index.html#contact" class="scroll-link">Contact</a></li>
+        </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+<!--Header_section--> 
+
+
+<!--home-->
+<section id="home" class="top_cont_outer">
+  <div class="hero_wrapper">
+    <div class="container">
+      <div class="home">
+        <div class="row">
+			<div class="col-lg-6 col-sm-6">
+            <div class="top_left_cont zoomIn wow animated">
+              <h2>Software Security</h2> 
+              <p style="font-size:18px; text-align:justify;">Open source software (OSS) has been widely used in both free and proprietary applications. The Black Duck reports that 96% of their scanned applications contain open source components, which account for 57% of the code base on average. At the same time, vulnerabilities embedded in upstream OSS are fast propagated to the underlying applications. Also, the clone or reuse of OSS without explicit reference makes it challenging for maintainers to track and mitigate vulnerabilities. Our research develops practical techniques for detecting such vulnerabilities, which help build a more reliable and secure information system infrastructure.<br /><br />
+			  Read more about our works:<br />
+			    <a type="button" class="btn btn-success" style="background:transparent; border:1px solid #fff; font-size:18px;" href="#patch_identification">Security Patch Identification</a>
+				<a type="button" class="btn btn-success" style="background:transparent; border:1px solid #fff; font-size:18px;" href="#patch_classification">Security Patch Classification</a><br />
+				<a type="button" class="btn btn-success" style="background:transparent; border:1px solid #fff; font-size:18px;" href="#patch_db">PatchDB</a>
+			  </p>
+			</div>
+			</div>
+		  
+			<div class="col-lg-6 col-sm-6">
+		    <br /><br /><br />
+		    <div class="top_left_cont">
+              <img src="img/software_security.jpg"> </div>
+			</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--home--> 
+
+
+<!--modreplay-->
+<div class="container" id="patch_identification">
+	<br /><br /><br />
+	<h2>Security Patch Identification</h2>
+	<p style="font-size:18px; text-align:justify">Security patches in open source software (OSS) not only provide security fixes to identified vulnerabilities but also make the vulnerable code public to the attackers. Therefore, armored attackers may misuse this information to launch N-day attacks on unpatched OSS versions. The best practice for preventing this type of N-day attacks is to keep upgrading the software to the latest version in no time. However, due to the concerns on reputation and easy software development management, software vendors may choose to secretly patch their vulnerabilities in a new version without reporting them to CVE or even providing any explicit description in their change logs. When those secretly patched vulnerabilities are being identified by armored attackers, they can be turned into powerful "0-day" attacks, which can be exploited to compromise not only unpatched version of the same software, but also similar types of OSS (e.g., SSL libraries) that may contain the same vulnerability due to code clone or similar design/implementation logic. Therefore, it is critical to identify secret security patches. In our <a href="https://csis.gmu.edu/ksun/publications/secretpatch-dsn19.pdf" target="_blank">paper</a>, we develop a defense system and implement a toolset to automatically identify secret security patches in OSS. To distinguish security patches from other patches, we first build a security patch database that contains more than 4700 security patches mapping to the records in the CVE list. Next, we identify a set of features to help distinguish security patches from non-security ones using machine learning approaches. Finally, we use code clone identification mechanisms to discover similar patches or vulnerabilities in similar types of OSS. The experimental results show our approach can achieve good detection performance. A case study on OpenSSL, LibreSSL, and BoringSSL discover 12 secret security patches.</p>
+	<div style="text-align:center">
+		<img src="img/patch_identification.png" width="78%">
+	</div>
+	<p style="font-size:18px; text-align:justify">Publiched in <a href="http://2019.dsn.org/">the IEEE Conference on Dependable Systems and Networks (DSN) 2019.</a></p>
+	<br />
+	<p align="center">
+		<a class="btn btn-primary btn-lg" role="button" style="margin-right:10px;" href="https://csis.gmu.edu/ksun/publications/secretpatch-dsn19.pdf" target="_blank">Download the Paper</a>
+		<a class="btn btn-primary btn-lg" role="button" style="margin-right:10px;" href="https://github.com/SunLab-GMU/PatchDataset" target="_blank">Dataset</a>
+		<a class="btn btn-primary btn-lg" role="button" data-toggle="collapse" href="#bibtex_wang2019dsn" aria-expanded="false" aria-controls="bibtex">Export Citation</a>
+	</p>
+	<div class="collapse" style="margin-top: 1.5em;" align="left" id="bibtex_wang2019dsn" >
+		<pre style="white-space: pre">
+@INPROCEEDINGS{wang2019dsn,  
+author={X. {Wang} and K. {Sun} and A. {Batcheller} and S. {Jajodia}},  
+booktitle={2019 49th Annual IEEE/IFIP International Conference on Dependable Systems and Networks (DSN)},   
+title={Detecting "0-Day" Vulnerability: An Empirical Study of Secret Security Patch in OSS},   
+year={2019},  
+volume={},  
+number={},  
+pages={485-492},  
+doi={10.1109/DSN.2019.00056}
+}
+</pre>
+	</div>
+	<br /><br /><br />
+</div>
+
+
+
+<div style="background:#efefef;">
+<div class="container" id="patch_classification">
+	<!-- About -->
+	<br /><br /><br />
+	<h2>Security Patch Classification</h2>
+	<p style="font-size:18px; text-align:justify">With the increasing usage of open source software (OSS) in both free and proprietary applications, vulnerabilities embedded in OSS are also propagated to the underlying applications. It is critical to find security patches to fix these vulnerabilities, especially those essential to reduce security risk. Unfortunately, given a security patch, currently, there does not exist a way to automatically recognize the vulnerability that is fixed. In our <a href="http://mason.gmu.edu/~swang47/papers/cns20.pdf" target="_blank">paper</a>, we first conduct an empirical study on security patches by type (i.e., corresponding vulnerability type), using a large-scale dataset collected from the National Vulnerability Database (NVD). Based on analysis results, we develop a machine learning-based system to help identify the vulnerability type of a given security patch. The evaluation results show that our system achieves good performance.</p>
+	<br />
+	<div style="text-align:center">
+		<img src="img/patch_classification.png" width="60%">
+	</div>
+	<br />
+	<p style="font-size:18px; text-align:justify">Published in <a href="https://cns2020.ieee-cns.org/">the IEEE Conference on Communications and Network Security (CNS) 2020.</a></p>
+	<br />
+	<p align="center">
+		<a class="btn btn-primary btn-lg" role="button" style="margin-right:10px;" href="http://mason.gmu.edu/~swang47/papers/cns20.pdf" target="_blank">Download the Paper</a>
+		<a class="btn btn-primary btn-lg" role="button" data-toggle="collapse" href="#bibtex_wang2020cns" aria-expanded="false" aria-controls="bibtex">Export Citation</a>
+	</p>
+	<div class="collapse" style="margin-top: 1.5em;" align="left" id="bibtex_wang2020cns" >
+		<pre style="white-space: pre">
+@INPROCEEDINGS{wang2020cns,
+author={X. {Wang} and S. {Wang} and K. {Sun} and A. {Batcheller} and S. {Jajodia}},
+booktitle={2020 IEEE Conference on Communications and Network Security (CNS)}, 
+title={A Machine Learning Approach to Classify Security Patches into Vulnerability Types}, 
+year={2020},
+volume={},
+number={},
+pages={1-9},
+doi={10.1109/CNS48642.2020.9162237}
+}
+</pre>
+	</div>
+	<br /><br /><br />
+</div>
+</div>
+
+
+<div class="container" id="patch_db">
+	<br /><br /><br />
+	<h2>PatchDB: A Large-Scale Security Patch Dataset</h2>
+	<p style="font-size:18px; text-align:justify">Security patches, embedding both vulnerable code and the corresponding fixes, are of great significance to vulnerability detection and software maintenance. A large patch dataset is critical for various patch analysis tasks. However, the existing patch datasets suffer from insufficient samples and low varieties. In this <a href="http://mason.gmu.edu/~swang47/papers/dsn21.pdf" target="_blank">paper</a>, we construct a large-scale patch dataset called PatchDB consisting of three datasets, namely, NVD-based dataset, wild-based dataset, and synthetic dataset. The NVD-based dataset is extracted from the patch hyperlinks indexed by the NVD. The wild-based dataset includes security patches that we collect from the commits on GitHub. To improve the efficiency of data collection and reduce the effort on manual verification, we develop a new nearest link search method to help find the most promising security patch candidates. Moreover, we provide a synthetic dataset, which uses a new oversampling method to synthesize patches at the source code level, enriching the control flow variants of original patches. We conduct a set of studies to investigate the effectiveness of the proposed algorithms and evaluate the properties of the collected dataset. The experimental results show that PatchDB can help improve the performance on security patch identification.</p>
+	<div style="text-align:center">
+		<img src="img/PatchDB.png" width="78%">
+	</div>
+	<br />
+	<p style="font-size:18px; text-align:justify">Publiched in <a href="http://dsn2021.ntu.edu.tw/">the IEEE Conference on Dependable Systems and Networks (DSN) 2021.</a></p>
+	<br />
+	<p align="center">
+		<a class="btn btn-primary btn-lg" role="button" style="margin-right:10px;" href="http://mason.gmu.edu/~swang47/papers/dsn21.pdf" target="_blank">Download the Paper</a>
+		<a class="btn btn-primary btn-lg" role="button" style="margin-right:10px;" href="https://github.com/SunLab-GMU/PatchDB" target="_blank">Dataset</a>
+		<a class="btn btn-primary btn-lg" role="button" data-toggle="collapse" href="#bibtex_wang2021dsn" aria-expanded="false" aria-controls="bibtex">Export Citation</a>
+	</p>
+	<div class="collapse" style="margin-top: 1.5em;" align="left" id="bibtex_wang2021dsn" >
+		<pre style="white-space: pre">
+@INPROCEEDINGS{wang2021dsn,  
+author={X. {Wang} and S. {Wang} and P. {Feng} and K. {Sun} and S. {Jajodia}},  
+booktitle={2021 51st Annual IEEE/IFIP International Conference on Dependable Systems and Networks (DSN)},   
+title={PatchDB: A Large-Scale Security Patch Dataset},   
+year={2021},  
+volume={},  
+number={},  
+pages={},  
+doi={}
+}
+</pre>
+	</div>
+	<br /><br /><br />
+</div>
+
+
+
+
+<div style="background:#efefef;">
+<div class="container" id="group">
+	<br /><br />
+	<h2>Group</h2>
+	
+	<p style="font-size:18px; text-align:justify; color:#222"><strong>Faculty:</strong></p>
+	<p style="font-size:18px; text-align:justify; color:#666"><a href="https://csis.gmu.edu/ksun/" target="_blank">Dr. Kun Sun</a></p>
+	<br />
+
+	<p style="font-size:18px; text-align:justify; color:#222"><strong>Student:</strong></p>
+	<p style="font-size:18px; text-align:justify; color:#666"><a href="https://www.linkedin.com/in/xindawang/">Xinda Wang</a><a>&nbsp;</a><a href="https://www.linkedin.com/in/xindawang/">&nbsp;</a> (PhD student)</p>
+	<p style="font-size:18px; text-align:justify; color:#666"><a href="http://mason.gmu.edu/~swang47/">Shu Wang&nbsp;</a> (PhD student)</p>
+	<p style="font-size:18px; text-align:justify; color:#666"><a href="https://sites.google.com/view/hexu/">Xu He</a> (PhD student)</p>
+	<p style="font-size:18px; text-align:justify; color:#666"><a href="https://sites.google.com/view/pfeng/home">Pengbin Feng</a> (Postdoc)&nbsp;</p>
+  <br />
+	
+	<p style="font-size:18px; text-align:justify; color:#222"><strong>External Collaborators:</strong></p>
+	<p style="font-size:18px; text-align:justify; color:#666"><a href="#" target="_blank">&nbsp;</a></p>
+	<br />
+	
+	<!--
+	<div class="text-center mt-auto" style="width: 90%; margin-top: 1.5em; margin-bottom: 1.5em; display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap;">
+		<a href="https://www2.gmu.edu/" target="_blank">
+			<img width="250px" src="img/gmu_logo.png" alt="George Mason University logo" class="img-fluid" />
+		</a>
+		<a href="https://csis.gmu.edu/" target="_blank">
+			<img width="150px" src="img/csis.png" alt="CSIS logo" class="img-fluid" />
+		</a>
+		<a href="https://www.tsinghua.edu.cn/en/" target="_blank">
+			<img width="400px" src="img/tsinghua.png" alt="Tsinghua University logo" class="img-fluid" />
+		</a>
+	</div>
+	-->
+	<br /><br />
+</div>
+</div>
+
+<!--Footer-->
+<footer class="footer_wrapper" id="ack">
+&nbsp; </footer>
+
+
+<script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/jquery-scrolltofixed.js"></script>
+<script type="text/javascript" src="../js/jquery.nav.js"></script> 
+<script type="text/javascript" src="../js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="../js/jquery.isotope.js"></script>
+<script type="text/javascript" src="../js/wow.js"></script> 
+<script type="text/javascript" src="../js/custom.js"></script>
+<script>
+  $(document).ready(function(){
+    $('.dropdown-submenu a.submenu').on("click", function(e){
+      $(this).next('ul').toggle();
+      e.stopPropagation();
+      e.preventDefault();
+    });
+  });
+  </script>
+
+</body>
+</html>
