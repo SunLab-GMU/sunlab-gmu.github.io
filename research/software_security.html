@@ -97,10 +97,25 @@
 <div class="container" id="patch_identification">
 	<br /><br /><br />
 	<h2>Security Patch Identification</h2>
-	<p style="font-size:18px; text-align:justify">Security patches in open source software (OSS) not only provide security fixes to identified vulnerabilities but also make the vulnerable code public to the attackers. Therefore, armored attackers may misuse this information to launch N-day attacks on unpatched OSS versions. The best practice for preventing this type of N-day attacks is to keep upgrading the software to the latest version in no time. However, due to the concerns on reputation and easy software development management, software vendors may choose to secretly patch their vulnerabilities in a new version without reporting them to CVE or even providing any explicit description in their change logs. When those secretly patched vulnerabilities are being identified by armored attackers, they can be turned into powerful "0-day" attacks, which can be exploited to compromise not only unpatched version of the same software, but also similar types of OSS (e.g., SSL libraries) that may contain the same vulnerability due to code clone or similar design/implementation logic. Therefore, it is critical to identify secret security patches. In our <a href="https://csis.gmu.edu/ksun/publications/secretpatch-dsn19.pdf" target="_blank">paper</a>, we develop a defense system and implement a toolset to automatically identify secret security patches in OSS. To distinguish security patches from other patches, we first build a security patch database that contains more than 4700 security patches mapping to the records in the CVE list. Next, we identify a set of features to help distinguish security patches from non-security ones using machine learning approaches. Finally, we use code clone identification mechanisms to discover similar patches or vulnerabilities in similar types of OSS. The experimental results show our approach can achieve good detection performance. A case study on OpenSSL, LibreSSL, and BoringSSL discover 12 secret security patches.</p>
-	<div style="text-align:center">
+	<p style="font-size:18px; text-align:justify">Security patches in open source software (OSS) not only provide security fixes to identified vulnerabilities but also make the vulnerable code public to the attackers. Therefore, armored attackers may misuse this information to launch N-day attacks on unpatched OSS versions. The best practice for preventing this type of N-day attacks is to keep upgrading the software to the latest version in no time. However, due to the concerns on reputation and easy software development management, software vendors may choose to secretly patch their vulnerabilities in a new version without reporting them to CVE or even providing any explicit description in their change logs. When those secretly patched vulnerabilities are being identified by armored attackers, they can be turned into powerful "0-day" attacks, which can be exploited to compromise not only unpatched version of the same software, but also similar types of OSS (e.g., SSL libraries) that may contain the same vulnerability due to code clone or similar design/implementation logic. Therefore, it is critical to identify secret security patches. </p>
+	<!-- <div style="text-align:center">
 		<img src="img/patch_identification.png" width="78%">
+	</div> -->
+	<br />
+
+	<div class="row">
+		<div class="col-lg-6 col-sm-6">
+			<div style="text-align:center">
+				<p style="font-size:18px; text-align:justify">In our <a href="https://csis.gmu.edu/ksun/publications/secretpatch-dsn19.pdf" target="_blank">paper</a>, we develop a defense system and implement a toolset to automatically identify secret security patches in OSS. To distinguish security patches from other patches, we first build a security patch database that contains more than 4700 security patches mapping to the records in the CVE list. Next, we identify a set of features to help distinguish security patches from non-security ones using machine learning approaches. Finally, we use code clone identification mechanisms to discover similar patches or vulnerabilities in similar types of OSS. The experimental results show our approach can achieve good detection performance. A case study on OpenSSL, LibreSSL, and BoringSSL discover 12 secret security patches.</p>
+			</div>
+		</div>
+		<div class="col-lg-6 col-sm-6">
+			<div style="text-align:center">
+				<img src="img/patch_identification.png" width="95%">
+			</div>
+		</div>
 	</div>
+
 	<p style="font-size:18px; text-align:justify">Publiched in <a href="http://2019.dsn.org/" target="_blank">the IEEE Conference on Dependable Systems and Networks (DSN) 2019.</a></p>
 	<br />
 	<p align="center">
@@ -175,7 +190,7 @@ doi={10.1109/CNS48642.2020.9162237}
 	<h2>PatchDB: A Large-Scale Security Patch Dataset</h2>
 	<p style="font-size:18px; text-align:justify">Security patches, embedding both vulnerable code and the corresponding fixes, are of great significance to vulnerability detection and software maintenance. A large patch dataset is critical for various patch analysis tasks. However, the existing patch datasets suffer from insufficient samples and low varieties. In this <a href="https://sunlab-gmu.github.io/PatchDB/file/dsn21_paper_wang.pdf" target="_blank">paper</a>, we construct a large-scale patch dataset called PatchDB consisting of three datasets, namely, NVD-based dataset, wild-based dataset, and synthetic dataset. The NVD-based dataset is extracted from the patch hyperlinks indexed by the NVD. The wild-based dataset includes security patches that we collect from the commits on GitHub. To improve the efficiency of data collection and reduce the effort on manual verification, we develop a new nearest link search method to help find the most promising security patch candidates. Moreover, we provide a synthetic dataset, which uses a new oversampling method to synthesize patches at the source code level, enriching the control flow variants of original patches. We conduct a set of studies to investigate the effectiveness of the proposed algorithms and evaluate the properties of the collected dataset. The experimental results show that PatchDB can help improve the performance on security patch identification.</p>
 	<div style="text-align:center">
-		<img src="img/PatchDB.png" width="78%">
+		<img src="img/PatchDB.png" width="70%">
 	</div>
 	<br />
 	<p style="font-size:18px; text-align:justify">Publiched in <a href="http://dsn2021.ntu.edu.tw/" target="_blank">the IEEE Conference on Dependable Systems and Networks (DSN) 2021.</a></p>

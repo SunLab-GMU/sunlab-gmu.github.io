@@ -102,7 +102,7 @@
 <!--home--> 
 
 
-<!--modreplay-->
+<!--CITM-->
 <div class="container" id="tc1">
 	<br /><br /><br />
 	<h2>Cache-in-the-Middle (CITM) Attacks</h2>
@@ -122,20 +122,6 @@
 			<p align="center" style="font-size:18px;">CITM Attack on Ginseng.</p>
 		</div>
 	</div>
-	<!--
-	<br />
-	<div style="text-align:center">
-		<img src="img/uber_design.jpg" width="50%">
-	</div>
-	<br />
-	<p align="center" style="font-size:18px;">Uber System Design</p>
-	<br />
-	<div style="text-align:center">
-		<img src="img/uber_implementation.jpg" width="65%">
-	</div>
-	<br />
-	<p align="center" style="font-size:18px;">Uber System Implementation</p>
-	-->
 	<br />
 	<p style="font-size:18px; text-align:justify">Published in <a href="https://www.sigsac.org/ccs/CCS2020/">ACM Conference on Computer and Communications Security (CCS) 2020.</a></p>
 	<br />
@@ -165,27 +151,21 @@
 <div class="container" id="tc2">
 	<br /><br /><br />
 	<h2>RusTEE: Developing Memory-Safe ARM TrustZone Applications</h2>
-	<p style="font-size:18px; text-align:justify">In the past decade, Trusted Execution Environment (TEE) provided by ARM TrustZone is becoming one of the primary techniques for enhancing the security of mobile devices. The isolation enforced by TrustZone can protect the trusted applications running in the TEE against malicious software in the untrusted rich execution environment (REE). However, TrustZone cannot completely prevent vulnerabilities in trusted applications residing in the TEE, which can then be used to attack other trusted applications or even the trusted OS. Previously, a number of memory corruption vulnerabilities have been reported on different TAs, which are written in memory-unsafe languages like C. Recently, various memory-safe programming languages have emerged to mitigate the prevalent memory corruption bugs. In this paper, we propose RusTEE, a trusted application mechanism that leverages Rust, a newly emerged memory-safe language, to enhance the security of TAs. Though the high-level idea is quite straight-forwarding, we resolve several challenges on adopting Rust in mobile TEEs. Specifically, since Rust currently does not support any TrustZone-assisted TEE systems, we extend the existing Rust compiler for providing such support. Also, we apply comprehensive security mechanisms to resolve two security issues of trusted applications, namely, securely invoking high-privileged system services and securely communicating with untrusted REE. We implement a prototype of RusTEE as the trusted applications’ SDK, which supports both emulator and real hardware devices. The experiment shows that RusTEE can compile applications with close-to-C performance on the evaluated platforms.</p>
+	<p style="font-size:18px; text-align:justify">In the past decade, Trusted Execution Environment (TEE) provided by ARM TrustZone is becoming one of the primary techniques for enhancing the security of mobile devices. The isolation enforced by TrustZone can protect the trusted applications running in the TEE against malicious software in the untrusted rich execution environment (REE). However, TrustZone cannot completely prevent vulnerabilities in trusted applications residing in the TEE, which can then be used to attack other trusted applications or even the trusted OS. Previously, a number of memory corruption vulnerabilities have been reported on different TAs, which are written in memory-unsafe languages like C. Recently, various memory-safe programming languages have emerged to mitigate the prevalent memory corruption bugs. </p>
 	<br />
-	<div style="text-align:center">
-	<img src="img/rustee_arch.png" width="55%" height="55%">
+	<div class="row">
+		<div class="col-lg-6 col-sm-6">
+			<div style="text-align:center">
+				<p style="font-size:18px; text-align:justify">In this paper, we propose RusTEE, a trusted application mechanism that leverages Rust, a newly emerged memory-safe language, to enhance the security of TAs. Though the high-level idea is quite straight-forwarding, we resolve several challenges on adopting Rust in mobile TEEs. Specifically, since Rust currently does not support any TrustZone-assisted TEE systems, we extend the existing Rust compiler for providing such support. Also, we apply comprehensive security mechanisms to resolve two security issues of trusted applications, namely, securely invoking high-privileged system services and securely communicating with untrusted REE. We implement a prototype of RusTEE as the trusted applications’ SDK, which supports both emulator and real hardware devices. The experiment shows that RusTEE can compile applications with close-to-C performance on the evaluated platforms.</p>
+			</div>
+		</div>
+		<div class="col-lg-6 col-sm-6">
+			<div style="text-align:center">
+				<img src="img/rustee_arch.png" width="80%">
+			</div>
+			<p align="center" style="font-size:18px;">RusTEE Architecture.</p>
+		</div>
 	</div>
-	<p align="center" style="font-size:18px;">RusTEE Architecture.</p>
-	
-	<!--
-	<br />
-	<div style="text-align:center">
-		<img src="img/uber_design.jpg" width="50%">
-	</div>
-	<br />
-	<p align="center" style="font-size:18px;">Uber System Design</p>
-	<br />
-	<div style="text-align:center">
-		<img src="img/uber_implementation.jpg" width="65%">
-	</div>
-	<br />
-	<p align="center" style="font-size:18px;">Uber System Implementation</p>
-	-->
 	<br />
 	<p style="font-size:18px; text-align:justify">Published in <a href="https://infocom2016.ieee-infocom.org">Annual Computer Security Applications Conference (ACSAC) 2020.</a></p>
 	<br />
@@ -210,31 +190,24 @@
 </div>
 	
 	
-<!--modreplay-->
+<!--CaSE-->
 <div style="background:#ffffff;">
 <div class="container" id="tc3">
 	<br /><br /><br />
 	<h2>CaSE: Cache-Assisted Secure Execution</h2>
-	<p style="font-size:18px; text-align:justify">TWe develop a cache-assisted secure execution mechanism called CaSE on ARM processors to defend against sophisticated attackers who can launch multi-vector attacks including software attacks and hardware memory disclosure attacks. CaSE utilizes TrustZone to create a cache based isolated execution environment, which can protect both sensitive code and data against the malicious mobile OS and the cold boot attacks. Since the encrypted secure application is loaded into the CPU cache and then decrypted within the processor, we can protect not only the sensitive data but also the code confidentiality against cold boot attacks. Moreover, we use the memory separation and the cache separation mechanism provided by TrustZone to protect the cached application against malicious mobile OS.</p>
-	<br />
-	<div style="text-align:center">
-	<img src="img/case_arch.png" width="55%" height="45%">
+	<div class="row">
+		<div class="col-lg-6 col-sm-6">
+			<div style="text-align:center">
+				<p style="font-size:18px; text-align:justify">We develop a cache-assisted secure execution mechanism called CaSE on ARM processors to defend against sophisticated attackers who can launch multi-vector attacks including software attacks and hardware memory disclosure attacks. CaSE utilizes TrustZone to create a cache based isolated execution environment, which can protect both sensitive code and data against the malicious mobile OS and the cold boot attacks. Since the encrypted secure application is loaded into the CPU cache and then decrypted within the processor, we can protect not only the sensitive data but also the code confidentiality against cold boot attacks. Moreover, we use the memory separation and the cache separation mechanism provided by TrustZone to protect the cached application against malicious mobile OS.</p>
+			</div>
+		</div>
+		<div class="col-lg-5 col-sm-5">
+			<div style="text-align:center">
+				<img src="img/case_arch.png" width="65%">
+			</div>
+			<p align="center" style="font-size:18px;">CaSE Architecture.</p>
+		</div>
 	</div>
-	<p align="center" style="font-size:18px;">CaSE Architecture.</p>
-	<!--
-	<br />
-	<div style="text-align:center">
-		<img src="img/uber_design.jpg" width="50%">
-	</div>
-	<br />
-	<p align="center" style="font-size:18px;">Uber System Design</p>
-	<br />
-	<div style="text-align:center">
-		<img src="img/uber_implementation.jpg" width="65%">
-	</div>
-	<br />
-	<p align="center" style="font-size:18px;">Uber System Implementation</p>
-	-->
 	<br />
 	<p style="font-size:18px; text-align:justify">Published in <a href="https://www.ieee-security.org/TC/SP2016/">IEEE Symposium on Security and Privacy 2016.</a></p>
 	<br />

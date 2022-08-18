@@ -82,8 +82,6 @@
 				<a type="button" class="btn btn-success" style="background:transparent; border:1px solid #fff; font-size:18px;" href="#taintradar">TaintRadar</a>
 			  </p>
 			  </p>
-              <!--<a href="#modreplay" class="read_more2">Modulated Replay Attack</a>-->
-			  <!--<a href="#sieve" class="read_more2">SIEVE system</a> -->
 			</div>
           </div>
 		  
@@ -158,11 +156,21 @@ series = {CCS '20}
 	<!-- About -->
 	<br /><br /><br />
 	<h2>SIEVE System</h2>
-	<p style="font-size:18px; text-align:justify">Driverless vehicles are becoming an irreversible trend in our daily lives, and humans can interact with cars through invehicle voice control systems. However, the automatic speech recognition (ASR) module in the voice control systems is vulnerable to adversarial voice commands, which may cause unexpected behaviors or even accidents in driverless cars. Due to the high demand on security insurance, it remains as a challenge to defend in-vehicle ASR systems against adversarial voice commands from various sources in a noisy driving environment. In our <a href="https://csis.gmu.edu/ksun/publications/SIEVE_RAID20.pdf" target="_blank">paper</a>, we develop a secure in-vehicle ASR system called <b>SIEVE</b>, which can effectively distinguish voice commands issued from the driver, passengers, or electronic speakers in three steps. First, it filters out multiple-source voice commands from multiple vehicle speakers by leveraging an autocorrelation analysis. Second, it identifies if a single-source voice command is from humans or electronic speakers using a novel dual-domain detection method. Finally, it leverages the directions of voice sources to distinguish the voice of the driver from those of the passengers. We implement a prototype of SIEVE and perform a real-world study under different driving conditions. Experimental results show SIEVE can defeat various adversarial voice commands over in-vehicle ASR systems.</p>
+	<p style="font-size:18px; text-align:justify">Driverless vehicles are becoming an irreversible trend in our daily lives, and humans can interact with cars through invehicle voice control systems. However, the automatic speech recognition (ASR) module in the voice control systems is vulnerable to adversarial voice commands, which may cause unexpected behaviors or even accidents in driverless cars. Due to the high demand on security insurance, it remains as a challenge to defend in-vehicle ASR systems against adversarial voice commands from various sources in a noisy driving environment. </p>
 	<br />
-	<div style="text-align:center">
-		<img src="img/car.png" width="70%">
+	<div class="row">
+		<div class="col-lg-6 col-sm-6">
+			<div style="text-align:center">
+				<p style="font-size:18px; text-align:justify">In our <a href="https://csis.gmu.edu/ksun/publications/SIEVE_RAID20.pdf" target="_blank">paper</a>, we develop a secure in-vehicle ASR system called <b>SIEVE</b>, which can effectively distinguish voice commands issued from the driver, passengers, or electronic speakers in three steps. First, it filters out multiple-source voice commands from multiple vehicle speakers by leveraging an autocorrelation analysis. Second, it identifies if a single-source voice command is from humans or electronic speakers using a novel dual-domain detection method. Finally, it leverages the directions of voice sources to distinguish the voice of the driver from those of the passengers. We implement a prototype of SIEVE and perform a real-world study under different driving conditions. Experimental results show SIEVE can defeat various adversarial voice commands over in-vehicle ASR systems.</p>
+			</div>
+		</div>
+		<div class="col-lg-6 col-sm-6">
+			<div style="text-align:center">
+				<img src="img/car.png" width="90%">
+			</div>
+		</div>
 	</div>
+
 	<br />
 	<p style="font-size:18px; text-align:justify">Published in <a href="https://www.usenix.org/conference/raid2020" target="_blank">the 23rd International Symposium on Research in Attacks, Intrusions and Defenses (RAID) 2020.</a></p>
 	<br />
