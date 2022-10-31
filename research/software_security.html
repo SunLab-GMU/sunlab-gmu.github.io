@@ -73,10 +73,13 @@
               <h2>Software Security</h2> 
               <p style="font-size:18px; text-align:justify;">Open source software (OSS) has been widely used in both free and proprietary applications. The Black Duck reports that 96% of their scanned applications contain open source components, which account for 57% of the code base on average. At the same time, vulnerabilities embedded in upstream OSS are fast propagated to the underlying applications. Also, the clone or reuse of OSS without explicit reference makes it challenging for maintainers to track and mitigate vulnerabilities. Our research develops practical techniques for detecting such vulnerabilities, which help build a more reliable and secure information system infrastructure.<br /><br />
 			  Read more about our works:<br />
-			    <a type="button" class="btn btn-success" style="background:transparent; border:1px solid #fff; font-size:18px;" href="#patch_identification">Security Patch Identification</a>
-				<a type="button" class="btn btn-success" style="background:transparent; border:1px solid #fff; font-size:18px;" href="#patch_classification">Security Patch Classification</a><br />
-				<a type="button" class="btn btn-success" style="background:transparent; border:1px solid #fff; font-size:18px;" href="#patch_db">PatchDB</a>
-			  </p>
+			  <a type="button" class="btn btn-success" style="background:transparent; border:1px solid #fff; font-size:18px;" href="#graph_spd">GraphSPD</a>
+			  
+			  <a type="button" class="btn btn-success" style="background:transparent; border:1px solid #fff; font-size:18px;" href="#patch_db">PatchDB</a>
+			  <a type="button" class="btn btn-success" style="background:transparent; border:1px solid #fff; font-size:18px;" href="#patch_classification">Security Patch Classification</a><br />
+			  <a type="button" class="btn btn-success" style="background:transparent; border:1px solid #fff; font-size:18px;" href="#patch_identification">Security Patch Identification</a>
+			  <a type="button" class="btn btn-success" style="background:transparent; border:1px solid #fff; font-size:18px;" href="#binprov">BinProv</a>
+			</p>
 			</div>
 			</div>
 		  
@@ -92,6 +95,198 @@
   </div>
 </section>
 <!--home--> 
+
+
+
+
+
+<div class="container" id="graph_spd">
+	<!-- About -->
+	<br /><br /><br />
+	<h2>GraphSPD: Graph-Based Security Patch Detection with Enriched Code Semantics</h2>
+	<div class="row">
+		<div class="col-lg-6 col-sm-6">
+			<div style="text-align:center">
+				<p style="font-size:18px; text-align:justify">
+					With the increasing popularity of open-source software, embedded vulnerabilities have been widely propagating to downstream software. Due to different maintenance policies, software vendors may silently release security patches without providing sufficient advisories (e.g., CVE). This leaves users unaware of security patches and provides attackers good chances to exploit unpatched vulnerabilities. Thus, detecting those silent security patches becomes imperative for secure software maintenance. In our <a href="https://csis.gmu.edu/ksun/publications/SP23_GraphSPD.pdf" target="_blank">paper</a>, we propose a graph neural network based security patch detection system named GraphSPD, which represents patches as graphs with richer semantics and utilizes a patch-tailored graph model for detection. We first develop a novel graph structure called PatchCPG to represent software patches by merging two code property graphs (CPGs) for the pre-patch and post-patch source code as well as retaining the context, deleted, and added components for the patch. By applying a slicing technique, we retain the most relevant context and reduce the size of PatchCPG. Then, we develop the first end-to-end deep learning model called PatchGNN to determine if a patch is security-related directly from its graphstructured PatchCPG. PatchGNN includes a new embedding process to convert PatchCPG into a numeric format and a new multi-attributed graph convolution mechanism to adapt diverse relationships in PatchCPG. 
+					<!-- The experimental results show GraphSPD can significantly outperform the state-of-theart approaches on security patch detection. -->
+				</p>
+			</div>
+		</div>
+		<div class="col-lg-6 col-sm-6">
+			<div style="text-align:center">
+				<img src="img/PatchCPG.png" width="98%">
+			</div>
+		</div>
+	</div>
+	<br />
+	<p style="font-size:18px; text-align:justify">Published in <a href="https://www.ieee-security.org/TC/SP2023/" target="_blank">the 44th IEEE Symposium on Security and Privacy (S&P) 2023.</a></p>
+	<br />
+	<p align="center">
+		<a class="btn btn-primary btn-lg" role="button" style="margin-right:10px;" href="https://csis.gmu.edu/ksun/publications/SP23_GraphSPD.pdf" target="_blank">Download the Paper</a>
+		<a class="btn btn-primary btn-lg" role="button" style="margin-right:10px;" href="https://github.com/SunLab-GMU/GraphSPD" target="_blank">Code</a>
+		<a class="btn btn-primary btn-lg" role="button" style="margin-right:10px;" href="https://sunlab-gmu.github.io/GraphSPD/" target="_blank">Website</a>
+		<a class="btn btn-primary btn-lg" role="button" data-toggle="collapse" href="#bibtex_wang2023sp" aria-expanded="false" aria-controls="bibtex">Export Citation</a>
+	</p>
+	<div class="collapse" style="margin-top: 1.5em;" align="left" id="bibtex_wang2023sp" >
+		<pre style="white-space: pre">
+@INPROCEEDINGS{GraphSPD23Wang,
+author={Wang, Shu and Wang, Xinda and Sun, Kun and Jajodia, Sushil and Wang, Haining and Li, Qi},
+booktitle={2023 IEEE Symposium on Security and Privacy (SP)}, 
+title={GraphSPD: Graph-Based Security Patch Detection with Enriched Code Semantics}, 
+year={2023},
+pages={604-621},
+doi={10.1109/SP46215.2023.00035}
+}
+</pre>
+	</div>
+	<br /><br /><br />
+</div>
+
+
+
+
+<div style="background:#efefef;">
+	<div class="container" id="binprov">
+		<br /><br /><br />
+		<h2>BinProv: Binary Code Provenance Identification without Disassembly</h2>
+		<p style="font-size:18px; text-align:justify">
+			Provenance identification, which is essential for binary analysis,
+			aims to uncover the specific compiler and configuration used for
+			generating the executable. Traditionally, the existing solutions extract syntactic, structural, and semantic features from disassembled
+			programs and employ machine learning techniques to identify the
+			compilation provenance of binaries. However, their effectiveness
+			heavily relies on disassembly tools (e.g., IDA Pro) and tedious feature engineering, since it is challenging to obtain accurate assembly
+			code, particularly, from the stripped or obfuscated binaries. In addition, the features in machine learning approaches are manually
+			selected based on the domain knowledge of one specific architecture, which cannot be applied to other architectures. In this
+			paper, we develop an end-to-end provenance identification system
+			BinProv, which leverages a BERT (Bidirectional Encoder Representations from Transformers) based embedding model to learn
+			and represent the context semantics and syntax directly from the
+			binary code. Therefore, BinProv avoids the disassembling step and
+			manual feature selection in provenance identification. Moreover,
+			BinProv can distinguish the compilers and the four optimization
+			levels (O0/O1/O2/O3) by fine-tuning the classifier model with the
+			embedding inputs for specific provenance identification tasks. Experimental results show that BinProv achieves 92.14%, 99.4%, and
+			99.8% accuracy at byte sequence, function, and binary levels, respectively. We further demonstrate that BinProv works well on
+			obfuscated binary code, suggesting that BinProv is a viable approach to remarkably mitigate the disassembler dependence in
+			future provenance identification tasks. Finally, our case studies
+			show that BinProv can better identify compiler helper functions
+			and improve the performance of binary code similarity detection.
+		</p>
+		<br />
+		<div style="text-align:center">
+			<img src="img/BinProv.png" width="100%">
+		</div>
+		<br />
+		<p style="font-size:18px; text-align:justify">Publiched in <a href="https://raid2022.cs.ucy.ac.cy/" target="_blank">the International Symposium on Research in Attacks, Intrusions and Defenses (RAID), 2022.</a></p>
+		<br />
+		<p align="center">
+			<a class="btn btn-primary btn-lg" role="button" style="margin-right:10px;" href="https://csis.gmu.edu/ksun/publications/BinProv_RAID.pdf" target="_blank">Download the Paper</a>
+			<a class="btn btn-primary btn-lg" role="button" style="margin-right:10px;" href="https://github.com/Viewer-HX/BinProv" target="_blank">Code</a>
+			<a class="btn btn-primary btn-lg" role="button" data-toggle="collapse" href="#bibtex_xu2022binprov" aria-expanded="false" aria-controls="bibtex">Export Citation</a>
+		</p>
+		<div class="collapse" style="margin-top: 1.5em;" align="left" id="bibtex_xu2022binprov" >
+			<pre style="white-space: pre">
+@inproceedings{xu2022binprov,
+	author = {He, Xu and Wang, Shu and Xing, Yunlong and Feng, Pengbin and Wang, Haining and Li, Qi and Chen, Songqing and Sun, Kun},
+	title = {BinProv: Binary Code Provenance Identification without Disassembly},
+	year = {2022},
+	publisher = {Association for Computing Machinery},
+	address = {New York, NY, USA},
+	booktitle = {Proceedings of the 25th International Symposium on Research in Attacks, Intrusions and Defenses},
+	pages = {350–363},
+	numpages = {14},
+	location = {Limassol, Cyprus},
+	series = {RAID '22}
+	}
+</pre>
+		</div>
+		<br /><br /><br />
+	</div>
+</div>
+
+
+
+
+<div class="container" id="patch_db">
+	<br /><br /><br />
+	<h2>PatchDB: A Large-Scale Security Patch Dataset</h2>
+	<p style="font-size:18px; text-align:justify">Security patches, embedding both vulnerable code and the corresponding fixes, are of great significance to vulnerability detection and software maintenance. A large patch dataset is critical for various patch analysis tasks. However, the existing patch datasets suffer from insufficient samples and low varieties. In this <a href="https://sunlab-gmu.github.io/PatchDB/file/dsn21_paper_wang.pdf" target="_blank">paper</a>, we construct a large-scale patch dataset called PatchDB consisting of three datasets, namely, NVD-based dataset, wild-based dataset, and synthetic dataset. The NVD-based dataset is extracted from the patch hyperlinks indexed by the NVD. The wild-based dataset includes security patches that we collect from the commits on GitHub. To improve the efficiency of data collection and reduce the effort on manual verification, we develop a new nearest link search method to help find the most promising security patch candidates. Moreover, we provide a synthetic dataset, which uses a new oversampling method to synthesize patches at the source code level, enriching the control flow variants of original patches. We conduct a set of studies to investigate the effectiveness of the proposed algorithms and evaluate the properties of the collected dataset. The experimental results show that PatchDB can help improve the performance on security patch identification.</p>
+	<div style="text-align:center">
+		<img src="img/PatchDB.png" width="70%">
+	</div>
+	<br />
+	<p style="font-size:18px; text-align:justify">Publiched in <a href="http://dsn2021.ntu.edu.tw/" target="_blank">the IEEE Conference on Dependable Systems and Networks (DSN) 2021.</a></p>
+	<br />
+	<p align="center">
+		<a class="btn btn-primary btn-lg" role="button" style="margin-right:10px;" href="https://csis.gmu.edu/ksun/publications/dsn21_PatchDB.pdf" target="_blank">Download the Paper</a>
+		<a class="btn btn-primary btn-lg" role="button" style="margin-right:10px;" href="https://sunlab-gmu.github.io/PatchDB/file/dsn21_slides_wang.pdf" target="_blank">Slides</a>
+		<a class="btn btn-primary btn-lg" role="button" style="margin-right:10px;" href="https://github.com/SunLab-GMU/PatchDB" target="_blank">Dataset</a>
+		<a class="btn btn-primary btn-lg" role="button" style="margin-right:10px;" href="https://github.com/shuwang127/PatchClearance" target="_blank">Code</a>
+		<a class="btn btn-primary btn-lg" role="button" style="margin-right:10px;" href="https://sunlab-gmu.github.io/PatchDB" target="_blank">Website</a>
+		<a class="btn btn-primary btn-lg" role="button" data-toggle="collapse" href="#bibtex_wang2021dsn" aria-expanded="false" aria-controls="bibtex">Export Citation</a>
+	</p>
+	<div class="collapse" style="margin-top: 1.5em;" align="left" id="bibtex_wang2021dsn" >
+		<pre style="white-space: pre">
+@INPROCEEDINGS{wang2021dsn,  
+author={X. {Wang} and S. {Wang} and P. {Feng} and K. {Sun} and S. {Jajodia}},  
+booktitle={2021 51st Annual IEEE/IFIP International Conference on Dependable Systems and Networks (DSN)},   
+title={PatchDB: A Large-Scale Security Patch Dataset},   
+year={2021},  
+volume={},  
+number={},  
+pages={},  
+doi={}
+}
+</pre>
+	</div>
+	<br /><br /><br />
+</div>
+
+
+
+<div style="background:#efefef;">
+	<div class="container" id="patch_classification">
+		<!-- About -->
+		<br /><br /><br />
+		<h2>Security Patch Classification</h2>
+		<div class="row">
+			<div class="col-lg-6 col-sm-6">
+				<div style="text-align:center">
+					<p style="font-size:18px; text-align:justify">With the increasing usage of open source software (OSS) in both free and proprietary applications, vulnerabilities embedded in OSS are also propagated to the underlying applications. It is critical to find security patches to fix these vulnerabilities, especially those essential to reduce security risk. Unfortunately, given a security patch, currently, there does not exist a way to automatically recognize the vulnerability that is fixed. In our <a href="https://csis.gmu.edu/ksun/publications/CNS20_PatchByType.pdf" target="_blank">paper</a>, we first conduct an empirical study on security patches by type (i.e., corresponding vulnerability type), using a large-scale dataset collected from the National Vulnerability Database (NVD). Based on analysis results, we develop a machine learning-based system to help identify the vulnerability type of a given security patch. The evaluation results show that our system achieves good performance.</p>
+				</div>
+			</div>
+			<div class="col-lg-6 col-sm-6">
+				<div style="text-align:center">
+					<img src="img/patch_classification.png" width="85%">
+				</div>
+			</div>
+		</div>
+		<br />
+		<p style="font-size:18px; text-align:justify">Published in <a href="https://cns2020.ieee-cns.org/" target="_blank">the IEEE Conference on Communications and Network Security (CNS) 2020.</a></p>
+		<br />
+		<p align="center">
+			<a class="btn btn-primary btn-lg" role="button" style="margin-right:10px;" href="https://csis.gmu.edu/ksun/publications/CNS20_PatchByType.pdf" target="_blank">Download the Paper</a>
+			<a class="btn btn-primary btn-lg" role="button" data-toggle="collapse" href="#bibtex_wang2020cns" aria-expanded="false" aria-controls="bibtex">Export Citation</a>
+		</p>
+		<div class="collapse" style="margin-top: 1.5em;" align="left" id="bibtex_wang2020cns" >
+			<pre style="white-space: pre">
+@INPROCEEDINGS{wang2020cns,
+author={X. {Wang} and S. {Wang} and K. {Sun} and A. {Batcheller} and S. {Jajodia}},
+booktitle={2020 IEEE Conference on Communications and Network Security (CNS)}, 
+title={A Machine Learning Approach to Classify Security Patches into Vulnerability Types}, 
+year={2020},
+volume={},
+number={},
+pages={1-9},
+doi={10.1109/CNS48642.2020.9162237}
+}
+</pre>
+		</div>
+		<br /><br /><br />
+	</div>
+</div>
+
 
 
 <div class="container" id="patch_identification">
@@ -142,82 +337,8 @@ doi={10.1109/DSN.2019.00056}
 
 
 
-<div style="background:#efefef;">
-<div class="container" id="patch_classification">
-	<!-- About -->
-	<br /><br /><br />
-	<h2>Security Patch Classification</h2>
-	<div class="row">
-		<div class="col-lg-6 col-sm-6">
-			<div style="text-align:center">
-				<p style="font-size:18px; text-align:justify">With the increasing usage of open source software (OSS) in both free and proprietary applications, vulnerabilities embedded in OSS are also propagated to the underlying applications. It is critical to find security patches to fix these vulnerabilities, especially those essential to reduce security risk. Unfortunately, given a security patch, currently, there does not exist a way to automatically recognize the vulnerability that is fixed. In our <a href="https://csis.gmu.edu/ksun/publications/CNS20_PatchByType.pdf" target="_blank">paper</a>, we first conduct an empirical study on security patches by type (i.e., corresponding vulnerability type), using a large-scale dataset collected from the National Vulnerability Database (NVD). Based on analysis results, we develop a machine learning-based system to help identify the vulnerability type of a given security patch. The evaluation results show that our system achieves good performance.</p>
-			</div>
-		</div>
-		<div class="col-lg-6 col-sm-6">
-			<div style="text-align:center">
-				<img src="img/patch_classification.png" width="85%">
-			</div>
-		</div>
-	</div>
-	<br />
-	<p style="font-size:18px; text-align:justify">Published in <a href="https://cns2020.ieee-cns.org/" target="_blank">the IEEE Conference on Communications and Network Security (CNS) 2020.</a></p>
-	<br />
-	<p align="center">
-		<a class="btn btn-primary btn-lg" role="button" style="margin-right:10px;" href="https://csis.gmu.edu/ksun/publications/CNS20_PatchByType.pdf" target="_blank">Download the Paper</a>
-		<a class="btn btn-primary btn-lg" role="button" data-toggle="collapse" href="#bibtex_wang2020cns" aria-expanded="false" aria-controls="bibtex">Export Citation</a>
-	</p>
-	<div class="collapse" style="margin-top: 1.5em;" align="left" id="bibtex_wang2020cns" >
-		<pre style="white-space: pre">
-@INPROCEEDINGS{wang2020cns,
-author={X. {Wang} and S. {Wang} and K. {Sun} and A. {Batcheller} and S. {Jajodia}},
-booktitle={2020 IEEE Conference on Communications and Network Security (CNS)}, 
-title={A Machine Learning Approach to Classify Security Patches into Vulnerability Types}, 
-year={2020},
-volume={},
-number={},
-pages={1-9},
-doi={10.1109/CNS48642.2020.9162237}
-}
-</pre>
-	</div>
-	<br /><br /><br />
-</div>
-</div>
 
 
-<div class="container" id="patch_db">
-	<br /><br /><br />
-	<h2>PatchDB: A Large-Scale Security Patch Dataset</h2>
-	<p style="font-size:18px; text-align:justify">Security patches, embedding both vulnerable code and the corresponding fixes, are of great significance to vulnerability detection and software maintenance. A large patch dataset is critical for various patch analysis tasks. However, the existing patch datasets suffer from insufficient samples and low varieties. In this <a href="https://sunlab-gmu.github.io/PatchDB/file/dsn21_paper_wang.pdf" target="_blank">paper</a>, we construct a large-scale patch dataset called PatchDB consisting of three datasets, namely, NVD-based dataset, wild-based dataset, and synthetic dataset. The NVD-based dataset is extracted from the patch hyperlinks indexed by the NVD. The wild-based dataset includes security patches that we collect from the commits on GitHub. To improve the efficiency of data collection and reduce the effort on manual verification, we develop a new nearest link search method to help find the most promising security patch candidates. Moreover, we provide a synthetic dataset, which uses a new oversampling method to synthesize patches at the source code level, enriching the control flow variants of original patches. We conduct a set of studies to investigate the effectiveness of the proposed algorithms and evaluate the properties of the collected dataset. The experimental results show that PatchDB can help improve the performance on security patch identification.</p>
-	<div style="text-align:center">
-		<img src="img/PatchDB.png" width="70%">
-	</div>
-	<br />
-	<p style="font-size:18px; text-align:justify">Publiched in <a href="http://dsn2021.ntu.edu.tw/" target="_blank">the IEEE Conference on Dependable Systems and Networks (DSN) 2021.</a></p>
-	<br />
-	<p align="center">
-		<a class="btn btn-primary btn-lg" role="button" style="margin-right:10px;" href="https://sunlab-gmu.github.io/PatchDB/file/dsn21_paper_wang.pdf" target="_blank">Download the Paper</a>
-		<a class="btn btn-primary btn-lg" role="button" style="margin-right:10px;" href="https://sunlab-gmu.github.io/PatchDB/file/dsn21_slides_wang.pdf" target="_blank">Slides</a>
-		<a class="btn btn-primary btn-lg" role="button" style="margin-right:10px;" href="https://github.com/SunLab-GMU/PatchDB" target="_blank">Dataset</a>
-		<a class="btn btn-primary btn-lg" role="button" style="margin-right:10px;" href="https://sunlab-gmu.github.io/PatchDB" target="_blank">Website</a>
-		<a class="btn btn-primary btn-lg" role="button" data-toggle="collapse" href="#bibtex_wang2021dsn" aria-expanded="false" aria-controls="bibtex">Export Citation</a>
-	</p>
-	<div class="collapse" style="margin-top: 1.5em;" align="left" id="bibtex_wang2021dsn" >
-		<pre style="white-space: pre">
-@INPROCEEDINGS{wang2021dsn,  
-author={X. {Wang} and S. {Wang} and P. {Feng} and K. {Sun} and S. {Jajodia}},  
-booktitle={2021 51st Annual IEEE/IFIP International Conference on Dependable Systems and Networks (DSN)},   
-title={PatchDB: A Large-Scale Security Patch Dataset},   
-year={2021},  
-volume={},  
-number={},  
-pages={},  
-doi={}
-}
-</pre>
-	</div>
-	<br /><br /><br />
-</div>
 
 
 
